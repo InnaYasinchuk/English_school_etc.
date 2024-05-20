@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color-scheme: light;
+    background-color: $bgrColor;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 50px;
+
+  // @include laptop {
+  //   scroll-padding-top: 30px;
+  // }
+
+  // @include lg-mobile {
+  //   scroll-padding-top: 20px;
+  // }
+
+  // @include mobile {
+  //   scroll-padding-top: 15px;
+  // }
+}
+
+body {
+  font-family: $mainFamily;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background-color: $bgrColor;
+  color: $textColor;
+  font-size: 25px;
+  
+}
+
+.layout-wrapper{
+  margin: 0px auto;
+  max-width: 1550px;
+  background-color: $bgrColor;
+  padding: 50px 55px 0;
+  
+}
+
+.site-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: $mainBgrColor;
+  box-shadow: -2px -11px 8.699999809265137px 0 rgba(66, 129, 108, 0.2);
+  border-radius: 18px 18px 18px 18px;
+ 
+  }
+
+  .logo a{
+    @include flex;
+    
+    // &:focus{
+    // outline: 3px solid $mainColor;
+    // outline-offset: 3px;
+    // border-radius: $borderRadiusExtra;
+    // }
+  }
+
+ 
+
+
+.green {
+  margin-top: 100px;
+ padding-bottom: 300px;
+}

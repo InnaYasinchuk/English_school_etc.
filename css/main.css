@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+*,
+svg,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+address {
+  font-style: normal;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color-scheme: light;
+    background-color: #E6F9F3;
+  }
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 50px;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background-color: #E6F9F3;
+  color: #212019;
+  font-size: 25px;
+}
+
+.layout-wrapper {
+  margin: 0px auto;
+  max-width: 1550px;
+  background-color: #E6F9F3;
+  padding: 50px 55px 0;
+}
+
+.site-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: #FEFAE2;
+  box-shadow: -2px -11px 8.6999998093px 0 rgba(66, 129, 108, 0.2);
+  border-radius: 18px 18px 18px 18px;
+}
+
+.logo a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+}
+
+.green {
+  margin-top: 100px;
+  padding-bottom: 300px;
+}
+
+.header {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+.header__top-container {
+  padding-left: 23px;
+  padding-right: 23px;
+}
+
+.header__top-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+}
+
+.header-menu {
+  max-width: 760px;
+  width: 100%;
+}
+.header-menu__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  color: #42816C;
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.header__button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 22px 56px;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #FCDE58;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+.header__button:hover, .header__button:focus {
+  box-shadow: 0 4px 4px 0 #b3dcd7;
+  outline: none;
+}
+.header__button:active {
+  background-color: #42816C;
+}
+
+.header__content-container {
+  padding-left: 36px;
+  padding-right: 31px;
+}
+
+.header__content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  margin-top: 71px;
+}
+
+.header__content-inner {
+  max-width: 680px;
+  max-width: 50%;
+  margin-right: -50px;
+  padding-top: 20px;
+}
+
+.header__content-title {
+  font-size: 40px;
+  color: #42816C;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.header__content-title span {
+  font-size: 44px;
+  text-transform: none;
+}
+
+.advantages {
+  margin-top: 24px;
+  font-size: 20px;
+}
+.advantages__item {
+  padding-top: 16px;
+}
+
+.header__content-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 30px;
+  margin-top: 50px;
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #42816C;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+.header__content-btn:hover, .header__content-btn:focus {
+  box-shadow: 0 4px 4px 0 rgba(255, 212, 42, 0.6);
+  outline: none;
+}
+.header__content-btn:active {
+  background-color: #FCDE58;
+}
+
+.header__img-wrapper {
+  max-width: 53%;
+}
+
+.header__img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 0.3s ease-in;
+}
+.header__img:hover {
+  transform: scale(1.02);
+}
+
+.footer {
+  position: relative;
+}
+
+.footer_content {
+  max-width: 1500px;
+  margin: -300px auto;
+  background: url("./../../img/footer/bgr_footer.png") no-repeat center bottom;
+  background-size: contain;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  width: 1204px;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-top: 80px;
+}
+
+.bgr_decor {
+  margin: 0 auto;
+  width: 100%;
+  height: 300px;
+  background: url("./../../img/footer/bgr_footer_decor.png") no-repeat center bottom;
+  background-size: contain;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+}
+
+.menu-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 40px;
+  max-width: 400px;
+}/*# sourceMappingURL=main.css.map */

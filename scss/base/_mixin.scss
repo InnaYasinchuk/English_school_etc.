@@ -1,0 +1,124 @@
+@mixin flex($gap: 0) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: $gap;
+}
+
+// @mixin section-title($color: $main-blue-color, $fsize: 96px) {
+//   font-family: "Amatic SC", sans-serif;
+//   font-size: $fsize;
+//   font-weight: 700;
+//   color: $color;
+
+//   @include laptop {
+//     font-size: 76px;
+//   }
+
+//   @include tablet() {
+//     font-size: 56px;
+//   }
+
+//   @include lg-mobile {
+//     font-size: 30px;
+//   }
+// }
+
+
+
+
+// @mixin star($left, $top, $fill: $main-blue-color, $fill-opasity: 0.6) {
+//   position: absolute;
+//   fill: $fill;
+//   fill-opacity: $fill-opasity;
+//   left: $left;
+//   top: $top;
+//   transition: transform 1s ease-in-out;
+
+//   &:hover {
+//     transform: scale(1.4) rotate(360deg);
+//   }
+// }
+
+// @mixin starAnimation($time: 6s) {
+//   transform-origin: center;
+//   animation-name: scaleAndRotate;
+//   animation-duration: $time;
+//   animation-iteration-count: infinite;
+//   animation-timing-function: ease-in-out;
+
+//   @keyframes scaleAndRotate {
+//     0% {
+//       transform: scale(1) rotate(0deg);
+//     }
+//     50% {
+//       transform: scale(1.4) rotate(180deg);
+//     }
+//     100% {
+//       transform: scale(1) rotate(360deg);
+//     }
+//   }
+// }
+
+// @mixin starAnimationMobile($time: 6s) {
+//   transform-origin: center;
+//   animation-name: scaleAndRotateMobile;
+//   animation-duration: $time;
+//   animation-iteration-count: infinite;
+//   animation-timing-function: ease-in-out;
+
+//   @keyframes scaleAndRotateMobile {
+//     0% {
+//       transform: scale(0.7) rotate(0deg);
+//     }
+//     50% {
+//       transform: scale(0.5) rotate(180deg);
+//     }
+//     100% {
+//       transform: scale(0.7) rotate(360deg);
+//     }
+//   }
+// }
+
+
+
+
+
+
+
+
+@mixin desktop() {
+  @media (max-width: 1439.98px) {
+    @content;
+  }
+}
+
+@mixin laptop() {
+  @media (max-width: 1199.98px) {
+    @content;
+  }
+}
+
+@mixin lg-tablet() {
+  @media (max-width: 991.98px) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media (max-width: 767.98px) {
+    @content;
+  }
+}
+
+@mixin lg-mobile() {
+  @media (max-width: 575.98px) {
+    @content;
+  }
+}
+
+@mixin mobile() {
+  @media (max-width: 389.98px) {
+    @content;
+  }
+}
