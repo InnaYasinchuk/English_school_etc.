@@ -1,10 +1,6 @@
 const form = document.getElementById('form');
 const result = document.getElementById('result');
 
-document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById('access_key').value = accessKey;
-        });
-
 form.addEventListener('submit', function(e) {
     e.preventDefault();
     const formData = new FormData(form);
