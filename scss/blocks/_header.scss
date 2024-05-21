@@ -10,15 +10,16 @@
 }
 
 .header__top-inner {
-  @include flex;
+  @include flex(20px);
+  
 }
 
 .header-menu {
   max-width: 760px;
   width: 100%;
- 
+
   &__list {
-    @include flex;
+    @include flex(10px);
     color: $mainColor;
     font-size: 36px;
     font-weight: 500;
@@ -27,6 +28,7 @@
 
 .header__button {
   display: inline-flex;
+  max-width: 314px;
   justify-content: center;
   align-items: center;
   padding: 22px 56px;
@@ -39,55 +41,121 @@
   cursor: pointer;
   transition: $transition;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     box-shadow: 0 4px 4px 0 $hoverBtnBlue;
     outline: none;
   }
 
- &:active{  
+  &:active {
     background-color: $mainColor;
   }
 }
 
-.header__content-container{
+.header__content-container {
   padding-left: 36px;
   padding-right: 31px;
 }
 
-.header__content-wrapper{
+.header__content-wrapper {
   @include flex;
   margin-top: 71px;
 }
 
-.header__content-inner{
+.header__content-inner {
   max-width: 680px;
   max-width: 50%;
   margin-right: -50px;
   padding-top: 20px;
-}
+  position: relative;
 
-.header__content-title{
+  .header__bubble-sm-decor, .header__bubble-lg-decor{
+    position: absolute;
+    background-color: $bubbleDecor;
+    border-radius: $borderRadiusExtra;
+    transition: $transition;
+
+    &:hover{
+      background-color: $hoverBtnBlue;
+      transform: scale(1.1);
+    }
+  }
+
+ }
+
+ .header__bubble-sm-decor{
+  
+     width: 25px;
+    height: 25px;
+    top: 27%;
+    left: 93%;
+ }
+
+ .header__bubble-lg-decor{
+ 
+     width: 53px;
+    height: 53px;
+    top: 68%;
+    left: 79%;
+ }
+
+.header__content-title {
   font-size: 40px;
   color: $mainColor;
   text-transform: uppercase;
   font-weight: 500;
+}
 
-  & span{
-    font-size: 44px;
-    text-transform: none;
+.school {
+  display: inline-flex;
+  font-size: 44px;
+  text-transform: none;
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 110px;
+    height: 15px;
+    background-color: $accentBgrColor;
+    left: 50%;
+    bottom: 17px;
+    transform: rotate(-10deg) translateX(-50%);
+    filter: blur(5px);
+    z-index: -1;
   }
 }
 
-.advantages{
+.advantages {
   margin-top: 24px;
   font-size: 20px;
+  margin-left: 45px;
 
-  &__item{
+  &__item {
     padding-top: 16px;
+    position: relative;
+
+    &::before {
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      left: -40px;
+      top: calc(50% + 8px);
+      transform: translateY(-50%);
+    }
+
+    &:not(:first-child)::before {
+      content: url(./../../img/header/check-mark.svg);
+    }
+
+    &:first-child::before {
+      content: url(./../../img/header/error-mark.svg);
+    }
   }
 }
 
-.header__content-btn{
+.header__content-btn {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -103,30 +171,25 @@
   cursor: pointer;
   transition: $transition;
 
-  &:hover, &:focus {
-   box-shadow: 0 4px 4px 0 rgba(255,212,42,.6);
+  &:hover,
+  &:focus {
+    box-shadow: 0 4px 4px 0 rgba(255, 212, 42, 0.6);
     outline: none;
   }
 
- &:active{  
+  &:active {
     background-color: $accentBgrColor;
   }
 }
 
-.header__img-wrapper{
-  // max-width: 723px;
+.header__img-wrapper {
   max-width: 53%;
 }
 
-.header__img{
-  max-width: 100%;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  transition: $transition;
+.header__img {
+   transition: 0.5s ease-in;
 
-  &:hover{
+  &:hover {
     transform: scale(1.02);
   }
-
 }

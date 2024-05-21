@@ -5,6 +5,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow">
+  <meta name="color-scheme" content="only light" />
+  <meta name="description" content="Прокачай свою англійську зі школою etc. Для нас важливо, щоб вивчати англійську було цікаво, весело, а головне — ефективно">
+  <link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="img/favicon/site.webmanifest">
   <title>etc</title>
   <link rel="stylesheet" href="css/main.css" />
 </head>
@@ -25,16 +32,16 @@
             <nav class="header-menu">
               <ul class="header-menu__list">
                 <li class="header-menu__list-item">
-                  <a class="header-menu__link" href="">Про нас</a>
+                  <a class="header-menu__link" href="#about">Про нас</a>
                 </li>
                 <li class="header-menu__list-item">
-                  <a class="header-menu__link" href="">Вчителі</a>
+                  <a class="header-menu__link" href="#teachers">Вчителі</a>
                 </li>
                 <li class="header-menu__list-item">
-                  <a class="header-menu__link" href="">Тарифи</a>
+                  <a class="header-menu__link" href="#tariffs">Тарифи</a>
                 </li>
                 <li class="header-menu__list-item">
-                  <a class="header-menu__link" href="">Питання</a>
+                  <a class="header-menu__link" href="#Questions">Питання</a>
                 </li>
               </ul>
             </nav>
@@ -47,7 +54,7 @@
           <div class="header__content-container">
             <div class="header__content-wrapper">
               <div class="header__content-inner">
-                <h1 class="header__content-title">прокачай свою англійську зі школою <span>етс.</span> </h1>
+                <h1 class="header__content-title">прокачай свою англійську зі школою <span class="school">етс.</span> </h1>
 
                 <ul class="advantages">
                   <li class="advantages__item">Віковий бар’єр : відсутний</li>
@@ -56,7 +63,9 @@
                   <li class="advantages__item">Онлайн</li>
                 </ul>
 
-                <a class="header__content-btn" href="">спробувати безкоштовно</a>
+                <a class="header__content-btn" href="#">спробувати безкоштовно</a>
+                <div class="header__bubble-sm-decor"></div>
+                 <div class="header__bubble-lg-decor"></div>
               </div>
               <div class="header__img-wrapper">
                 <img class="header__img" src="./img/header/header-img.webp" alt="Вчитель та учень" width="723"
@@ -72,24 +81,33 @@
 
       <main>
 
-        <!-- <section class="about">
-          <div class="container">
-            <div class="about__column-image">
-              <img class="about__img" src="" alt="" />
-              <div class="about__text">
-                <p></p>
+        <section class="about" id="about">
+          <div class="about__container">
+            <div class="about__wrapper">
+              <div class="about__column-image">
+              <img class="about__img" src="./img/about/about-img.webp" alt="Заняття з англійської мови" width="710"
+                  height="405"/>
+              <div class="about__img-text">
+                <p>Маємо більше 100 задоволених студентів 😊 ️</p>
               </div>
 
             </div>
             <div class="about__column-descr">
-              <h2 class="title about__title"></h2>
-              <div class="about__text">
-                <p></p>
-                <p></p>
+              <h2 class="title about__title">про нас</h2>
+              <div class="about__descr-text">
+                <p>Привіт and you are welcome! Раді бачити вас на сторінці нашої онлайн-школи. Для нас важливо, щоб
+                  вивчати англійську було цікаво, весело, а головне — ефективно.
+                </p>
+                <p>Ми створюємо дружню атмосферу на уроках, де кожен студент почуває себе комфортно і знаходить
+                  мотивацію, щоб досягати своїх мовних цілей. Ми впевнені, що кожен здатен вільно володіти англійською і
+                  не важливо це для подорожей, співбесід, читання, переглядів улюбленого кіно в оригіналі чи складання
+                  іспитів. Ми готові допомагати кожному на цьому шляху.</p>
               </div>
             </div>
+            </div>
+            
 
-        </section> -->
+        </section>
 
         <!-- <section class="help">
           <div class="container">
@@ -117,7 +135,7 @@
                   <p>Заповнюйте форму - залишайте заявку на перший урок</p>
                 </div>
                 <form class="contact__form" action="https://api.web3forms.com/submit" method="POST" id="form">
-                  <input type="hidden" name="access_key" id="access_key" value="0e5ba20c-75a1-46a9-8132-008a8b84b71c"/>
+                  <input type="hidden" name="access_key" value="0e5ba20c-75a1-46a9-8132-008a8b84b71c" />
                   <input type="hidden" name="subject" value="I want to learn English. Contact me" />
                   <input type="hidden" name="from_name" value="etc site" />
 
@@ -139,8 +157,8 @@
         </section>
 
 
-        
-        
+
+
       </main>
     </div>
   </div>
@@ -148,7 +166,11 @@
   <footer class="footer">
     <section class="footer_content">
       <div class="content">
-        <img src="./img/logo.svg" alt="logo" />
+        <div class="logo">
+              <a href="#">
+                <img src="./img/logo.svg" alt="logo" width="99" height="99" />
+              </a>
+            </div>
         <nav class="menu">
           <ul class="menu-list">
             <li class="menu__item"> <a href="" class="menu__link">Про нас</a></li>
@@ -175,7 +197,7 @@
     </section>
     <div class="bgr_decor"></div>
   </footer>
-  
+
   <script src="./main.js"></script>
 </body>
 
