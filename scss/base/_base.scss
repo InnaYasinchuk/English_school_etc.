@@ -59,6 +59,11 @@ img {
   border-radius: 18px 18px 18px 18px;
 }
 
+.logo{
+  width: 99px;
+  height: 99px;
+}
+
 .logo a {
   @include flex;
 

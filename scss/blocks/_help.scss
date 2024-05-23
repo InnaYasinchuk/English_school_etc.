@@ -1,0 +1,66 @@
+.help {
+  max-width: 1440px;
+  margin: 0 auto;
+  margin-top: 180px;
+  padding-top: 240px;
+  position: relative;
+  height: 1090px;
+  overflow: hidden;
+  
+
+  &::before, &::after{
+    
+    position: absolute;
+    width: 100%;
+    height: 500px;
+    z-index: 0;
+    
+  }
+
+   &::before{
+    content: url('./../../img/help/help-bgr-before.png');
+top: 0;
+    left: 0;
+   }
+  &::after{
+    content: url('./../../img/help/help-bgr-after.png');
+    bottom: 95px;
+    left: 0;
+
+  }
+}
+
+.help__container {
+  padding-left: 50px;
+  padding-right: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+
+.help__title{
+  font-size: 50px;
+  font-weight: 700;
+color: $mainColor;
+text-align: center;
+}
+
+.help__text{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px 40px;
+  margin-top: 60px;
+
+  & p{
+    max-width: 535px;
+    margin-left: 90px;
+    position: relative;
+
+    &::before{
+      content: url('/img/about/Group.svg');
+      position: absolute;
+      top: 0;
+      left: -85px;
+    }
+  }
+}
