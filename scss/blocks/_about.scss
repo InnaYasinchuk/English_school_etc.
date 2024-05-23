@@ -1,6 +1,4 @@
 .about {
-  max-width: 1440px;
-  margin: 0 auto;
   margin-top: 20px;
   padding-top: 80px;
 }
@@ -28,7 +26,7 @@
   }
 }
 
-.about__img-text p{
+.about__img-text p {
   font-size: 28px;
   font-weight: 500;
   color: $secondTextColor;
@@ -38,32 +36,30 @@
 
 .about__column-descr {
   max-width: 48%;
-  position: relative;
-  
-  &::after{
-    content: url('./../../img/about/about-decor.webp');
-    position: absolute;
-    top: -23%;
-    right: -1%;
-    
-  }
+}
+
+.about__title-wrapper {
+  @include flex;
+  max-width: 637px;
+  margin-top: -60px;
+  align-items: flex-end;
 }
 
 .about__title {
   color: $mainColor;
   margin-bottom: 15px;
-  
-  
 }
 
-.about__descr-text p{
+.about__title-img{
+max-width: 161px;
+}
+
+.about__descr-text p {
   padding-top: 24px;
 }
 
-
-.star{
-  fill:#ACC400;
+.star {
+  fill: #acc400;
   width: 100px;
   height: 100px;
- 
 }

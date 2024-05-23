@@ -1,0 +1,156 @@
+.teachers {
+  padding-top: 0px;
+}
+
+.teachers__container {
+  padding-left: 40px;
+  padding-right: 0px;
+}
+
+.teachers__content {
+  display: flex;
+  flex-direction: column;
+  padding-right: 118px;
+}
+
+.teachers__title-wrapper {
+  @include flex(19px);
+  align-self: flex-end;
+  align-items: flex-end;
+}
+
+.teachers__title {
+  color: $mainColor;
+}
+
+.teachers__descr1 {
+  margin-top: 60px;
+  max-width: 1282px;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.teachers__descr2 {
+  @include flex(14px);
+  align-items: end;
+  margin-top: 40px;
+  font-size: 28px;
+  position: relative;
+
+  &::before {
+    content: url("./../../img/teachers/teachers-man.webp");
+    position: absolute;
+    bottom: 66px;
+    right: 28px;
+  }
+}
+
+.teachers__button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 69px;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: $whiteColor;
+  border-radius: $borderRadiusExtra;
+  background-color: $mainColor;
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 4px 4px 0 rgba(255, 212, 42, 0.6);
+    outline: none;
+  }
+
+  &:active {
+    background-color: $accentBgrColor;
+  }
+}
+
+.teachers__slider {
+  margin-top: 96px;
+}
+
+// .swiper.teachers__swiper {
+//   margin: 0;
+//   margin-top: 50px;
+//   width: 100%;
+//   height: 680px;
+//   display: flex;
+//   justify-content: space-between;
+// }
+
+.teachers__swiper .swiper-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-bottom: 50px;
+}
+
+.teachers__swiper .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 450px;
+  height: auto;
+  border: 1px solid $borderColor;
+  padding: 20px 9px 22px;
+  border-radius: 5px;
+  text-align: center;
+  color: $swiperTextColor;
+  cursor: grab;
+  &:active {
+    cursor: grabbing;
+  }
+}
+
+.teachers__slide-img {
+  max-width: 310px;
+  max-height: 356px;
+  border-radius: $borderRadius;
+}
+
+.teachers__slide-title{
+  margin-top: 5px;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.teachers__slide-text:first-child p{
+  margin-top: 5px;
+  font-size: 22px;
+}
+
+.teachers__slide-text:last-child p{
+  margin-top: 8px;
+  font-size: 22px;
+}
+
+// .teachers__swiper .swiper-pagination {
+//   margin-top: 100px;
+// }
+
+.teachers__swiper .swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  background-color: $mainColor;
+
+  @include tablet {
+    width: 10px;
+    height: 10px;
+  }
+
+  @include lg-mobile {
+    width: 8px;
+    height: 8px;
+  }
+
+  @include mobile {
+    width: 7px;
+    height: 7px;
+  }
+}

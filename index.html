@@ -13,8 +13,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
   <link rel="manifest" href="img/favicon/site.webmanifest">
-  <title>etc</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/main.css" />
+  <title>etc</title>
 </head>
 
 <body>
@@ -105,7 +106,11 @@
 
               </div>
               <div class="about__column-descr">
-                <h2 class="title about__title">про нас</h2>
+                <div class="about__title-wrapper">
+                  <h2 class="title about__title">про нас</h2>
+                  <img class="about__title-img" src="./img/about/about-decor.webp" alt="Квіти" width="161" height="211">
+                </div>
+
                 <div class="about__descr-text">
                   <p>Привіт and you are welcome! Раді бачити вас на сторінці нашої онлайн-школи. Для нас важливо, щоб
                     вивчати англійську було цікаво, весело, а головне — ефективно.
@@ -125,7 +130,7 @@
 
         <section class="help">
           <div class="help__container">
-           <h2 class="help__title">Як школа етс. допоможе вам вивчати англійську</h2>
+            <h2 class="help__title">Як школа етс. допоможе вам вивчати англійську</h2>
             <div class="help__text">
               <p>Якщо для вас важливий персоналізований підхід — кожен викладач добирає програму навчання відповідно до
                 потреб. Ви отримуєте індивідуальні заняття, відповідні вашому рівню та спрямовані на досягнення саме
@@ -139,6 +144,86 @@
               <p>Якщо ви втомилася від нудної домашки — спілкуйтеся на теми цікаві вам, робіть креативні проєкти або
                 виконуйте інтерактивну домашку.</p>
             </div>
+
+          </div>
+        </section>
+
+        <section class="teachers" id="teachers">
+          <div class="teachers__container">
+            <div class="teachers__content">
+              <div class="teachers__title-wrapper">
+                <h2 class="title teachers__title">вчителі</h2>
+                <img src="./img/teachers/teachers-title-flower.webp" alt="Квіти" width="135" height="190">
+              </div>
+
+              <div class="teachers__descr1">
+                <p>У нашій команді молоді, енергійні, кваліфіковані та прогресивні викладачі англійської. Вони відкриті
+                  до
+                  бажань і цілей учнів, чуйні та комунікабельні, завжди готові врахувати ваші потреби.
+                </p>
+              </div>
+
+              <div class="teachers__descr2">
+                <p>А ще вони підготують для вас суперові уроки. Чому? Тому що кожен урок в етс. готується під учня —
+                  цікаво, інтерактивно, без зубріння і переписування підручників.
+                </p>
+                <a class="teachers__button" href="#">познайомитися</a>
+              </div>
+            </div>
+
+            <div class="teachers__slider">
+              <div class="swiper teachers__swiper" id="teachersSwiper">
+                <div class="swiper-wrapper">
+
+                  <div class="swiper-slide">
+                    <img class="teachers__slide-img" src="./img/teachers/Anastasiya.webp" alt="Анастасія" width="310"
+                      height="356">
+                    <h3 class="teachers__slide-title">Анастасія Ісаєва</h3>
+                    <div class="teachers__slide-text">
+                      <p>С1+, викладаю понад 3 роки</p>
+                      <p>Неймовірно обожнюю подорожі та навчати англійській інших</p>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img class="teachers__slide-img" src="./img/teachers/Anna.webp" alt="Анна" width="310" height="356">
+                    <h3 class="teachers__slide-title">Анна Іванова
+                    </h3>
+                    <div class="teachers__slide-text">
+                      <p>B2+, викладаю понад 1 рік</p>
+                      <p>
+                        Обожнюю подорожувати, походи й загалом усі активності — від катання на байдарках до стрибків з
+                        парашутом — також люблю читати трилери і фентезі</p>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img class="teachers__slide-img" src="./img/teachers/Mariya.webp" alt="Марія" width="310"
+                      height="356">
+                    <h3 class="teachers__slide-title">Марія Флюнт</h3>
+                    <div class="teachers__slide-text">
+                      <p>B2+, викладаю понад 1 рік</p>
+                      <p>Обожнюю робити заняття цікавими та зрозумілими</p>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img class="teachers__slide-img" src="./img/teachers/Victoriya.webp" alt="Анастасія" width="310"
+                      height="356">
+                    <h3 class="teachers__slide-title">Вікторія</h3>
+                    <div class="teachers__slide-text">
+                      <p>С1, викладаю понад 3 роки</p>
+                      <p>Я люблю дивитись англомовний контент, особливо true crime, а також обожнюю читати і дивитись
+                        трилери і, звісно, викладати англійську!</p>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+
+            </div>
+
 
           </div>
         </section>
@@ -220,7 +305,7 @@
     </section>
     <div class="bgr_decor"></div>
   </footer>
-
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="./main.js"></script>
 </body>
 

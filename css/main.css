@@ -44,6 +44,8 @@ body {
 }
 
 section {
+  max-width: 1440px;
+  margin: 0 auto;
   overflow-y: hidden;
 }
 
@@ -94,8 +96,6 @@ img {
 }
 
 .header {
-  max-width: 1440px;
-  margin: 0 auto;
   padding-top: 40px;
 }
 
@@ -280,8 +280,6 @@ img {
 }
 
 .about {
-  max-width: 1440px;
-  margin: 0 auto;
   margin-top: 20px;
   padding-top: 80px;
 }
@@ -320,13 +318,16 @@ img {
 
 .about__column-descr {
   max-width: 48%;
-  position: relative;
 }
-.about__column-descr::after {
-  content: url("./../../img/about/about-decor.webp");
-  position: absolute;
-  top: -23%;
-  right: -1%;
+
+.about__title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  max-width: 637px;
+  margin-top: -60px;
+  align-items: flex-end;
 }
 
 .about__title {
@@ -334,21 +335,24 @@ img {
   margin-bottom: 15px;
 }
 
+.about__title-img {
+  max-width: 161px;
+}
+
 .about__descr-text p {
   padding-top: 24px;
 }
 
 .star {
-  fill: #ACC400;
+  fill: #acc400;
   width: 100px;
   height: 100px;
 }
 
 .help {
-  max-width: 1440px;
-  margin: 0 auto;
   margin-top: 180px;
   padding-top: 240px;
+  padding-bottom: 50px;
   position: relative;
   height: 1090px;
   overflow: hidden;
@@ -400,6 +404,155 @@ img {
   position: absolute;
   top: 0;
   left: -85px;
+}
+
+.teachers {
+  padding-top: 0px;
+}
+
+.teachers__container {
+  padding-left: 40px;
+  padding-right: 0px;
+}
+
+.teachers__content {
+  display: flex;
+  flex-direction: column;
+  padding-right: 118px;
+}
+
+.teachers__title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 19px;
+  align-self: flex-end;
+  align-items: flex-end;
+}
+
+.teachers__title {
+  color: #42816C;
+}
+
+.teachers__descr1 {
+  margin-top: 60px;
+  max-width: 1282px;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.teachers__descr2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  align-items: end;
+  margin-top: 40px;
+  font-size: 28px;
+  position: relative;
+}
+.teachers__descr2::before {
+  content: url("./../../img/teachers/teachers-man.webp");
+  position: absolute;
+  bottom: 66px;
+  right: 28px;
+}
+
+.teachers__button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 69px;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 50px;
+  background-color: #42816C;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+.teachers__button:hover, .teachers__button:focus {
+  box-shadow: 0 4px 4px 0 rgba(255, 212, 42, 0.6);
+  outline: none;
+}
+.teachers__button:active {
+  background-color: #FCDE58;
+}
+
+.teachers__slider {
+  margin-top: 96px;
+}
+
+.teachers__swiper .swiper-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-bottom: 50px;
+}
+
+.teachers__swiper .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 450px;
+  height: auto;
+  border: 1px solid #46A988;
+  padding: 20px 9px 22px;
+  border-radius: 5px;
+  text-align: center;
+  color: #2D2B2B;
+  cursor: grab;
+}
+.teachers__swiper .swiper-slide:active {
+  cursor: grabbing;
+}
+
+.teachers__slide-img {
+  max-width: 310px;
+  max-height: 356px;
+  border-radius: 15px;
+}
+
+.teachers__slide-title {
+  margin-top: 5px;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.teachers__slide-text:first-child p {
+  margin-top: 5px;
+  font-size: 22px;
+}
+
+.teachers__slide-text:last-child p {
+  margin-top: 8px;
+  font-size: 22px;
+}
+
+.teachers__swiper .swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  background-color: #42816C;
+}
+@media (max-width: 767.98px) {
+  .teachers__swiper .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+  }
+}
+@media (max-width: 575.98px) {
+  .teachers__swiper .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+  }
+}
+@media (max-width: 389.98px) {
+  .teachers__swiper .swiper-pagination-bullet {
+    width: 7px;
+    height: 7px;
+  }
 }
 
 .footer {
