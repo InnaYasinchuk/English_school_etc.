@@ -98,7 +98,7 @@
   max-width: 450px;
   height: auto;
   border: 1px solid $borderColor;
-  padding: 20px 9px 22px;
+  padding: 20px 10px 22px;
   border-radius: 5px;
   text-align: center;
   color: $swiperTextColor;
@@ -108,11 +108,35 @@
   }
 }
 
+.teachers__slide-img-wrapper{
+  position: relative;
+   max-width: 310px;
+  max-height: 356px;
+}
+
+.teachers__slide-btn-svg{
+  width: 65px;
+  height: 65px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: $whiteColor;
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover{
+    fill: $secondTextColor;
+  }
+}
+
 .teachers__slide-img {
   max-width: 310px;
   max-height: 356px;
   border-radius: $borderRadius;
 }
+
+
 
 .teachers__slide-title{
   margin-top: 5px;
@@ -129,10 +153,6 @@
   margin-top: 8px;
   font-size: 22px;
 }
-
-// .teachers__swiper .swiper-pagination {
-//   margin-top: 100px;
-// }
 
 .teachers__swiper .swiper-pagination-bullet {
   width: 15px;
@@ -154,3 +174,98 @@
     height: 7px;
   }
 }
+
+.teachers-modal-box{
+  position: fixed;
+  padding: 15px;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(60, 90, 76, 0.6) ;
+  opacity: 0;
+  visibility: hidden;
+  transition: .7s ease-in-out;
+  @include flex;
+  justify-content: center;
+  
+ 
+}
+
+.teachers-modal-box.show{
+  opacity: 1;
+  visibility: visible;
+}
+
+.teachers-modal-box__wrapper{
+  // margin: 8% auto;
+  max-width: 1100px;
+  background: $gradientColorVideo;
+  border-radius: $borderRadiusExtra;
+  position: relative;
+  padding: 115px 139px;
+  z-index: 999;
+}
+
+.teachers-modal-box__video {
+    width: 100%;
+    height: auto;
+    border-radius: $borderRadius;
+    }
+
+    .teachers-modal-box__close-btn{
+      width: 45px;
+      height: 45px;
+      background: transparent;
+      padding: 5px;
+      @include flex;
+      cursor: pointer;
+      position: absolute;
+      top: 6%;
+      right: 5%;
+    }
+
+.teachers-modal-box__close-btn-svg{
+  fill: #42816C;
+  transition: $transition;
+
+  &:hover{
+    fill: #f99576;
+  }
+}
+    
+
+// .teachers__video{
+//  border-radius: $borderRadius;
+// }
+
+// .teachers__modal-box{
+//   display: block;
+//   position: fixed;
+//   width: 0%;
+//   height: 0%;
+//   opacity: 0;
+//   visibility: hidden;
+
+// }
+
+// .teachers__modal-box-wrapper{
+// position: absolute;
+// width: 0%;
+//   height: 0%;
+//   overflow: hidden;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+
+// }
+
+// .teachers__modal-box.show{
+//   opacity: 1;
+//   visibility: visible;
+//   width: 100%;
+//   height: 100%;
+// }
+
+

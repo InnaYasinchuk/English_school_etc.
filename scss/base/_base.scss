@@ -31,6 +31,10 @@ body {
   background-color: $bgrColor;
   color: $textColor;
   font-size: 25px;
+
+    &.lock {
+    overflow: hidden;
+  }
  
 }
 

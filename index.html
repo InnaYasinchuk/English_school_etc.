@@ -176,17 +176,35 @@
                 <div class="swiper-wrapper">
 
                   <div class="swiper-slide">
-                    <img class="teachers__slide-img" src="./img/teachers/Anastasiya.webp" alt="Анастасія" width="310"
-                      height="356">
+                    <div class="teachers__slide-img-wrapper">
+                      <img class="teachers__slide-img" src="./img/teachers/Anastasiya.webp" alt="Анастасія" width="310"
+                        height="356">
+                      <button class="teachers__slide-btn" data-modal-btn="modal1">
+                        <svg class="teachers__slide-btn-svg">
+                          <use xlink:href="sprite.svg#play-video" width="65" height="65"></use>
+                        </svg>
+                      </button>
+                    </div>
+
                     <h3 class="teachers__slide-title">Анастасія Ісаєва</h3>
                     <div class="teachers__slide-text">
                       <p>С1+, викладаю понад 3 роки</p>
                       <p>Неймовірно обожнюю подорожі та навчати англійській інших</p>
                     </div>
+
                   </div>
 
                   <div class="swiper-slide">
-                    <img class="teachers__slide-img" src="./img/teachers/Anna.webp" alt="Анна" width="310" height="356">
+                    <div class="teachers__slide-img-wrapper">
+                      <img class="teachers__slide-img" src="./img/teachers/Anna.webp" alt="Анна" width="310"
+                        height="356">
+                      <button class="teachers__slide-btn" data-modal-btn="modal2">
+                        <svg class="teachers__slide-btn-svg">
+                          <use xlink:href="sprite.svg#play-video" width="65" height="65"></use>
+                        </svg>
+                      </button>
+                    </div>
+
                     <h3 class="teachers__slide-title">Анна Іванова
                     </h3>
                     <div class="teachers__slide-text">
@@ -198,8 +216,16 @@
                   </div>
 
                   <div class="swiper-slide">
-                    <img class="teachers__slide-img" src="./img/teachers/Mariya.webp" alt="Марія" width="310"
+                    <div class="teachers__slide-img-wrapper">
+                     <img class="teachers__slide-img" src="./img/teachers/Mariya.webp" alt="Марія" width="310"
                       height="356">
+                      <button class="teachers__slide-btn" data-modal-btn="modal3">
+                        <svg class="teachers__slide-btn-svg">
+                          <use xlink:href="sprite.svg#play-video" width="65" height="65"></use>
+                        </svg>
+                      </button>
+                    </div>
+                   
                     <h3 class="teachers__slide-title">Марія Флюнт</h3>
                     <div class="teachers__slide-text">
                       <p>B2+, викладаю понад 1 рік</p>
@@ -208,8 +234,16 @@
                   </div>
 
                   <div class="swiper-slide">
-                    <img class="teachers__slide-img" src="./img/teachers/Victoriya.webp" alt="Анастасія" width="310"
+                    <div class="teachers__slide-img-wrapper">
+                      <img class="teachers__slide-img" src="./img/teachers/Victoriya.webp" alt="Вікторія" width="310"
                       height="356">
+                      <button class="teachers__slide-btn" data-modal-btn="modal4">
+                        <svg class="teachers__slide-btn-svg">
+                          <use xlink:href="sprite.svg#play-video" width="65" height="65"></use>
+                        </svg>
+                      </button>
+                    </div>
+                   
                     <h3 class="teachers__slide-title">Вікторія</h3>
                     <div class="teachers__slide-text">
                       <p>С1, викладаю понад 3 роки</p>
@@ -222,6 +256,55 @@
                 <div class="swiper-pagination"></div>
               </div>
 
+              <div class="teachers-modal-box" data-modal-box="modal1">
+                <div class="teachers-modal-box__wrapper">
+                  <video class="teachers-modal-box__video" src="./video/Anastasiya.MOV" width="822px" height="433px"
+                    controls autoplay></video>
+                  <button class="teachers-modal-box__close-btn">
+                    <svg class="teachers-modal-box__close-btn-svg" width="35" height="35">
+                      <use xlink:href="sprite.svg#close"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="teachers-modal-box" data-modal-box="modal2">
+                <div class="teachers-modal-box__wrapper">
+                  <video class="teachers-modal-box__video" src="./video/Anna.MOV" width="822px" height="433px"
+                    controls autoplay></video>
+                  <button class="teachers-modal-box__close-btn">
+                    <svg class="teachers-modal-box__close-btn-svg" width="35" height="35">
+                      <use xlink:href="sprite.svg#close"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="teachers-modal-box" data-modal-box="modal3">
+                <div class="teachers-modal-box__wrapper">
+                  <video class="teachers-modal-box__video" src="./video/Mariya.mp4" width="822px" height="433px"
+                    controls autoplay></video>
+                  <button class="teachers-modal-box__close-btn">
+                    <svg class="teachers-modal-box__close-btn-svg" width="35" height="35">
+                      <use xlink:href="sprite.svg#close"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="teachers-modal-box" data-modal-box="modal4">
+                <div class="teachers-modal-box__wrapper">
+                  <video class="teachers-modal-box__video" src="./video/Victoriya.MOV" width="822px" height="433px"
+                    controls autoplay></video>
+                  <button class="teachers-modal-box__close-btn">
+                    <svg class="teachers-modal-box__close-btn-svg" width="35" height="35">
+                      <use xlink:href="sprite.svg#close"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              
             </div>
 
 

@@ -42,6 +42,9 @@ body {
   color: #212019;
   font-size: 25px;
 }
+body.lock {
+  overflow: hidden;
+}
 
 section {
   max-width: 1440px;
@@ -311,7 +314,7 @@ img {
 .about__img-text p {
   font-size: 28px;
   font-weight: 500;
-  color: #3C5A4C;
+  color: #3c5a4c;
   margin-top: 35px;
   margin-left: 35px;
 }
@@ -499,7 +502,7 @@ img {
   max-width: 450px;
   height: auto;
   border: 1px solid #46A988;
-  padding: 20px 9px 22px;
+  padding: 20px 10px 22px;
   border-radius: 5px;
   text-align: center;
   color: #2D2B2B;
@@ -507,6 +510,27 @@ img {
 }
 .teachers__swiper .swiper-slide:active {
   cursor: grabbing;
+}
+
+.teachers__slide-img-wrapper {
+  position: relative;
+  max-width: 310px;
+  max-height: 356px;
+}
+
+.teachers__slide-btn-svg {
+  width: 65px;
+  height: 65px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: #fff;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+.teachers__slide-btn-svg:hover {
+  fill: #3c5a4c;
 }
 
 .teachers__slide-img {
@@ -553,6 +577,68 @@ img {
     width: 7px;
     height: 7px;
   }
+}
+
+.teachers-modal-box {
+  position: fixed;
+  padding: 15px;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(60, 90, 76, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.7s ease-in-out;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  justify-content: center;
+}
+
+.teachers-modal-box.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.teachers-modal-box__wrapper {
+  max-width: 1100px;
+  background: linear-gradient(to bottom, #FCE169 0%, #FDBEB2 100%);
+  border-radius: 50px;
+  position: relative;
+  padding: 115px 139px;
+  z-index: 999;
+}
+
+.teachers-modal-box__video {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.teachers-modal-box__close-btn {
+  width: 45px;
+  height: 45px;
+  background: transparent;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 6%;
+  right: 5%;
+}
+
+.teachers-modal-box__close-btn-svg {
+  fill: #42816C;
+  transition: 0.3s ease-in;
+}
+.teachers-modal-box__close-btn-svg:hover {
+  fill: #f99576;
 }
 
 .footer {
