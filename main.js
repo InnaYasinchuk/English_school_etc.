@@ -59,14 +59,15 @@ let btns = document.querySelectorAll("*[data-modal-btn]");
 for (let i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function () {
     let name = btns[i].getAttribute("data-modal-btn");
+   
     let modal = document.querySelector("*[data-modal-box = '" + name + "']");
     modal.classList.add("show");
     body.classList.add("lock");
 
-    // let video = modal.querySelector("video");
-    // if (video) {
-    //   video.play();
-    // }
+    let video = modal.querySelector("video");
+    if (video) {
+      video.play();
+    }
 
     let close = modal.querySelector(".teachers-modal-box__close-btn");
     close.addEventListener("click", function () {
@@ -82,18 +83,6 @@ for (let i = 0; i < btns.length; i++) {
   });
 }
 
-window.onload = function () {
-  let modals = document.querySelectorAll("*[data-modal-box]");
-  for (let i = 0; i < modals.length; i++) {
-    let modal = modals[i];
-    let video = modal.querySelector("video");
-    if (video) {
-      modal.addEventListener("transitionend", function () {
-        video.play();
-      });
-    }
-  }
-};
 
 window.onclick = function (e) {
   if (e.target.hasAttribute("data-modal-box")) {
