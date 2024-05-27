@@ -31,9 +31,11 @@ body {
   background-color: $bgrColor;
   color: $textColor;
   font-size: 25px;
+  padding-right: -25px;
 
     &.lock {
     overflow: hidden;
+    padding-right: 25px;
   }
  
 }
@@ -90,7 +92,3 @@ img {
   line-height: 1;
 }
 
-.green {
-  margin-top: 100px;
-  padding-bottom: 300px;
-}

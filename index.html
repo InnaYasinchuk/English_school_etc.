@@ -47,7 +47,7 @@
                 </li>
               </ul>
             </nav>
-            <a href="#" class="header__button">навчатися</a>
+            <a href="#contact" class="header__button">навчатися</a>
           </div>
         </div>
 
@@ -66,7 +66,7 @@
                   <li class="advantages__item">Онлайн</li>
                 </ul>
 
-                <a class="header__content-btn" href="#">спробувати безкоштовно</a>
+                <a class="header__content-btn" href="#contact">спробувати безкоштовно</a>
                 <div class="header__bubble-sm-decor"></div>
                 <div class="header__bubble-lg-decor"></div>
               </div>
@@ -167,7 +167,7 @@
                 <p>А ще вони підготують для вас суперові уроки. Чому? Тому що кожен урок в етс. готується під учня —
                   цікаво, інтерактивно, без зубріння і переписування підручників.
                 </p>
-                <a class="teachers__button" href="#">познайомитися</a>
+                <a class="teachers__button" href="#contact">познайомитися</a>
               </div>
             </div>
 
@@ -217,15 +217,15 @@
 
                   <div class="swiper-slide">
                     <div class="teachers__slide-img-wrapper">
-                     <img class="teachers__slide-img" src="./img/teachers/Mariya.webp" alt="Марія" width="310"
-                      height="356">
+                      <img class="teachers__slide-img" src="./img/teachers/Mariya.webp" alt="Марія" width="310"
+                        height="356">
                       <button class="teachers__slide-btn" data-modal-btn="modal3">
                         <svg class="teachers__slide-btn-svg">
                           <use xlink:href="sprite.svg#play-video" width="65" height="65"></use>
                         </svg>
                       </button>
                     </div>
-                   
+
                     <h3 class="teachers__slide-title">Марія Флюнт</h3>
                     <div class="teachers__slide-text">
                       <p>B2+, викладаю понад 1 рік</p>
@@ -236,14 +236,14 @@
                   <div class="swiper-slide">
                     <div class="teachers__slide-img-wrapper">
                       <img class="teachers__slide-img" src="./img/teachers/Victoriya.webp" alt="Вікторія" width="310"
-                      height="356">
+                        height="356">
                       <button class="teachers__slide-btn" data-modal-btn="modal4">
                         <svg class="teachers__slide-btn-svg">
                           <use xlink:href="sprite.svg#play-video" width="65" height="65"></use>
                         </svg>
                       </button>
                     </div>
-                   
+
                     <h3 class="teachers__slide-title">Вікторія</h3>
                     <div class="teachers__slide-text">
                       <p>С1, викладаю понад 3 роки</p>
@@ -304,9 +304,7 @@
                 </div>
               </div>
 
-              
             </div>
-
 
           </div>
         </section>
@@ -314,35 +312,60 @@
 
 
 
-        <section class="contact green">
-          <div class="container">
+        <section class="contact" id="contact">
+          <div class="contact__container">
             <div class="contact__inner">
-              <img src="" alt="" class="contact__img">
+              <img class="contact__img" src="./img/contact/contact-img.webp" alt="Викладачі вітають студентів"
+                width="706" height="515">
               <div class="contact__content">
-                <h2 class="title contact__title">І що далі?</h2>
-                <div class="contact__descr">
-                  <p>Заповнюйте форму - залишайте заявку на перший урок</p>
-                </div>
+                <h2 class="contact__title">І що далі?</h2>
+                <h3 class="contact__descr">Заповнюйте форму - залишайте заявку на перший урок</h3>
                 <form class="contact__form" action="https://api.web3forms.com/submit" method="POST" id="form">
                   <input type="hidden" name="access_key" value="0e5ba20c-75a1-46a9-8132-008a8b84b71c" />
                   <input type="hidden" name="subject" value="I want to learn English. Contact me" />
                   <input type="hidden" name="from_name" value="etc site" />
 
-                  <input class="contact__form-input" type="text" name="name" required placeholder="enter your name"
+                  <label class="contact__form-label" for="name">*Ім'я</label>
+                  <input class="contact__form-input" id="name" type="text" name="name" required placeholder="Вікторія"
                     autocomplete="on" />
-                  <input class="contact__form-input" type="text" name="phone" required placeholder="enter your phone"
-                    autocomplete="on" />
-                  <button class="contact__form-btn" type="submit">спробувати безкоштовно</button>
 
-                  <div id="result"></div>
+                  <label class="contact__form-label" for="phone">*Телефон </label>
+                  <input class="contact__form-input" id="phone" type="tel" name="phone" required
+                    placeholder="+380(XX) XXX XX XX" autocomplete="on" pattern="^\+?[\d\-\s\(\)]{10,15}$"
+                    title="+380(__)-___-__-__" />
+
+                  <button class="contact__form-btn" type="submit"> <span>спробувати безкоштовно</span> </button>
+
+                  <div class="contact__form-result" id="result">
+                    <div class="contact__form-result-wrapper">
+                      <div class="contact__form-result-check">
+                        <svg width="69" height="52">
+                          <use xlink:href="sprite.svg#result-check"></use>
+                        </svg>
+                      </div>
+                      <p>Дякуємо,</p>
+                      <p>що обираєте етс.</p>
+                    </div>
+                  </div>
                 </form>
+
+                <div class="contact__socials">
+                  <p>Пишіть нам у месенджери :</p>
+                  <a class="contact__socials-link" href="https://t.me/+380987282779" target="_blank" rel="noopener noreferrer">
+                    <svg class="contact__socials-svg" width="50" height="50">
+                      <use xlink:href="sprite.svg#telegram"></use>
+                    </svg></a>
+                  <a class="contact__socials-link" href="viber://chat?number=+380987282779" target="_blank" rel="noopener noreferrer">
+                    <svg class="contact__socials-svg" width="50" height="50">
+                      <use xlink:href="sprite.svg#viber"></use>
+                    </svg>
+                  </a>
+                </div>
+
               </div>
 
             </div>
-
           </div>
-
-
         </section>
 
 

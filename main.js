@@ -1,3 +1,5 @@
+const body = document.body;
+
 //  TEACHERS SWIPER
 
 const teachersSwiper = new Swiper("#teachersSwiper", {
@@ -53,7 +55,6 @@ const teachersSwiper = new Swiper("#teachersSwiper", {
 // Modal
 
 let btns = document.querySelectorAll("*[data-modal-btn]");
-const body = document.body;
 
 for (let i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function () {
@@ -82,8 +83,8 @@ for (let i = 0; i < btns.length; i++) {
 }
 
 window.onclick = function (e) {
-  if (e.target.hasAttribute('data-modal-box')) {
-    let modals = document.querySelectorAll('*[data-modal-box]');
+  if (e.target.hasAttribute("data-modal-box")) {
+    let modals = document.querySelectorAll("*[data-modal-box]");
     for (let i = 0; i < modals.length; i++) {
       let modal = modals[i];
       if (e.target === modal) {
@@ -98,14 +99,13 @@ window.onclick = function (e) {
       }
     }
   }
-}
-
-
+};
 
 // CONTACT FORM
 
 const form = document.getElementById("form");
 const result = document.getElementById("result");
+const resultBox = document.querySelector(".contact__form-result");
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
@@ -113,8 +113,9 @@ form.addEventListener("submit", function (e) {
   const object = Object.fromEntries(formData);
   const json = JSON.stringify(object);
 
-  // Очищення вмісту result перед відправкою нового запиту
-  result.innerHTML = "Please wait...";
+  // result.innerHTML = "Please wait...";
+  
+//  console.log("Please wait...");
 
   fetch("https://api.web3forms.com/submit", {
     method: "POST",
@@ -127,8 +128,8 @@ form.addEventListener("submit", function (e) {
     .then(async (response) => {
       let json = await response.json();
       if (response.status == 200) {
-        // Зміна тексту повідомлення про успішне відправлення
-        result.innerHTML = "Your custom success message"; // Встановлення вашого власного тексту повідомлення
+        resultBox.classList.add("show");
+        body.classList.add("lock");
       } else {
         console.log(response);
         result.innerHTML = json.message;
@@ -141,7 +142,8 @@ form.addEventListener("submit", function (e) {
     .then(function () {
       form.reset();
       setTimeout(() => {
-        result.style.display = "none";
-      }, 3000);
+        resultBox.classList.remove("show");
+        body.classList.remove("lock");
+        }, 3000);
     });
 });
