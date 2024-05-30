@@ -640,6 +640,182 @@ img {
   fill: #f99576;
 }
 
+.tariffs {
+  margin-top: 130px;
+}
+
+.tariffs__container {
+  padding-left: 41px;
+  padding-right: 41px;
+}
+
+.tariffs__cards-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2%;
+  align-items: end;
+}
+
+.accent-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  flex-direction: column;
+  max-width: 343px;
+  padding: 19px 27px 15px;
+  border-radius: 50px;
+  background-color: #FFD42A;
+}
+
+.accent-card__flower {
+  max-width: 236px;
+  height: auto;
+  margin-bottom: 13px;
+}
+
+.card-inner {
+  max-width: 290px;
+  margin-top: 30px;
+  padding: 28px 16px 16px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.last-card {
+  padding: 28px 8px 20px;
+}
+
+.tariffs__simple-cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2%;
+}
+
+.card-img {
+  border-radius: 130px;
+}
+
+.accent-card__img {
+  margin-bottom: 15px;
+  margin-top: 21px;
+}
+
+.simple-card__img {
+  margin-bottom: 8px;
+}
+
+.simple-card__img1,
+.simple-card__img2 {
+  width: 258px;
+  margin-top: 23px;
+}
+
+.simple-card__img3 {
+  width: 274px;
+  margin-top: 21px;
+}
+
+.card-price {
+  font-size: 30px;
+  margin-bottom: 7px;
+}
+
+.card-lessons {
+  font-size: 33px;
+  font-weight: 600;
+}
+
+.accent-card__lessons {
+  color: #D9664A;
+}
+
+.simple-card__lessons {
+  color: #42816C;
+}
+
+.accent-card__lessons-crossed-out {
+  margin-top: 5px;
+  font-size: 31px;
+  font-weight: 600;
+  color: #D9664A;
+  position: relative;
+}
+.accent-card__lessons-crossed-out::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  height: 2px;
+  width: 85%;
+  background-color: currentColor;
+  top: 55%;
+  transform: translateX(-50%);
+}
+
+.card-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 51px;
+  margin-top: 29px;
+  font-size: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+
+.accent-card__btn {
+  color: #3c5a4c;
+  background-color: #fff;
+}
+
+.simple-card__btn {
+  background-color: #42816C;
+  color: #fff;
+  margin-bottom: 15px;
+}
+.simple-card__btn:hover, .simple-card__btn:focus {
+  box-shadow: 0 4px 4px 0 rgba(255, 212, 42, 0.6);
+  outline: none;
+}
+.simple-card__btn:active {
+  background-color: #FCDE58;
+}
+
+.tariffs__title-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  flex-direction: column;
+  max-width: 976px;
+}
+
+.tariffs__title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  align-self: flex-end;
+  align-items: flex-end;
+  margin-right: 78px;
+}
+
+.tariffs__title-img {
+  max-width: 129px;
+  height: auto;
+}
+
+.tariffs__title {
+  color: #FFD42A;
+}
+
 .contact {
   margin-top: 200px;
   padding-bottom: 500px;
@@ -760,7 +936,7 @@ img {
   z-index: 0;
   overflow: hidden;
 }
-.contact__form-btn:hover::after {
+.contact__form-btn:hover::after, .contact__form-btn:focus::after {
   transform: scaleX(1);
 }
 .contact__form-btn > * {
@@ -777,6 +953,11 @@ img {
   margin-top: 14px;
   margin-right: 22px;
   transform: scale(0.9);
+  transition: 0.3s ease-in;
+}
+.contact__socials-svg:hover, .contact__socials-svg:focus {
+  transform: scale(1.1);
+  outline: none;
 }
 
 .contact__form-result {

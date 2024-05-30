@@ -112,7 +112,7 @@
     overflow: hidden;
   }
 
-  &:hover::after {
+  &:hover::after, &:focus::after {
     transform: scaleX(1);
   }
 
@@ -120,12 +120,6 @@
     position: relative;
     z-index: 2;
   }
-
-  // &:hover,
-  // &:focus {
-  //   box-shadow: 0 4px 4px 0 rgba(255, 212, 42, 0.6);
-  //   outline: none;
-  // }
 
   // &:active {
   //   background-color: $accentBgrColor;
@@ -141,6 +135,13 @@
   margin-top: 14px;
   margin-right: 22px;
   transform: scale(0.9);
+  transition: $transition;
+
+   &:hover,
+  &:focus {
+   transform: scale(1.1);
+    outline: none;
+  }
 }
 
 .contact__form-result {

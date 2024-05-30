@@ -72,7 +72,7 @@
               </div>
               <div class="header__img-wrapper">
                 <img class="header__img" src="./img/header/header-img.webp" alt="Вчитель та учень" width="723"
-                  height="447">
+                  height="447" loading="lazy">
               </div>
 
             </div>
@@ -99,7 +99,7 @@
 
               <div class="about__column-image">
                 <img class="about__img" src="./img/about/about-img.webp" alt="Заняття з англійської мови" width="710"
-                  height="405" />
+                  height="405" loading="lazy">
                 <div class="about__img-text">
                   <p>Маємо більше 100 задоволених студентів 😊 ️</p>
                 </div>
@@ -108,7 +108,8 @@
               <div class="about__column-descr">
                 <div class="about__title-wrapper">
                   <h2 class="title about__title">про нас</h2>
-                  <img class="about__title-img" src="./img/about/about-decor.webp" alt="Квіти" width="161" height="211">
+                  <img class="about__title-img" src="./img/about/about-decor.webp" alt="Квіти" width="161" height="211"
+                    loading="lazy">
                 </div>
 
                 <div class="about__descr-text">
@@ -153,7 +154,8 @@
             <div class="teachers__content">
               <div class="teachers__title-wrapper">
                 <h2 class="title teachers__title">вчителі</h2>
-                <img src="./img/teachers/teachers-title-flower.webp" alt="Квіти" width="135" height="190">
+                <img src="./img/teachers/teachers-title-flower.webp" alt="Квіти" width="135" height="190"
+                  loading="lazy">
               </div>
 
               <div class="teachers__descr1">
@@ -178,7 +180,7 @@
                   <div class="swiper-slide">
                     <div class="teachers__slide-img-wrapper">
                       <img class="teachers__slide-img" src="./img/teachers/Anastasiya.webp" alt="Анастасія" width="310"
-                        height="356">
+                        height="356" loading="lazy">
                       <button class="teachers__slide-btn" data-modal-btn="modal1">
                         <svg class="teachers__slide-btn-svg">
                           <use xlink:href="sprite.svg#play-video" width="65" height="65"></use>
@@ -197,7 +199,7 @@
                   <div class="swiper-slide">
                     <div class="teachers__slide-img-wrapper">
                       <img class="teachers__slide-img" src="./img/teachers/Anna.webp" alt="Анна" width="310"
-                        height="356">
+                        height="356" loading="lazy">
                       <button class="teachers__slide-btn" data-modal-btn="modal2">
                         <svg class="teachers__slide-btn-svg">
                           <use xlink:href="sprite.svg#play-video" width="65" height="65"></use>
@@ -218,7 +220,7 @@
                   <div class="swiper-slide">
                     <div class="teachers__slide-img-wrapper">
                       <img class="teachers__slide-img" src="./img/teachers/Mariya.webp" alt="Марія" width="310"
-                        height="356">
+                        height="356" loading="lazy">
                       <button class="teachers__slide-btn" data-modal-btn="modal3">
                         <svg class="teachers__slide-btn-svg">
                           <use xlink:href="sprite.svg#play-video" width="65" height="65"></use>
@@ -236,7 +238,7 @@
                   <div class="swiper-slide">
                     <div class="teachers__slide-img-wrapper">
                       <img class="teachers__slide-img" src="./img/teachers/Victoriya.webp" alt="Вікторія" width="310"
-                        height="356">
+                        height="356" loading="lazy">
                       <button class="teachers__slide-btn" data-modal-btn="modal4">
                         <svg class="teachers__slide-btn-svg">
                           <use xlink:href="sprite.svg#play-video" width="65" height="65"></use>
@@ -259,7 +261,7 @@
               <div class="teachers-modal-box" data-modal-box="modal1">
                 <div class="teachers-modal-box__wrapper">
                   <video class="teachers-modal-box__video" src="./video/Anastasiya.MOV" width="822px" height="433px"
-                    controls></video>
+                    controls preload="auto" loading="lazy"></video>
                   <button class="teachers-modal-box__close-btn">
                     <svg class="teachers-modal-box__close-btn-svg" width="35" height="35">
                       <use xlink:href="sprite.svg#close"></use>
@@ -270,8 +272,8 @@
 
               <div class="teachers-modal-box" data-modal-box="modal2">
                 <div class="teachers-modal-box__wrapper">
-                  <video class="teachers-modal-box__video" src="./video/Anna.MOV" width="822px" height="433px"
-                    controls></video>
+                  <video class="teachers-modal-box__video" src="./video/Anna.MOV" width="822px" height="433px" controls
+                    preload="auto" loading="lazy"></video>
                   <button class="teachers-modal-box__close-btn">
                     <svg class="teachers-modal-box__close-btn-svg" width="35" height="35">
                       <use xlink:href="sprite.svg#close"></use>
@@ -283,7 +285,7 @@
               <div class="teachers-modal-box" data-modal-box="modal3">
                 <div class="teachers-modal-box__wrapper">
                   <video class="teachers-modal-box__video" src="./video/Mariya.mp4" width="822px" height="433px"
-                    controls></video>
+                    controls preload="auto" loading="lazy"></video>
                   <button class="teachers-modal-box__close-btn">
                     <svg class="teachers-modal-box__close-btn-svg" width="35" height="35">
                       <use xlink:href="sprite.svg#close"></use>
@@ -295,7 +297,7 @@
               <div class="teachers-modal-box" data-modal-box="modal4">
                 <div class="teachers-modal-box__wrapper">
                   <video class="teachers-modal-box__video" src="./video/Victoriya.MOV" width="822px" height="433px"
-                    controls></video>
+                    controls preload="auto" loading="lazy"></video>
                   <button class="teachers-modal-box__close-btn">
                     <svg class="teachers-modal-box__close-btn-svg" width="35" height="35">
                       <use xlink:href="sprite.svg#close"></use>
@@ -309,14 +311,95 @@
           </div>
         </section>
 
+        <section class="tariffs" id="tariffs">
+          <div class="tariffs__container">
 
+            <div class="tariffs__cards-wrapper">
+
+              <div class="accent-card">
+                <img class="accent-card__flower" src="./img/tariffs/tariffs-accent-card-flower.webp" alt="Квіти"
+                  width="236" height="76">
+                <div class="card-inner">
+                  <p class="card-price">300 гривень</p>
+                  <p>1 заняття</p>
+                  <img class="card-img accent-card__img" src="./img/tariffs/tariffs-accent-card-img.webp"
+                    alt="Вчителі та студенти" width="258" height="174" loading="lazy">
+                  <h3 class="card-lessons accent-card__lessons">24 уроки 7200</h3>
+                  <h3 class="accent-card__lessons-crossed-out">замість 8880</h3>
+                </div>
+                <a class="card-btn accent-card__btn" href="#contact">записатися</a>
+              </div>
+
+              <div class="tariffs__cards-inner">
+                <div class="tariffs__title-content">
+                  <div class="tariffs__title-wrapper">
+                    <img class="tariffs__title-img" src="./img/tariffs/tariffs-title-flower.webp" alt="Квіти"
+                      width="129" height="111">
+                    <h2 class="title tariffs__title">тарифи</h2>
+                  </div>
+                  <div class="tariffs__descr">
+                    <p>Навчайся говорити на будь-які теми англійською, розшир свій словниковий запас і опануй граматику
+                      за
+                      більше занять, а плати менше</p>
+                  </div>
+                </div>
+
+                <div class="tariffs__simple-cards">
+
+                  <div class="simple-card">
+                    <div class="card-inner">
+                      <p class="card-price">320 гривень</p>
+                      <p>1 заняття</p>
+                      <img class="card-img simple-card__img simple-card__img1" src="./img/tariffs/tariffs-simple-card1.webp"
+                        alt="Вчителі та студенти" width="258" height="174" loading="lazy">
+                      <h3 class="card-lessons simple-card__lessons">12 уроків 3840</h3>
+                    </div>
+                    <a class="card-btn simple-card__btn" href="#contact">записатися</a>
+                  </div>
+
+                  <div class="simple-card">
+                    <div class="card-inner">
+                      <p class="card-price">340 гривень</p>
+                      <p>1 заняття</p>
+                      <img class="card-img simple-card__img simple-card__img2" src="./img/tariffs/tariffs-simple-card2.webp"
+                        alt="Вчителі та студенти" width="258" height="174" loading="lazy">
+                      <h3 class="card-lessons simple-card__lessons">6 уроків 2040</h3>
+                    </div>
+                    <a class="card-btn simple-card__btn" href="#contact">записатися</a>
+                  </div>
+
+                  <div class="simple-card">
+                    <div class="card-inner last-card">
+                      <p class="card-price">370 гривень</p>
+                      <p>1 заняття</p>
+                      <img class="card-img simple-card__img simple-card__img3" src="./img/tariffs/tariffs-simple-card3.webp"
+                        alt="Вчителі та студенти" width="258" height="174" loading="lazy">
+                    </div>
+                    <a class="card-btn simple-card__btn" href="#contact">записатися</a>
+                  </div>
+
+                </div>
+              </div>
+
+
+
+
+
+
+            </div>
+
+
+
+
+          </div>
+        </section>
 
 
         <section class="contact" id="contact">
           <div class="contact__container">
             <div class="contact__inner">
               <img class="contact__img" src="./img/contact/contact-img.webp" alt="Викладачі вітають студентів"
-                width="706" height="515">
+                width="706" height="515" loading="lazy">
               <div class="contact__content">
                 <h2 class="contact__title">І що далі?</h2>
                 <h3 class="contact__descr">Заповнюйте форму - залишайте заявку на перший урок</h3>
@@ -351,11 +434,13 @@
 
                 <div class="contact__socials">
                   <p>Пишіть нам у месенджери :</p>
-                  <a class="contact__socials-link" href="https://t.me/+380987282779" target="_blank" rel="noopener noreferrer">
+                  <a class="contact__socials-link" href="https://t.me/+380987282779" target="_blank"
+                    rel="noopener noreferrer">
                     <svg class="contact__socials-svg" width="50" height="50">
                       <use xlink:href="sprite.svg#telegram"></use>
                     </svg></a>
-                  <a class="contact__socials-link" href="viber://chat?number=+380987282779" target="_blank" rel="noopener noreferrer">
+                  <a class="contact__socials-link" href="viber://chat?number=+380987282779" target="_blank"
+                    rel="noopener noreferrer">
                     <svg class="contact__socials-svg" width="50" height="50">
                       <use xlink:href="sprite.svg#viber"></use>
                     </svg>
