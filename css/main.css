@@ -816,6 +816,75 @@ img {
   color: #FFD42A;
 }
 
+.questions {
+  margin-top: 130px;
+}
+
+.questions__container {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.questions__title-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 11px;
+}
+
+.questions__title {
+  color: #FFD42A;
+}
+
+.questions__title-img {
+  max-width: 99px;
+}
+
+.accordion {
+  margin-top: 70px;
+  list-style: none;
+}
+
+.accordion-item {
+  padding: 31px 30px;
+  position: relative;
+  background: linear-gradient(to right, rgb(252, 225, 104) 0%, rgba(252, 225, 104, 0.8) 41%, rgba(249, 149, 118, 0.4) 100%);
+  border-radius: 50px;
+  margin-bottom: 30px;
+}
+
+.faq-close {
+  fill: #fff;
+  position: absolute;
+  top: 37px;
+  right: 85px;
+  transform: scale(1) rotate(0deg);
+  transition: 0.3s ease-in;
+}
+
+.accordion-item-title {
+  font-size: 30px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+  width: 87%;
+}
+.accordion-item-title:hover, .accordion-item-title:active {
+  color: #212019;
+}
+.accordion-item-title span .faq-close:hover {
+  fill: #212019 !important;
+}
+
+.accordion-item-content {
+  max-width: 1195px;
+  margin-top: 0px;
+  max-height: 0px;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+
 .contact {
   margin-top: 200px;
   padding-bottom: 500px;

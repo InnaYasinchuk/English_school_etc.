@@ -1,0 +1,138 @@
+.questions {
+  margin-top: 130px;
+}
+
+.questions__container {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.questions__title-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 11px;
+}
+
+.questions__title {
+  color: $accentColor;
+}
+
+.questions__title-img {
+  max-width: 99px;
+}
+
+.accordion {
+ margin-top: 70px;
+  list-style: none;
+
+  // @include tablet {
+  //   padding: 20px 25px;
+  // }
+
+  // @include lg-mobile {
+  //   padding: 6px 0px;
+  // }
+}
+
+.accordion-item {
+  padding: 31px 30px;
+  position: relative;
+  background: $gradientColor;
+  border-radius: $borderRadiusExtra;
+  margin-bottom: 30px;
+
+  // @include lg-tablet {
+  //   padding: 20px 30px;
+  // }
+
+  // @include tablet {
+  //   padding: 15px 20px;
+  // }
+
+  // @include lg-mobile {
+  //   padding: 10px 20px;
+  // }
+}
+
+.faq-close {
+  fill: $whiteColor;
+  position: absolute;
+  top: 37px;
+  right: 85px;
+  transform: scale(1) rotate(0deg);
+  transition: $transition;
+
+  // @include lg-tablet {
+  //   transform: scale(0.8) rotate(0deg);
+  //   right: 30px;
+  // }
+
+  // @include tablet {
+  //   transform: scale(0.6) rotate(0deg);
+  //   right: 10px;
+  //   top: 11px;
+  // }
+  // @include lg-mobile {
+  //   transform: scale(0.5) rotate(0deg);
+  //   right: 10px;
+  //   top: 1px;
+  // }
+  // @include mobile {
+  //   transform: scale(0.45) rotate(0deg);
+  //   top: 0;
+  // }
+}
+
+.accordion-item-title {
+  font-size: 30px;
+  font-weight: 600;
+  color: $whiteColor;
+  cursor: pointer;
+  transition: $transition;
+  width: 87%;
+
+  // @include lg-tablet {
+  //   font-size: 28px;
+  // }
+
+  // @include tablet {
+  //   font-size: 22px;
+  // }
+
+  // @include lg-mobile {
+  //   font-size: 16px;
+  // }
+
+  // @include mobile {
+  //   font-size: 14px;
+  // }
+
+  &:hover,
+  &:active {
+    color: $textColor;
+  }
+
+  & span .faq-close:hover {
+    fill: $textColor !important;
+  }
+}
+.accordion-item-content {
+  max-width: 1195px;
+  margin-top: 0px;
+  max-height: 0px;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+
+  // @include tablet {
+  //   font-size: 16px;
+  // }
+
+  // @include lg-mobile {
+  //   font-size: 14px;
+  // }
+
+  // @include lg-mobile {
+  //   font-size: 13px;
+  // }
+}
