@@ -169,6 +169,82 @@ function getMarginTopValue(width) {
   }
 }
 
+//  TEACHERS SWIPER
+
+ document.addEventListener('DOMContentLoaded', function () {
+
+const reviewsSwiperTop = new Swiper("#reviewsSwiperTop", {
+  slidesPerView: 2.1,
+  spaceBetween: 40,
+  loop: true,
+  speed: 3000,
+  slideToClickedSlide: true,
+  // centeredSlides: true,
+  // centeredSlidesBounds: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
+    // dynamicMainBullets: 2,
+  },
+  // breakpoints: {
+  //   360: {
+  //     slidesPerView: 1.4,
+  //     spaceBetween: 10,
+  //   },
+  //   410: {
+  //     slidesPerView: 1.5,
+  //     spaceBetween: 15,
+  //   },
+
+  //   470: {
+  //     slidesPerView: 1.6,
+  //     spaceBetween: 15,
+  //   },
+
+  //   510: {
+  //     slidesPerView: 1.9,
+  //     spaceBetween: 15,
+  //   },
+
+  //   655: {
+  //     slidesPerView: 2,
+  //     spaceBetween: 15,
+  //   },
+
+  //   860: {
+  //     slidesPerView: 2.5,
+  //     spaceBetween: 18,
+  //   },
+  //   992: {
+  //     slidesPerView: 3,
+  //     spaceBetween: 22,
+  //   },
+  // },
+});
+
+const reviewsSwiperBottom = new Swiper('#reviewsSwiperBottom', {
+  loop: true,
+  slidesPerView: 1.6,
+  spaceBetween: 20,
+  speed: 3000,
+  slideToClickedSlide: true,
+  // centeredSlides: true,
+  // centeredSlidesBounds: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
+    // dynamicMainBullets: 2,
+  },
+});
+    
+reviewsSwiperTop.controller.control = reviewsSwiperBottom;
+reviewsSwiperBottom.controller.control = reviewsSwiperTop;
+
+ });
+
+
 
 // CONTACT FORM
 
