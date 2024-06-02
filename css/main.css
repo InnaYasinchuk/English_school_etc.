@@ -987,7 +987,7 @@ img {
 
 .contact {
   margin-top: 200px;
-  padding-bottom: 500px;
+  padding-bottom: 570px;
 }
 
 .contact__container {
@@ -1199,27 +1199,81 @@ img {
   position: relative;
 }
 
-.footer_content {
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  justify-content: center;
   max-width: 1500px;
   margin: -300px auto;
   background: url("./../../img/footer/bgr_footer.png") no-repeat center bottom;
   background-size: contain;
-  height: 420px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 440px;
 }
 
-.content {
-  width: 1204px;
-  height: 120px;
+.footer-content__wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: end;
-  margin-top: 80px;
+  align-items: center;
+  gap: 0;
+  width: 1204px;
+  height: 120px;
+  margin-top: 110px;
+  position: relative;
+  z-index: 2;
 }
 
-.bgr_decor {
+.footer__logo {
+  width: 120px;
+  height: 120px;
+}
+
+.footer__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 85px;
+  color: #42816C;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.footer__button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 26px 60px;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 50px;
+  background-color: #42816C;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+.footer__button:hover, .footer__button:focus {
+  box-shadow: 0 4px 4px 0 rgba(255, 212, 42, 0.6);
+  outline: none;
+}
+.footer__button:active {
+  background-color: #FCDE58;
+}
+
+.footer__socials-svg {
+  transition: 0.3s ease-in;
+}
+.footer__socials-svg:hover, .footer__socials-svg:focus {
+  transform: scale(1.1);
+  outline: none;
+}
+
+.footer__socials a:last-child {
+  margin-left: 59px;
+}
+
+.footer__bgr-decor {
   margin: 0 auto;
   width: 100%;
   height: 300px;
@@ -1228,11 +1282,4 @@ img {
   position: absolute;
   left: 0px;
   bottom: 0px;
-}
-
-.menu-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px 40px;
-  max-width: 400px;
 }/*# sourceMappingURL=main.css.map */

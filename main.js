@@ -174,10 +174,14 @@ function getMarginTopValue(width) {
  document.addEventListener('DOMContentLoaded', function () {
 
 const reviewsSwiperTop = new Swiper("#reviewsSwiperTop", {
-  slidesPerView: 2.1,
+  slidesPerView: 2.3,
   spaceBetween: 40,
   loop: true,
-  speed: 3000,
+  autoplay: {
+    delay: 3000, 
+    disableOnInteraction: false
+  },
+  speed: 5000,
   slideToClickedSlide: true,
   // centeredSlides: true,
   // centeredSlidesBounds: true,
@@ -186,6 +190,11 @@ const reviewsSwiperTop = new Swiper("#reviewsSwiperTop", {
     clickable: true,
     dynamicBullets: true,
     // dynamicMainBullets: 2,
+  },
+  freeMode: {
+    enabled: true,
+    momentum: true,
+    momentumRatio: 0.5, // Керування інерцією для плавності
   },
   // breakpoints: {
   //   360: {
@@ -225,22 +234,29 @@ const reviewsSwiperTop = new Swiper("#reviewsSwiperTop", {
 
 const reviewsSwiperBottom = new Swiper('#reviewsSwiperBottom', {
   loop: true,
-  slidesPerView: 1.6,
+  slidesPerView: 1.8,
   spaceBetween: 20,
-  speed: 3000,
+  autoplay: {
+    delay: 3000, 
+    disableOnInteraction: false
+  },
+  speed: 5000,
   slideToClickedSlide: true,
-  // centeredSlides: true,
-  // centeredSlidesBounds: true,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
     dynamicBullets: true,
     // dynamicMainBullets: 2,
   },
+  freeMode: {
+    enabled: true,
+    momentum: true,
+    momentumRatio: 0.5, // Керування інерцією для плавності
+  },
 });
     
-reviewsSwiperTop.controller.control = reviewsSwiperBottom;
-reviewsSwiperBottom.controller.control = reviewsSwiperTop;
+// reviewsSwiperTop.controller.control = reviewsSwiperBottom;
+// reviewsSwiperBottom.controller.control = reviewsSwiperTop;
 
  });
 

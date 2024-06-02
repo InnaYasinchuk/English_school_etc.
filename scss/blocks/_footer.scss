@@ -1,33 +1,90 @@
 
 .footer {
- 
- 
-  position: relative;
-  
-
+ position: relative;
 }
 
-.footer_content {
+.footer-content {
+  @include flex;
+  justify-content: center;
   max-width: 1500px;
   margin: -300px auto;
   background: url("./../../img/footer/bgr_footer.png") no-repeat center bottom;
   background-size: contain;
-  height: 420px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 440px;
+   
   }
 
-  .content{
+  .footer-content__wrapper{
+    @include flex;
     width: 1204px;
     height: 120px;
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-    margin-top: 80px;
+    margin-top: 110px;
+    position: relative;
+  z-index: 2;
   }
 
-.bgr_decor {
+  .footer__logo{
+     width: 120px;
+  height: 120px;
+
+  }
+
+.footer__list{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 85px;
+  color: $mainColor;
+    font-size: 25px;
+    font-weight: 500;
+
+
+}
+
+.footer__button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 26px 60px;
+  font-size: 25px;
+  font-weight: 700;
+ letter-spacing: 1px;
+  text-transform: uppercase;
+  color: $whiteColor;
+  border-radius: $borderRadiusExtra;
+  background-color: $mainColor;
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 4px 4px 0 rgba(255, 212, 42, 0.6);
+    outline: none;
+  }
+
+  &:active {
+    background-color: $accentBgrColor;
+  }
+}
+
+.footer__socials-svg {
+ 
+   transition: $transition;
+
+   &:hover,
+  &:focus {
+   transform: scale(1.1);
+    outline: none;
+  }
+}
+
+.footer__socials a:last-child{
+ margin-left: 59px;
+}
+
+
+
+
+.footer__bgr-decor {
   margin: 0 auto;
   width: 100%;
   height: 300px;
@@ -37,13 +94,4 @@
   position: absolute;
   left: 0px;
   bottom: 0px;
-}
-
-.menu-list{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px 40px;
-  max-width: 400px;
-
-
 }
