@@ -255,8 +255,8 @@ const reviewsSwiperBottom = new Swiper('#reviewsSwiperBottom', {
   },
 });
     
-reviewsSwiperTop.controller.control = reviewsSwiperBottom;
-reviewsSwiperBottom.controller.control = reviewsSwiperTop;
+// reviewsSwiperTop.controller.control = reviewsSwiperBottom;
+// reviewsSwiperBottom.controller.control = reviewsSwiperTop;
 
  });
 
