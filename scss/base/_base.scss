@@ -11,40 +11,53 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 50px;
 
-  // @include laptop {
-  //   scroll-padding-top: 30px;
-  // }
+  @include laptop {
+    scroll-padding-top: 30px;
+  }
 
-  // @include lg-mobile {
-  //   scroll-padding-top: 20px;
-  // }
+  @include tablet {
+    scroll-padding-top: 20px;
+  }
 
-  // @include mobile {
-  //   scroll-padding-top: 15px;
-  // }
+  @include mobile {
+    scroll-padding-top: 15px;
+  }
 }
 
 body {
   font-family: $mainFamily;
   font-optical-sizing: auto;
   font-style: normal;
+  font-size: 25px;
   background-color: $bgrColor;
   color: $textColor;
-  font-size: 25px;
-  padding-right: -25px;
 
-    &.lock {
+  &.lock {
     overflow: hidden;
     padding-right: 25px;
   }
- 
+
+   @include laptop {
+    font-size: 20px;
+  }
+
+  @include tablet {
+    font-size: 18px;
+  }
+
+  @include lg-mobile {
+    font-size: 14px;
+   }
+
+  @include mobile {
+    font-size: 12px;
+  }
 }
 
 section {
   max-width: 1440px;
   margin: 0 auto;
   overflow-y: hidden;
-
 }
 
 img {
@@ -58,6 +71,18 @@ img {
   max-width: 1550px;
   background-color: $bgrColor;
   padding: 50px 55px 0;
+
+  @include laptop {
+    padding: 40px 35px 0;
+  }
+
+  @include tablet {
+    padding: 30px 25px 0;
+  }
+
+  @include lg-mobile {
+    padding: 20px 15px 0;
+  }
 }
 
 .site-wrapper {
@@ -65,30 +90,48 @@ img {
   margin: 0 auto;
   background-color: $mainBgrColor;
   box-shadow: -2px -11px 8.699999809265137px 0 rgba(66, 129, 108, 0.2);
-  border-radius: 18px 18px 18px 18px;
+  border-radius: 18px;
+
+  @include tablet {
+    border-radius: 12px;
+  }
 }
-
-.logo{
-  width: 99px;
-  height: 99px;
-}
-
-.logo a {
-  @include flex;
-
-  // &:focus{
-  // outline: 3px solid $mainColor;
-  // outline-offset: 3px;
-  // border-radius: $borderRadiusExtra;
-  // }
-}
-
-
 
 .title {
   font-size: 90px;
   font-weight: 700;
   text-transform: uppercase;
   line-height: 1;
+
+  @include laptop {
+    font-size: 70px;
+  }
+
+  @include tablet {
+    font-size: 50;
+  }
+
+  @include lg-mobile {
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  @include mobile {
+    font-size: 20px;
+  }
 }
 
+.btn{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: $transition;
+}
+
+
+  // @media (max-width: 1354.98px) {
+  //   padding: 18px 40px;
+  // font-size: 28px;
+  // }

@@ -1,5 +1,36 @@
 const body = document.body;
 
+// BURGER MENU
+
+const menu = document.querySelector(".header-menu");
+const menuBtn = document.querySelector(".menu-burger");
+const headerBtn = document.querySelector("#header-btn");
+
+if (menu && menuBtn) {
+  menuBtn.addEventListener("click", () => {
+    menu.classList.toggle("active");
+    menuBtn.classList.toggle("active");
+    body.classList.toggle("lock");
+  });
+}
+
+menu.querySelectorAll(".header-menu__list-item").forEach((link) => {
+  link.addEventListener("click", () => {
+    menu.classList.remove("active");
+    menuBtn.classList.remove("active");
+    body.classList.remove("lock");
+  });
+});
+
+headerBtn.addEventListener("click", () => {
+  menu.classList.remove("active");
+  menuBtn.classList.remove("active");
+  body.classList.remove("lock");
+});
+
+
+
+
 //  TEACHERS SWIPER
 
 const teachersSwiper = new Swiper("#teachersSwiper", {

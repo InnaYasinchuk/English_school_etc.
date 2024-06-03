@@ -1,9 +1,9 @@
-// Fonts
+// FONTS
 
 $mainFamily: "Montserrat", sans-serif;
 
 
-// Colors
+// COLORS
 
 $mainBgrColor: #FEFAE2;
 $bgrColor: #E6F9F3;
@@ -24,6 +24,7 @@ $placeholderColor: #797870;
 $hoverBtnBlue: #b3dcd7;
 
 $bubbleDecor: #91C6FF;
+$menuDecor: #E6F9F3;
 $borderColor: #46A988;
 
 $gradientColor: linear-gradient(to right, rgba(252, 225, 104, 1) 0%, rgba(252, 225, 104, 0.8) 41%, rgba(249, 149, 118, 0.4) 100%);
@@ -31,12 +32,13 @@ $gradientColorVideo: linear-gradient(to bottom, #FCE169 0%, #FDBEB2 100%);
 $gradientColorBtn:linear-gradient(to right, #FFD42A 0%, #FFBAD1 100%);
 $gradientColorBox:linear-gradient(to bottom, #FFD333 0%, #FFBCC3 100%);
 
-// Border
+// BORDERS
 
 $borderRadius: 15px;
 $borderRadiusExtra: 50px;
-// $border-radius-mobile: 8px;
+$borderRadiusMobile: 12px;
 
-// Transition
+
+// ANIMATION
 
 $transition: 0.3s ease-in;

@@ -21,17 +21,20 @@
 <body>
   <div class="layout-wrapper">
     <div class="site-wrapper">
-      <header class="header">
 
+      <header class="header">
         <div class="header__top-container">
+
           <div class="header__top-inner">
-            <div class="logo">
-              <a href="#">
-                <img src="./img/logo.svg" alt="logo" width="99" height="99" />
-              </a>
-            </div>
+
+
+            <a class="logo" href="#">
+              <img src="./img/logo.svg" alt="logo" width="99" height="99" />
+            </a>
+
 
             <nav class="header-menu">
+
               <ul class="header-menu__list">
                 <li class="header-menu__list-item">
                   <a class="header-menu__link" href="#about">Про нас</a>
@@ -46,8 +49,30 @@
                   <a class="header-menu__link" href="#questions">Питання</a>
                 </li>
               </ul>
+
+              <a class="btn header__button" id="header-btn" href="#contact">Навчатися</a>
+
+              <img class="header-menu_flower" src="./img/header/header-menu-flower.webp" alt="Квіти" width="82"
+                height="150" loading="lazy">
+              <img class="header-menu_img" src="./img/header/header-menu-img.webp" alt="Студент" width="76"
+                height="156" loading="lazy">
+
+                <svg class="mobile-menu-star1" width="11" height="10">
+              <use xlink:href="sprite.svg#mobile-menu-star"></use>
+            </svg>
+            <svg class="mobile-menu-star2" width="11" height="10">
+              <use xlink:href="sprite.svg#mobile-menu-star"></use>
+            </svg>
+
             </nav>
-            <a href="#contact" class="header__button">навчатися</a>
+
+
+            <div class="menu-burger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
           </div>
         </div>
 
@@ -66,7 +91,7 @@
                   <li class="advantages__item">Онлайн</li>
                 </ul>
 
-                <a class="header__content-btn" href="#contact">спробувати безкоштовно</a>
+                <a class="btn header__content-btn" href="#contact">спробувати безкоштовно</a>
                 <div class="header__bubble-sm-decor"></div>
                 <div class="header__bubble-lg-decor"></div>
               </div>
@@ -87,9 +112,9 @@
         <section class="about" id="about">
           <div class="about__container">
 
-            <svg class="star">
+            <!-- <svg class="star">
               <use xlink:href="sprite.svg#star" width="73" height="72"></use>
-            </svg>
+            </svg> -->
 
             <!-- <svg width="50" height="50">
               <use xlink:href="sprite.svg#check"></use>
@@ -670,7 +695,7 @@
       <div class="footer-content__wrapper">
         <div class="footer__logo">
           <a href="#">
-            <img src="./img/logo.svg" alt="logo" width="99" height="99" />
+            <img src="./img/logo.svg" alt="logo" width="120" height="120" />
           </a>
         </div>
 
@@ -688,10 +713,10 @@
             <li class="footer__list-item">
               <a class="footer__link" href="#tariffs">Тарифи</a>
             </li>
-            
+
           </ul>
         </nav>
-        <a class="footer__button" href="#contact">Записатися</a>
+        <a class="btn footer__button" href="#contact">Записатися</a>
 
         <div class="footer__socials">
           <a class="footer__socials-link" href="https://t.me/+380987282779" target="_blank" rel="noopener noreferrer">

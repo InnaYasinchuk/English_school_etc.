@@ -27,58 +27,53 @@
 
 
 
-// @mixin star($left, $top, $fill: $main-blue-color, $fill-opasity: 0.6) {
-//   position: absolute;
-//   fill: $fill;
-//   fill-opacity: $fill-opasity;
-//   left: $left;
-//   top: $top;
-//   transition: transform 1s ease-in-out;
+@mixin decor($top, $left) {
+  position: absolute;
+    top: $top;
+   left: $left;
+  // fill-opacity: $fill-opasity;
+  transition: transform 1s ease-in-out;
+}
 
-//   &:hover {
-//     transform: scale(1.4) rotate(360deg);
-//   }
-// }
+@mixin decorAnimation($time: 6s) {
+  transform-origin: center;
+  animation-name: scaleAndRotate;
+  animation-duration: $time;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 
-// @mixin starAnimation($time: 6s) {
-//   transform-origin: center;
-//   animation-name: scaleAndRotate;
-//   animation-duration: $time;
-//   animation-iteration-count: infinite;
-//   animation-timing-function: ease-in-out;
+  @keyframes scaleAndRotate {
+    0% {
+      transform: scale(1.8) rotate(0deg);
+    }
+    50% {
+      transform: scale(2.5) rotate(180deg);
+    }
+    100% {
+      transform: scale(1.8) rotate(360deg);
+    }
+  }
+}
 
-//   @keyframes scaleAndRotate {
-//     0% {
-//       transform: scale(1) rotate(0deg);
-//     }
-//     50% {
-//       transform: scale(1.4) rotate(180deg);
-//     }
-//     100% {
-//       transform: scale(1) rotate(360deg);
-//     }
-//   }
-// }
+@mixin decorAnimationMobile($time: 6s) {
+  transform-origin: center;
+  animation-name: scaleAndRotateMobile;
+  animation-duration: $time;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 
-// @mixin starAnimationMobile($time: 6s) {
-//   transform-origin: center;
-//   animation-name: scaleAndRotateMobile;
-//   animation-duration: $time;
-//   animation-iteration-count: infinite;
-//   animation-timing-function: ease-in-out;
-
-//   @keyframes scaleAndRotateMobile {
-//     0% {
-//       transform: scale(0.7) rotate(0deg);
-//     }
-//     50% {
-//       transform: scale(0.5) rotate(180deg);
-//     }
-//     100% {
-//       transform: scale(0.7) rotate(360deg);
-//     }
-//   }
-// }
+  @keyframes scaleAndRotateMobile {
+    0% {
+      transform: scale(1) rotate(0deg);
+    }
+    50% {
+      transform: scale(1.4) rotate(180deg);
+    }
+    100% {
+      transform: scale(1) rotate(360deg);
+    }
+  }
+}
 
 
 
@@ -88,7 +83,7 @@
 
 
 @mixin desktop() {
-  @media (max-width: 1439.98px) {
+  @media (max-width: 1399.98px) {
     @content;
   }
 }

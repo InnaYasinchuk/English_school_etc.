@@ -24,10 +24,21 @@
   }
 
   .footer__logo{
-     width: 120px;
+  width: 120px;
   height: 120px;
+  
+   }
 
+  .footer__logo a{
+  @include flex;
+  
+
+  &:focus{
+     outline: 3px solid $mainColor;
+  outline-offset: 3px;
+  border-radius: 130px;
   }
+}
 
 .footer__list{
   display: grid;

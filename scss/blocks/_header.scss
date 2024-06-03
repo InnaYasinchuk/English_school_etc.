@@ -1,36 +1,156 @@
 .header {
   padding-top: 40px;
+
+  @include lg-tablet {
+    padding-top: 30px;
+  }
+
+  @include lg-mobile {
+    padding-top: 20px;
+  }
+
+   @include mobile {
+    padding-top: 10px;
+  }
 }
 
 .header__top-container {
   padding-left: 23px;
   padding-right: 23px;
+
+   @include lg-mobile {
+   padding-left: 15px;
+  padding-right: 15px;
+  }
 }
 
 .header__top-inner {
-  @include flex(20px);
+  @include flex(5%);
+  width: 100%;
+}
+
+.logo {
+  @include flex;
+  max-width: 99px;
+
+  @include laptop {
+    max-width: 80px;
+  }
+
+  @include tablet {
+    max-width: 50px;
+  }
+
+  @include lg-mobile {
+    max-width: 40px;
+  }
+
+  @include mobile {
+    max-width: 30px;
+  }
+
+  &:focus {
+    outline: 3px solid $mainColor;
+    outline-offset: 3px;
+    border-radius: $borderRadiusExtra;
+  }
 }
 
 .header-menu {
-  max-width: 760px;
+  @include flex(3%);
+  max-width: 1190px;
   width: 100%;
+  transition: $transition;
 
-  &__list {
-    @include flex(10px);
-color: $mainColor;
-    font-size: 36px;
-    font-weight: 500;
+  &.active {
+    right: 0%;
+  }
+
+   @include desktop {
+    max-width: 1000px;
+  }
+  
+  @include laptop {
+    max-width: 870px;
+  }
+
+  @include lg-tablet {
+    max-width: 992px;
+    width: 100%;
+    height: 103vh;
+    flex-direction: column;
+    justify-content: center;
+    gap: 60px;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: $mainBgrColor;
+    overflow: auto;
+    z-index: 15;
+
+     @include lg-mobile {
+    gap: 40px;
+  }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 300px;
+      height: 600px;
+      top: -100px;
+      left: -100px;
+      background-color: $menuDecor;
+      rotate: 15deg;
+      filter: blur(50px);
+
+       @include lg-mobile{
+   width: 200px;
+      height: 350px;
+       top: -50px;
+      left: -50px;
+  }
+    }
+  }
+}
+
+.header-menu__list {
+  @include flex(4%);
+  max-width: 790px;
+  width: 100%;
+  font-size: 36px;
+  font-weight: 500;
+  color: $mainColor;
+
+   @include desktop {
+    max-width: 650px;
+   font-size: 30px;
+  }
+
+  @include laptop {
+    max-width: 570px;
+    font-size: 26px;
+  }
+
+  @include lg-tablet {
+    flex-direction: column;
+    justify-content: center;
+    gap: 45px;
+    font-size: 35px;
+  }
+
+  @include lg-mobile {
+    font-size: 30px;
+    gap: 28px;
+  }
+
+  @include mobile {
+    font-size: 20px;
   }
 }
 
 .header-menu__link {
-  
   position: relative;
   z-index: 5;
-
-  &:focus {
-    outline: none;
-   }
 }
 
 .header-menu__link::after {
@@ -38,14 +158,14 @@ color: $mainColor;
   position: absolute;
   width: 0%;
   height: 15px;
-  background-color: $accentBgrColor;
   left: 0%;
   bottom: -20px;
+  background-color: $accentBgrColor;
   transform: rotate(-10deg);
   filter: blur(5px);
-  z-index: -1;
   transition: $transition;
   transform-origin: left;
+  z-index: -1;
 }
 
 .header-menu__link:hover::after,
@@ -55,28 +175,48 @@ color: $mainColor;
 }
 
 .header__button {
-  display: inline-flex;
   max-width: 314px;
-  justify-content: center;
-  align-items: center;
   padding: 22px 56px;
   font-size: 30px;
   font-weight: 700;
-  text-transform: uppercase;
   color: $whiteColor;
   background-color: $accentBgrColor;
   border-radius: $borderRadiusExtra;
-  cursor: pointer;
-  transition: $transition;
 
   &:hover,
   &:focus {
     box-shadow: 0 4px 4px 0 $hoverBtnBlue;
-    outline: none;
   }
 
   &:active {
     background-color: $mainColor;
+  }
+
+   @include desktop {
+   padding: 18px 40px;
+    font-size: 25px;
+  }
+
+  @include laptop {
+    padding: 16px 30px;
+    font-size: 22px;
+  }
+
+  @include lg-tablet {
+    padding: 18px 66px;
+    border-radius: $borderRadiusMobile;
+    font-size: 35px;
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+
+  @include lg-mobile {
+    font-size: 25px;
+  }
+
+  @include mobile {
+     padding: 8px 36px;
+    font-size: 16px;
   }
 }
 
@@ -182,20 +322,14 @@ color: $mainColor;
 }
 
 .header__content-btn {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
   padding: 24px 30px;
   margin-top: 50px;
   font-size: 25px;
   font-weight: 600;
   letter-spacing: 1px;
-  text-transform: uppercase;
   color: $whiteColor;
   background-color: $mainColor;
   border-radius: $borderRadius;
-  cursor: pointer;
-  transition: $transition;
 
   &:hover,
   &:focus {
@@ -217,5 +351,154 @@ color: $mainColor;
 
   &:hover {
     transform: scale(1.02);
+  }
+}
+
+// MOBILE MENU
+
+.menu-burger {
+  display: none;
+  position: fixed;
+  z-index: 25;
+  cursor: pointer;
+
+  @include lg-tablet {
+    display: block;
+    width: 40px;
+    height: 25px;
+    top: 85px;
+    right: 70px;
+  }
+
+   @include tablet {
+    top: 72px;
+    right: 55px;
+  }
+
+  @include lg-mobile {
+    width: 22px;
+    height: 15px;
+     top: 45px;
+    right: 35px;
+  }
+
+
+  @include mobile {
+      top: 35px;
+    right: 45px;
+  }
+
+  span {
+    position: absolute;
+    top: calc(50% - 2px);
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: $mainColor;
+    border-radius: 4px;
+    transition: $transition;
+    transform-origin: center;
+
+     @include lg-mobile {
+      top: calc(50% - 1px);
+    height: 2px;
+  }
+
+    &:first-child {
+      top: 0;
+    }
+
+    &:last-child {
+      top: auto;
+      bottom: 0;
+    }
+  }
+
+  &.active {
+    span {
+      transform: scale(0);
+      margin-right: -20px;
+
+      &:first-child {
+        transform: rotate(-45deg);
+        top: calc(50% - 2px);
+          @include lg-mobile {
+      top: calc(50% - 1px);
+    
+  }
+      }
+
+      &:last-child {
+        transform: rotate(45deg);
+        bottom: calc(50% - 2px);
+          @include lg-mobile {
+      top: calc(50% - 1px);
+   
+  }
+      }
+    }
+  }
+}
+
+.header-menu_flower {
+  display: none;
+  max-width: 140px;
+  height: auto;
+
+  @include lg-tablet {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 0px;
+  }
+
+   @include lg-mobile {
+    max-width: 83px;
+  }
+}
+
+.header-menu_img {
+  display: none;
+  max-width: 140px;
+  height: auto;
+
+  @include lg-tablet {
+    display: block;
+    position: absolute;
+    bottom: 25px;
+    right: 0px;
+  }
+
+   @include lg-mobile {
+    max-width: 78px;
+  }
+}
+
+
+.mobile-menu-star1,
+.mobile-menu-star2 {
+  display: none;
+
+  @include lg-tablet {
+    display: block;
+    fill: #acc400;
+  }
+}
+
+.mobile-menu-star1 {
+  @include decor(20%, 70%);
+  @include decorAnimation(4s);
+
+  @include lg-mobile {
+     @include decorAnimationMobile(4s);
+  }
+}
+
+.mobile-menu-star2 {
+  @include decor(80%, 10%);
+  @include decorAnimation(8s);
+
+  @include lg-mobile {
+     @include decorAnimationMobile(8s);
   }
 }
