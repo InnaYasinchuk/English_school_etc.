@@ -76,6 +76,7 @@
     height: 100vh;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 60px;
     position: fixed;
     top: 0;
@@ -758,18 +759,18 @@
 
 .mobile-menu-star1 {
   @include decor(20%, 70%);
-  @include decorAnimation(4s);
+  @include decorAnimationMicro(4s);
 
   @include lg-mobile {
-    @include decorAnimationMobile(4s);
+    @include decorAnimation(4s);
   }
 }
 
 .mobile-menu-star2 {
   @include decor(80%, 10%);
-  @include decorAnimation(8s);
+  @include decorAnimationMicro(8s);
 
   @include lg-mobile {
-    @include decorAnimationMobile(8s);
+    @include decorAnimation(8s);
   }
 }

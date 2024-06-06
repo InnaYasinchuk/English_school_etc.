@@ -1,65 +1,389 @@
 .about {
-  margin-top: 40px;
+  margin-top: 30px;
   padding-top: 100px;
+  padding-bottom: 200px;
+
+  @include laptop {
+    margin-top: 70px;
+  }
+
+  @include tablet {
+    padding-bottom: 20px;
+  }
+
+  @include lg-mobile {
+    margin-top: 45px;
+    padding-top: 20px;
+  }
+
+  @include mobile {
+    padding-top: 10px;
+  }
 }
 
 .about__container {
   padding-left: 0px;
   padding-right: 19px;
-}
 
-.about__wrapper {
-  @include flex(0%);
-  max-width: 1420px;
-}
-
-.about__column-image {
-  max-width: 54%;
-  margin-top: 25px;
-
-  .about__img {
-    transition: 0.5s ease-in;
-
-    &:hover {
-      transform: scale(1.02);
-    }
+  @include lg-tablet {
+    padding-left: 30px;
+    padding-right: 30px;
   }
-}
 
-.about__img-text p {
-  font-size: 28px;
-  font-weight: 500;
-  color: $secondTextColor;
-  margin-top: 35px;
-  margin-left: 35px;
-}
+  @include tablet {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 
-.about__column-descr {
-  max-width: 48%;
+  @include lg-mobile {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .about__title-wrapper {
   @include flex;
   max-width: 637px;
-  margin-top: -60px;
+  margin: -45px 3.3% -70px auto;
   align-items: flex-end;
+
+  @media (max-width: 1524.98px) {
+    margin: -45px 0% 0px auto;
+  }
+
+  @include desktop {
+    max-width: 580px;
+    margin: -54px 0% 0px auto;
+  }
+
+  @include laptop {
+    max-width: 480px;
+  }
+
+  @include tablet {
+    max-width: 350px;
+    margin: -50px 0% 0px auto;
+  }
+
+  @include lg-mobile {
+    max-width: 230px;
+    margin: -23px 0% 0px auto;
+  }
+
+  @include mobile {
+    max-width: 160px;
+    margin: -9px 0% 0px auto;
+  }
 }
 
 .about__title {
-  color: $mainColor;
   margin-bottom: 15px;
+  color: $mainColor;
 }
 
-.about__title-img{
-max-width: 161px;
+.about__title-img {
+  max-width: 161px;
+
+  @media (max-width: 1524.98px) {
+    max-width: 140px;
+  }
+
+  @include desktop {
+    max-width: 120px;
+  }
+
+  @include tablet {
+    max-width: 80px;
+  }
+
+  @include lg-mobile {
+    max-width: 65px;
+  }
+
+  @include mobile {
+    max-width: 56px;
+  }
 }
 
-.about__descr-text p {
+.about__wrapper {
+  @include flex(2%);
+  max-width: 1420px;
+  position: relative;
+
+  @include desktop {
+    margin-top: 20px;
+  }
+
+  @include laptop {
+    margin-top: 40px;
+  }
+
+  @include lg-tablet {
+    flex-direction: column;
+  }
+
+  @include tablet {
+    margin-top: 20px;
+  }
+
+  @include tablet {
+    margin-top: 0px;
+  }
+}
+
+.about__column-image {
+  width: 51%;
+  @include flex;
+  flex-direction: column;
+
+  @include desktop {
+    width: 44%;
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  @include lg-tablet {
+    width: 95%;
+    align-items: flex-start;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  @include tablet {
+    width: 100%;
+  }
+}
+
+.about__img {
+  max-width: 711px;
+  padding-bottom: 20px;
+  transition: 0.5s ease-in;
+  order: 1;
+
+  @include lg-tablet {
+    width: 90%;
+    margin-top: 50px;
+
+    align-self: center;
+    order: 4;
+  }
+
+  @include tablet {
+    margin-top: 20px;
+  }
+
+  @include mobile {
+    margin-top: 5px;
+  }
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+.about__descr-title-mobile {
+  display: none;
+  order: 2;
+
+  @include lg-tablet {
+    display: block;
+    margin-top: 10px;
+
+    font-size: 32px;
+    font-weight: 500;
+    order: 2;
+  }
+
+  @include tablet {
+    font-size: 26px;
+  }
+
+  @include lg-mobile {
+    font-size: 22px;
+    margin-top: 5px;
+  }
+
+  @include lg-mobile {
+    font-size: 18px;
+  }
+
+  & span {
+    text-transform: uppercase;
+
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+}
+
+.about__descr-text-mobile {
+  display: none;
+  order: 3;
+
+  @include lg-tablet {
+    display: block;
+    margin-top: 15px;
+    order: 3;
+  }
+
+  @include mobile {
+    margin-top: 20px;
+  }
+}
+
+.about__img-text {
+  margin-top: 12px;
+  font-size: 28px;
+  font-weight: 500;
+  color: $secondTextColor;
+  text-align: center;
+  order: 4;
+
+  @include laptop {
+    margin-top: 10px;
+    font-size: 24px;
+  }
+
+  @include lg-tablet {
+    font-size: 20px;
+    order: 1;
+  }
+
+  @include lg-mobile {
+    font-size: 12px;
+  }
+
+  @include mobile {
+    font-size: 9px;
+    font-weight: 400;
+  }
+}
+
+.about__column-descr {
+  width: 48%;
+  margin-top: 85px;
+
+  @media (max-width: 1524.98px) {
+    margin-top: 20px;
+  }
+
+  @include desktop {
+    width: 56%;
+    margin-top: -10px;
+  }
+
+  @include laptop {
+    margin-top: -50px;
+  }
+
+  @include lg-tablet {
+    width: 95%;
+    margin-top: 20px;
+  }
+
+  @include tablet {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  @include lg-mobile {
+    margin-top: 0;
+  }
+}
+
+.about__descr-text {
   padding-top: 24px;
+
+  @include desktop {
+    padding-top: 18px;
+  }
+
+  @include mobile {
+    padding-top: 10px;
+  }
+
+  &:first-child {
+    @include lg-tablet {
+      display: none;
+    }
+  }
+
+  & br {
+    display: none;
+
+    @include lg-tablet {
+      display: block;
+    }
+  }
 }
 
-.star {
+// DECOR
+
+.star1,
+.star2,
+.star3 {
+  width: 72px;
+  height: 72px;
   fill: #acc400;
-  width: 100px;
-  height: 100px;
+}
+
+.star1 {
+  @include decor(-16%, 7%);
+  @include decorAnimation(8s);
+
+  @include laptop {
+    @include decor(-32%, 8%);
+  }
+
+  @include lg-tablet {
+    @include decor(-10%, 4%);
+  }
+
+  @include tablet {
+    @include decor(-8%, -1%);
+    @include decorAnimationMobile(8s);
+  }
+
+  @include mobile {
+    @include decor(-10%, -4%);
+  }
+}
+
+.star2 {
+  @include decor(119%, 23%);
+ 
+  @include laptop {
+    @include decor(120%, 12%);
+  }
+
+  @include lg-tablet {
+    @include decor(100%, 10%);
+  }
+
+  @include tablet {
+    @include decor(22%, 44%);
+    transform: scale(0.3);
+  }
+
+  @media (max-width: 343.98px) {
+    @include decor(26%, 44%);
+  }
+}
+
+.star3 {
+  @include decor(111%, 44%);
+  @include decorAnimation(6s);
+
+  @include laptop {
+    @include decor(105%, 40%);
+  }
+
+  @include lg-tablet {
+    @include decor(105%, 70%);
+  }
+
+  @include tablet {
+    @include decor(42%, 86%);
+    @include decorAnimationMobile(6s);
+  }
 }
