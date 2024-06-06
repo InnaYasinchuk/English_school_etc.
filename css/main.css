@@ -1912,6 +1912,11 @@ img {
     left: -7%;
   }
 }
+@media (max-width: 489.98px) {
+  .help__top-img1 {
+    left: -9%;
+  }
+}
 @media (max-width: 389.98px) {
   .help__top-img1 {
     top: 48%;

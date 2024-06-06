@@ -237,6 +237,10 @@
     left: -7%;
   }
 
+  @media (max-width: 489.98px) {
+    left: -9%;
+  }
+
   @include mobile {
     top: 48%;
     left: -10%;
