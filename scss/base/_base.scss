@@ -35,6 +35,10 @@ body {
   &.lock {
     overflow: hidden;
     padding-right: 25px;
+
+     @include tablet {
+     padding-right: 0px;
+   }
   }
 
    @include laptop {
@@ -57,7 +61,7 @@ body {
 section {
   max-width: 1440px;
   margin: 0 auto;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 img {
