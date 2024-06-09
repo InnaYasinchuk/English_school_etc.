@@ -2597,7 +2597,7 @@ img {
 }
 @media (max-width: 575.98px) {
   .teachers-modal-box__wrapper {
-    padding: 30px 50px;
+    padding: 30px 35px;
     border-radius: 15px;
   }
 }
@@ -2643,6 +2643,12 @@ img {
 @media (max-width: 575.98px) {
   .teachers-modal-box__close-btn {
     transform: scale(0.4);
+    top: -1%;
+    right: 0%;
+  }
+}
+@media (max-width: 389.98px) {
+  .teachers-modal-box__close-btn {
     top: -3%;
     right: -1%;
   }
