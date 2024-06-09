@@ -2560,6 +2560,11 @@ img {
   justify-content: center;
   cursor: pointer;
 }
+@media (max-width: 575.98px) {
+  .teachers-modal-box {
+    padding: 10px;
+  }
+}
 
 .teachers-modal-box.show {
   opacity: 1;
@@ -2593,11 +2598,12 @@ img {
 @media (max-width: 575.98px) {
   .teachers-modal-box__wrapper {
     padding: 30px 50px;
+    border-radius: 15px;
   }
 }
 @media (max-width: 389.98px) {
   .teachers-modal-box__wrapper {
-    padding: 25px 40px;
+    padding: 25px 25px;
   }
 }
 
@@ -2637,13 +2643,8 @@ img {
 @media (max-width: 575.98px) {
   .teachers-modal-box__close-btn {
     transform: scale(0.4);
-    top: 0%;
-  }
-}
-@media (max-width: 389.98px) {
-  .teachers-modal-box__close-btn {
-    transform: scale(0.3);
-    top: 0%;
+    top: -3%;
+    right: -1%;
   }
 }
 

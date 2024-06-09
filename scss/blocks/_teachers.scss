@@ -448,6 +448,10 @@
   @include flex;
   justify-content: center;
   cursor: pointer;
+
+  @include lg-mobile {
+    padding: 10px;
+  }
 }
 
 .teachers-modal-box.show {
@@ -478,10 +482,11 @@
 
   @include lg-mobile {
     padding: 30px 50px;
+    border-radius: $borderRadius;
   }
 
   @include mobile {
-    padding: 25px 40px;
+    padding: 25px 25px;
   }
 }
 
@@ -515,12 +520,8 @@
 
   @include lg-mobile {
     transform: scale(0.4);
-    top: 0%;
-  }
-
-  @include mobile {
-    transform: scale(0.3);
-    top: 0%;
+    top: -3%;
+    right: -1%;
   }
 }
 
