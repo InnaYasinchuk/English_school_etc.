@@ -1,33 +1,107 @@
 .teachers {
-  padding-top: 0px;
+  margin-top: -200px;
+  position: relative;
+  z-index: 2;
 }
 
 .teachers__container {
   padding-left: 40px;
   padding-right: 0px;
+
+  @include lg-tablet {
+    padding-left: 30px;
+  }
+
+  @include tablet {
+    padding-left: 20px;
+  }
+
+  @include lg-mobile {
+    padding-left: 15px;
+  }
 }
 
 .teachers__content {
+  max-width: 1320px;
   display: flex;
   flex-direction: column;
-  padding-right: 118px;
+  padding-right: 40px;
+
+  @include lg-tablet {
+    padding-right: 30px;
+  }
+
+  @include tablet {
+    padding-right: 20px;
+  }
+
+  @include lg-mobile {
+    padding-right: 15px;
+  }
 }
 
 .teachers__title-wrapper {
   @include flex(19px);
   align-self: flex-end;
   align-items: flex-end;
+
+  @include lg-mobile {
+    gap: 10px;
+  }
+
+  @include mobile {
+    gap: 5px;
+  }
 }
 
 .teachers__title {
   color: $mainColor;
 }
 
+.teachers__title-img {
+  max-width: 135px;
+
+  @include laptop {
+    max-width: 120px;
+  }
+
+  @include tablet {
+    max-width: 80px;
+  }
+
+  @include lg-mobile {
+    max-width: 65px;
+  }
+
+  @include mobile {
+    max-width: 41px;
+  }
+}
+
 .teachers__descr1 {
-  margin-top: 60px;
   max-width: 1282px;
+  margin-top: 60px;
   font-size: 28px;
   font-weight: 500;
+
+  @include laptop {
+    margin-top: 40px;
+    font-size: 24px;
+  }
+
+  @include tablet {
+    margin-top: 25px;
+    font-size: 20px;
+  }
+
+  @include lg-mobile {
+    font-size: 14px;
+  }
+
+  @include mobile {
+    margin-top: 19px;
+    font-size: 12px;
+  }
 }
 
 .teachers__descr2 {
@@ -37,28 +111,133 @@
   font-size: 28px;
   position: relative;
 
+  @include laptop {
+    font-size: 24px;
+  }
+
+  @include lg-tablet {
+    gap: 5px;
+    font-size: 22px;
+  }
+
+  @include tablet {
+    margin-top: 25px;
+    flex-direction: column;
+    gap: 90px;
+
+    font-size: 20px;
+  }
+
+  @include lg-mobile {
+    margin-top: 10px;
+    gap: 60px;
+    font-size: 14px;
+  }
+
+  @include mobile {
+    gap: 50px;
+    font-size: 12px;
+  }
+
+  @media (max-width: 346.98px) {
+    gap: 60px;
+  }
+
   &::before {
+    display: none;
+    content: url("./../../img/teachers/teachers-btn-flower.svg");
+    position: absolute;
+    z-index: -1;
+
+    @include tablet {
+      display: block;
+      transform: scale(1.4);
+      bottom: 51px;
+      left: 35px;
+    }
+
+    @include lg-mobile {
+      transform: scale(1);
+      bottom: 32px;
+      left: 31px;
+    }
+
+    @include mobile {
+      bottom: 26px;
+      left: 0px;
+    }
+  }
+
+  &::after {
     content: url("./../../img/teachers/teachers-man.webp");
     position: absolute;
     bottom: 66px;
     right: 28px;
+
+    @include laptop {
+      transform: scale(0.8);
+      bottom: 53px;
+    }
+
+    @include lg-tablet {
+      bottom: 38px;
+    }
+
+    @include tablet {
+      transform: scale(0.7);
+      bottom: 35px;
+      right: 48px;
+    }
+
+    @include lg-mobile {
+      transform: scale(0.5);
+      bottom: 10px;
+      right: 20px;
+    }
+
+    @include mobile {
+      bottom: 4px;
+      right: -3px;
+    }
   }
 }
 
 .teachers__button {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
   padding: 20px 69px;
   font-size: 30px;
   font-weight: 600;
   letter-spacing: 1px;
-  text-transform: uppercase;
   color: $whiteColor;
   border-radius: $borderRadiusExtra;
   background-color: $mainColor;
-  cursor: pointer;
-  transition: $transition;
+
+  @include laptop {
+    font-size: 26px;
+  }
+
+  @include lg-tablet {
+    padding: 16px 40px;
+    font-size: 20px;
+  }
+
+  @include tablet {
+    width: 90%;
+    border-radius: $borderRadiusMobile;
+    align-self: center;
+  }
+
+  @include lg-mobile {
+    padding: 11px 0px;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+
+  @include mobile {
+    width: 100%;
+    padding: 8px 0px;
+  }
 
   &:hover,
   &:focus {
@@ -71,50 +250,98 @@
   }
 }
 
+// SLIDER
+
 .teachers__slider {
   margin-top: 96px;
-}
 
-// .swiper.teachers__swiper {
-//   margin: 0;
-//   margin-top: 50px;
-//   width: 100%;
-//   height: 680px;
-//   display: flex;
-//   justify-content: space-between;
-// }
+  @include laptop {
+    margin-top: 70px;
+  }
+
+  @include tablet {
+    margin-top: 50px;
+  }
+
+  @include lg-mobile {
+    margin-top: 30px;
+  }
+}
 
 .teachers__swiper .swiper-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
   margin-bottom: 50px;
+
+  @include lg-mobile {
+    margin-bottom: 40px;
+  }
 }
 
 .teachers__swiper .swiper-slide {
+  max-width: 450px;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 450px;
-  height: auto;
+  position: relative;
   border: 1px solid $borderColor;
   padding: 20px 10px 22px;
   border-radius: 5px;
   text-align: center;
   color: $swiperTextColor;
+  overflow: hidden;
   cursor: grab;
   &:active {
     cursor: grabbing;
   }
+
+  @include tablet {
+    padding: 16px 10px 16px;
+  }
+
+  @include lg-mobile {
+    padding: 14px 10px 14px;
+  }
 }
 
-.teachers__slide-img-wrapper{
-  position: relative;
-   max-width: 310px;
+.teachers__slide-img-wrapper {
+  max-width: 310px;
   max-height: 356px;
+  position: relative;
+
+  @include lg-tablet {
+    max-width: 280px;
+    height: auto;
+  }
+
+  @include tablet {
+    max-width: 220px;
+  }
+
+  @media (max-width: 675.98px) {
+    max-width: 200px;
+  }
+
+  @include lg-mobile {
+    width: 180px;
+    height: 180px;
+  }
+
+  @include mobile {
+    width: 171px;
+    height: 171px;
+  }
 }
 
-.teachers__slide-btn-svg{
+.teachers__slide-img {
+  max-width: 310px;
+  max-height: 356px;
+  border-radius: $borderRadius;
+}
+
+.teachers__slide-btn-svg {
   width: 65px;
   height: 65px;
   position: absolute;
@@ -125,33 +352,63 @@
   cursor: pointer;
   transition: $transition;
 
-  &:hover{
+  &:hover {
     fill: $secondTextColor;
+  }
+
+  @include tablet {
+    transform: scale(0.8);
+    top: 37%;
+    left: 34%;
+  }
+
+  @include lg-mobile {
+    transform: scale(0.5);
+    top: 32%;
+    left: 32%;
   }
 }
 
-.teachers__slide-img {
-  max-width: 310px;
-  max-height: 356px;
-  border-radius: $borderRadius;
-}
-
-
-
-.teachers__slide-title{
+.teachers__slide-title {
   margin-top: 5px;
   font-size: 30px;
   font-weight: 500;
+
+  @include lg-tablet {
+    font-size: 26px;
+  }
+
+  @include tablet {
+    font-size: 20px;
+  }
+
+  @include lg-mobile {
+    font-size: 17px;
+  }
 }
 
-.teachers__slide-text:first-child p{
+.teachers__slide-text {
+  font-size: 22px;
+
+  @include lg-tablet {
+    font-size: 18px;
+  }
+
+  @include tablet {
+    font-size: 16px;
+  }
+
+  @include lg-mobile {
+    font-size: 12px;
+  }
+}
+
+.teachers__slide-text p:first-child {
   margin-top: 5px;
-  font-size: 22px;
 }
 
-.teachers__slide-text:last-child p{
+.teachers__slide-text p:last-child {
   margin-top: 8px;
-  font-size: 22px;
 }
 
 .teachers__swiper .swiper-pagination-bullet {
@@ -175,31 +432,30 @@
   }
 }
 
-.teachers-modal-box{
+// MODAL VIDEO
+
+.teachers-modal-box {
   position: fixed;
   padding: 15px;
   z-index: 99;
- inset: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(60, 90, 76, 0.6) ;
+  background-color: rgba(60, 90, 76, 0.6);
   opacity: 0;
   visibility: hidden;
-  transition: .7s ease-in-out;
+  transition: 0.7s ease-in-out;
   @include flex;
   justify-content: center;
   cursor: pointer;
-  
- 
 }
 
-.teachers-modal-box.show{
+.teachers-modal-box.show {
   opacity: 1;
   visibility: visible;
 }
 
-.teachers-modal-box__wrapper{
-  
+.teachers-modal-box__wrapper {
   max-width: 1100px;
   background: $gradientColorVideo;
   border-radius: $borderRadiusExtra;
@@ -207,67 +463,141 @@
   padding: 115px 139px;
   z-index: 999;
   cursor: default;
+
+  @include laptop {
+    padding: 100px 120px;
+  }
+
+  @include lg-tablet {
+    padding: 80px 100px;
+  }
+
+  @include tablet {
+    padding: 50px 70px;
+  }
+
+  @include lg-mobile {
+    padding: 30px 50px;
+  }
+
+  @include mobile {
+    padding: 25px 40px;
+  }
 }
 
 .teachers-modal-box__video {
-    width: 100%;
-    height: auto;
-    border-radius: $borderRadius;
-    cursor: pointer;
-    }
+  width: 100%;
+  height: auto;
+  border-radius: $borderRadius;
+  cursor: pointer;
+}
 
-    .teachers-modal-box__close-btn{
-      width: 45px;
-      height: 45px;
-      background: transparent;
-      padding: 5px;
-      @include flex;
-      cursor: pointer;
-      position: absolute;
-      top: 6%;
-      right: 5%;
-    }
+.teachers-modal-box__close-btn {
+  width: 45px;
+  height: 45px;
+  background: transparent;
+  padding: 5px;
+  @include flex;
+  cursor: pointer;
+  position: absolute;
+  top: 6%;
+  right: 5%;
 
-.teachers-modal-box__close-btn-svg{
-  fill: #42816C;
+  @include lg-tablet {
+    transform: scale(0.7);
+  }
+
+  @include tablet {
+    transform: scale(0.5);
+    top: 3%;
+    right: 3%;
+  }
+
+  @include lg-mobile {
+    transform: scale(0.4);
+    top: 0%;
+  }
+
+  @include mobile {
+    transform: scale(0.3);
+    top: 0%;
+  }
+}
+
+.teachers-modal-box__close-btn-svg {
+  fill: #42816c;
   transition: $transition;
 
-  &:hover{
+  &:hover {
     fill: #f99576;
   }
 }
-    
 
-// .teachers__video{
-//  border-radius: $borderRadius;
-// }
+// DECOR
 
-// .teachers__modal-box{
-//   display: block;
-//   position: fixed;
-//   width: 0%;
-//   height: 0%;
-//   opacity: 0;
-//   visibility: hidden;
+.teachers__swiper .swiper-slide.slide1::before,
+.teachers__swiper .swiper-slide.slide1::after,
+.teachers__swiper .swiper-slide.slide3::before,
+.teachers__swiper .swiper-slide.slide3::after {
+  position: absolute;
+  bottom: -1%;
 
-// }
+  @include lg-tablet {
+    transform: scale(0.8);
+    bottom: -2.5%;
+  }
 
-// .teachers__modal-box-wrapper{
-// position: absolute;
-// width: 0%;
-//   height: 0%;
-//   overflow: hidden;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
+  @include tablet {
+    transform: scale(0.7);
+    bottom: -3.5%;
+  }
 
-// }
+  @include lg-mobile {
+    transform: scale(0.5);
+    bottom: -6.5%;
+  }
+}
 
-// .teachers__modal-box.show{
-//   opacity: 1;
-//   visibility: visible;
-//   width: 100%;
-//   height: 100%;
-// }
+.teachers__swiper .swiper-slide.slide1::before {
+  content: url(./../../img/teachers/slider-decor1.webp);
+  left: 5%;
 
+  @include lg-mobile {
+    left: -2%;
+  }
+}
 
+.teachers__swiper .swiper-slide.slide1::after {
+  content: url(./../../img/teachers/slider-decor1.webp);
+  transform: scaleX(-1);
+  right: 5%;
+
+  @include lg-tablet {
+    transform: scaleX(-1) scale(0.8);
+  }
+
+  @include tablet {
+    transform: scaleX(-1) scale(0.7);
+  }
+
+  @include lg-mobile {
+    transform: scaleX(-1) scale(0.5);
+    right: -2%;
+  }
+}
+
+.teachers__swiper .swiper-slide.slide3::before {
+  content: url(./../../img/teachers/slider-decor2.webp);
+  left: 5%;
+  @include lg-mobile {
+    left: -2%;
+  }
+}
+
+.teachers__swiper .swiper-slide.slide3::after {
+  content: url(./../../img/teachers/slider-decor2.webp);
+  right: 5%;
+  @include lg-mobile {
+    right: -2%;
+  }
+}

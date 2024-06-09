@@ -5,11 +5,11 @@
   position: relative;
 
   @include lg-tablet {
-    margin-top: -290px;
+    margin-top: -320px;
   }
 
   @include tablet {
-    margin-top: -150px;
+    margin-top: -200px;
     padding-top: 300px;
     padding-bottom: 270px;
   }
@@ -22,7 +22,7 @@
   @include mobile {
     margin-top: -50px;
     padding-top: 30px;
-  }
+   }
 
   &::before,
   &::after {
@@ -37,15 +37,25 @@
     top: 173px;
     left: 0;
 
+    @include lg-tablet{
+       top: 210px;
+    }
+
+    @include tablet{
+       top: 190px;
+    }
+
     @include lg-mobile {
       content: url("./../../img/help/help-bgr-before-mobile.webp");
-      top: 71px;
+      top: 40px;
       left: -40px;
     }
 
-    @include mobile {
+    
+     @media (max-width: 419.98px) {
       top: 92px;
     }
+
   }
 
   &::after {
@@ -53,14 +63,22 @@
     bottom: 190px;
     left: 0;
 
+    @media (max-width: 674.98px) {
+   bottom: 209px;
+  }
+
     @include lg-mobile {
       content: url("./../../img/help/help-bgr-after-mobile.webp");
-      top: 308px;
+      top: 244px;
       left: -40px;
     }
 
     @media (max-width: 454.98px) {
-      top: 350px;
+      top: 300px;
+    }
+
+     @media (max-width: 419.98px) {
+      top: 354px;
     }
 
     @include mobile {
@@ -82,6 +100,11 @@
 
   @include tablet {
     margin-top: 50px;
+  }
+
+  
+    @media (max-width: 674.98px) {
+    padding-bottom: 0px;
   }
 
   @include lg-mobile {
@@ -109,8 +132,8 @@
 
   @include tablet {
     padding-left: 120px;
-    padding-right: 30px;
-    font-size: 28px;
+    padding-right: 50px;
+    font-size: 26px;
   }
 
   @include lg-mobile {
