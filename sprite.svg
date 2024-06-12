@@ -34,6 +34,13 @@
 
 
 
+<!-- TARIFFS -->
+
+<symbol  width="16" height="15" fill="none">
+  <g id='arrow' clip-path="url(#a)"><rect width="15" height="16" x="16" fill="#DFFEE0" rx="2" transform="rotate(90 16 0)"/><path fill="#212019" d="M12.938 6.75 8.08 2.197l1.131-1.06L16 7.5l-.566.53-6.222 5.834-1.131-1.06 4.857-4.554H0v-1.5h12.938Z"/></g><defs><clipPath id="a"><rect width="15" height="16" x="16" fill="#fff" rx="2" transform="rotate(90 16 0)"/></clipPath></defs>
+</symbol>
+
+
 
 
 

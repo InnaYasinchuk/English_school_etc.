@@ -1,90 +1,381 @@
 .tariffs {
   margin-top: 130px;
+
+  @include laptop {
+    margin-top: 100px;
+  }
+
+  @include tablet {
+    margin-top: 70px;
+  }
+
+  @include lg-mobile {
+    margin-top: 40px;
+  }
 }
 
 .tariffs__container {
   padding-left: 41px;
-  padding-right: 41px;
+
+  @include lg-tablet {
+    padding-left: 30px;
+  }
+
+  @include tablet {
+    padding-left: 20px;
+  }
+
+  @include lg-mobile {
+    padding-left: 15px;
+  }
 }
 
-.tariffs__cards-wrapper {
-  @include flex(2%);
-  align-items: end;
+.tariffs__wrapper {
+  @include flex;
+  flex-direction: column;
+}
+
+.tariffs__content {
+  margin-right: 40px;
+  margin-left: 29%;
+  @include flex(60px);
+  flex-direction: column;
+  align-self: flex-end;
+  z-index: 2;
+
+  @media (max-width: 1429.98px) {
+    margin-left: 34%;
+  }
+
+  @include laptop {
+    margin-left: 350px;
+    gap: 35px;
+  }
+
+  @include lg-tablet {
+    margin-left: 20px;
+    gap: 20px;
+  }
+
+  @include lg-mobile {
+    margin-left: 0px;
+    margin-right: 15px;
+    gap: 15px;
+  }
+}
+
+.tariffs__title-wrapper {
+  margin-right: 78px;
+  @include flex(24px);
+  align-self: flex-end;
+
+  @include laptop {
+    gap: 10px;
+  }
+
+  @include lg-tablet {
+    margin-right: 10px;
+  }
+
+  @include lg-mobile {
+    margin-right: 0px;
+    gap: 0px;
+    align-self: center;
+    align-items: flex-end;
+  }
+}
+
+.tariffs__title-img {
+  max-width: 129px;
+  height: auto;
+
+  @include laptop {
+    max-width: 110px;
+  }
+
+  @include lg-mobile {
+    max-width: 80px;
+  }
+
+  @include mobile {
+    max-width: 62px;
+  }
+}
+
+.tariffs__title {
+  color: $accentColor;
+
+  @include lg-mobile {
+    margin-bottom: 8px;
+  }
+}
+
+// SLIDER
+
+.tariffs__slider {
+  width: 100%;
+  margin-top: -160px;
+  @include flex;
+  position: relative;
+
+  @media (max-width: 1549.98px) {
+    margin-top: -100px;
+  }
+
+  @include laptop {
+    margin-top: -100px;
+  }
+
+  @include lg-tablet {
+    margin-top: 30px;
+  }
+
+  @include lg-mobile {
+    margin-top: 20px;
+  }
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
+}
+
+.swiper__navigation-wrapper {
+  display: none;
+  position: absolute;
+  top: 19%;
+  right: 3%;
+
+  @media (max-width: 1549.98px) {
+    display: block;
+  }
+
+  @include laptop {
+    top: 20%;
+  }
+
+  @include lg-tablet {
+    top: 14%;
+  }
+
+  @include lg-mobile {
+    top: 10%;
+    right: 0%;
+  }
+}
+
+.swiper__navigation-inner {
+  width: 80px;
+  height: 30px;
+  margin-right: 10px;
+  margin-left: auto;
+  @include flex(10px);
+  justify-content: center;
+  position: relative;
+
+  @include lg-mobile {
+    width: 65px;
+    height: 15px;
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 24px;
+  height: 22px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.swiper-button-prev {
+  @include decor(56%, 0);
+  transform: scale(1.5) rotate(-180deg);
+
+  @include lg-mobile {
+    transform: scale(1) rotate(-180deg);
+  }
+}
+
+.swiper-button-next {
+  top: 92%;
+  right: 0;
+  transform: scale(1.5);
+
+  @include lg-mobile {
+    top: 102%;
+    transform: scale(1);
+  }
+}
+
+.tariffs__swiper .swiper-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.tariffs__swiper .swiper-slide {
+  @include flex;
+  flex-direction: column;
+  cursor: grab;
+
+  &:active {
+    cursor: grabbing;
+  }
 }
 
 .accent-card {
-  @include flex;
-  flex-direction: column;
   max-width: 343px;
+  margin-right: 35px !important;
   padding: 19px 27px 15px;
+
   border-radius: $borderRadiusExtra;
   background-color: $accentColor;
+
+  @include laptop {
+    max-width: 310px;
+    margin-right: 20px !important;
+    padding: 19px 20px 15px;
+  }
+
+  @include lg-tablet {
+    max-width: 290px;
+    margin-right: 15 !important;
+    padding: 15px 20px 15px;
+  }
+
+  @include tablet {
+    max-width: 250px;
+  }
+
+  @include lg-mobile {
+    max-width: 190px;
+    margin-right: 10px !important;
+    padding: 6px 14px 8px;
+    border-radius: $borderRadiusMobile;
+  }
 }
 
 .accent-card__flower {
-  max-width: 236px;
+  width: 236px;
   height: auto;
   margin-bottom: 13px;
+
+  @include lg-tablet {
+    width: 200px;
+    margin-bottom: 3px;
+  }
+
+  @include tablet {
+    width: 170px;
+  }
+
+  @include lg-mobile {
+    width: 130px;
+    margin-bottom: 0px;
+  }
 }
 
 .card-inner {
   max-width: 290px;
   margin-top: 30px;
   padding: 28px 16px 16px;
+  @include flex;
+  flex-direction: column;
   text-align: center;
   background-color: $whiteColor;
   border-radius: $borderRadius;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+  @include laptop {
+    max-width: 244px;
+    margin-top: 10px;
+  }
+
+  @include tablet {
+    max-width: 210px;
+    padding: 20px 12px 15px;
+  }
+
+  @include lg-mobile {
+    width: 162px;
+    padding: 14px 12px;
+    border-radius: $borderRadiusMobile;
+  }
 }
 
-.last-card {
-  padding: 28px 8px 20px;
-}
+.accent-card .card-inner {
+  @include laptop {
+    width: 100%;
+    padding: 28px 10px 16px;
+  }
 
-.tariffs__simple-cards {
-  @include flex(2%);
-}
-
-.card-img {
-  border-radius: 130px;
-}
-
-.accent-card__img {
-  margin-bottom: 15px;
-  margin-top: 21px;
-}
-
-.simple-card__img {
-  margin-bottom: 8px;
-}
-
-.simple-card__img1,
-.simple-card__img2 {
-  width: 258px;
-  margin-top: 23px;
-}
-
-.simple-card__img3 {
-  width: 274px;
-  margin-top: 21px;
+  @include lg-mobile {
+    margin-top: 6px;
+    padding: 14px 10px;
+  }
 }
 
 .card-price {
   font-size: 30px;
   margin-bottom: 7px;
+
+  @include laptop {
+    font-size: 28px;
+  }
+
+  @include tablet {
+    font-size: 24px;
+  }
+
+  @include lg-mobile {
+    font-size: 18px;
+    margin-bottom: 2px;
+  }
+}
+
+.accent-card__img {
+  width: 258px;
+  height: auto;
+  margin-top: 21px;
+  margin-bottom: 15px;
+  border-radius: 130px;
+
+  @include laptop {
+    width: 200px;
+    margin-top: 18px;
+    margin-bottom: 10px;
+  }
+
+  @include tablet {
+    width: 150px;
+  }
+
+  @include lg-mobile {
+    width: 104px;
+    margin-top: 10px;
+    margin-bottom: 3px;
+  }
 }
 
 .card-lessons {
   font-size: 33px;
   font-weight: 600;
+
+  @include laptop {
+    font-size: 28px;
+  }
+
+  @include tablet {
+    font-size: 24px;
+  }
+
+  @include lg-mobile {
+    font-size: 18px;
+  }
 }
 
 .accent-card__lessons {
   color: $cardLessonColor;
-}
-
-.simple-card__lessons {
-  color: $mainColor;
 }
 
 .accent-card__lessons-crossed-out {
@@ -94,51 +385,150 @@
   color: $cardLessonColor;
   position: relative;
 
+  @include laptop {
+    font-size: 26px;
+  }
+
+  @include tablet {
+    font-size: 22px;
+  }
+
+  @include lg-mobile {
+    margin-top: 0px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
   &::before {
     content: "";
+    width: 100%;
+    height: 2px;
     position: absolute;
     left: 50%;
-    height: 2px;
-    width: 85%;
-    background-color: currentColor;
     top: 55%;
     transform: translateX(-50%);
+    background-color: currentColor;
+
+    @include lg-mobile {
+      top: 53%;
+    }
   }
 }
 
 .card-btn {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  padding: 13px 51px;
   margin-top: 29px;
+  padding: 13px 51px;
+
   font-size: 25px;
   font-weight: 600;
-  text-transform: uppercase;
   border-radius: $borderRadius;
-  cursor: pointer;
-  transition: $transition;
+
+  @include laptop {
+    padding: 13px 41px;
+    font-size: 22px;
+  }
+
+  @include tablet {
+    margin-top: 20px;
+    padding: 13px 30px;
+    font-size: 20px;
+  }
+
+  @include lg-mobile {
+    margin-top: 10px;
+    padding: 6px 32px;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: none;
+    border-radius: $borderRadiusMobile;
+  }
 }
 
 .accent-card__btn {
   color: $secondTextColor;
   background-color: $whiteColor;
 
-  // &:hover,
-  // &:focus {
-  //   box-shadow: 0 4px 4px 0 rgba(255, 212, 42, 0.6);
-  //   outline: none;
-  // }
+  &:hover,
+  &:focus {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    outline: none;
+  }
 
-  // &:active {
-  //   background-color: $accentBgrColor;
-  // }
+  &:active {
+    background: $gradientBtn;
+  }
+}
+
+.simple-card {
+  max-width: 290px;
+
+  @include laptop {
+    max-width: 244px;
+  }
+
+  @include tablet {
+    max-width: 210px;
+  }
+
+  @include lg-mobile {
+    width: 162px;
+  }
+}
+
+.simple-card__img {
+  margin-bottom: 8px;
+  border-radius: 130px;
+}
+
+.simple-card__img1,
+.simple-card__img2 {
+  width: 258px;
+  margin-top: 23px;
+
+  @include laptop {
+    width: 200px;
+    margin-top: 18px;
+  }
+
+  @include tablet {
+    width: 150px;
+  }
+
+  @include lg-mobile {
+    width: 117px;
+  }
+}
+
+.simple-card__img3 {
+  width: 274px;
+  margin-top: 21px;
+
+  @include laptop {
+    width: 218px;
+    margin-top: 18px;
+  }
+
+  @include tablet {
+    width: 158px;
+  }
+
+  @include lg-mobile {
+    width: 135px;
+  }
+}
+
+.simple-card__lessons {
+  color: $mainColor;
 }
 
 .simple-card__btn {
+  margin-bottom: 15px;
   background-color: $mainColor;
   color: $whiteColor;
-  margin-bottom: 15px;
+
+  @include lg-mobile {
+    margin-bottom: 8px;
+  }
 
   &:hover,
   &:focus {
@@ -151,24 +541,18 @@
   }
 }
 
-.tariffs__title-content {
-  @include flex(60px);
-  flex-direction: column;
-  max-width: 976px;
-}
+.last-card {
+  padding: 27px 8px 15px;
 
-.tariffs__title-wrapper {
-  @include flex(24px);
-  align-self: flex-end;
-  align-items: flex-end;
-  margin-right: 78px;
-}
+  @include laptop {
+    padding: 27px 8px 13px;
+  }
 
-.tariffs__title-img {
-  max-width: 129px;
-  height: auto;
-}
+  @include tablet {
+    padding: 20px;
+  }
 
-.tariffs__title {
-  color: $accentColor;
+  @include lg-mobile {
+    padding: 14px 12px 8px;
+  }
 }

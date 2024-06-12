@@ -123,6 +123,41 @@ window.onclick = function (e) {
   }
 };
 
+// TARIFFS SLIDER
+
+const tariffsSwiper = new Swiper("#tariffsSwiper", {
+  slidesPerView: "auto",
+  spaceBetween: 10,
+  loop: false,
+  speed: 1700,
+  centeredSlidesBounds: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    320: {
+      spaceBetween: 10,
+    },
+    576: {
+      spaceBetween: 15,
+    },
+    992: {
+      spaceBetween: 20,
+    },
+    1050: {
+      spaceBetween: 25,
+    },
+    1200: {
+      spaceBetween: 45,
+    },
+    1400: {
+      spaceBetween: 55,
+    },
+  },
+});
+
+
 
 // QUESTIONS
 

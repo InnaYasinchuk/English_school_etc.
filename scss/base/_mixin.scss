@@ -31,8 +31,7 @@
   position: absolute;
     top: $top;
    left: $left;
-  // fill-opacity: $fill-opasity;
-  transition: transform 1s ease-in-out;
+    transition: transform 1s ease-in-out;
 }
 
 @mixin decorAnimation($time: 6s) {
