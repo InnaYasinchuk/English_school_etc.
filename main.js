@@ -157,47 +157,61 @@ const tariffsSwiper = new Swiper("#tariffsSwiper", {
   },
 });
 
-
-
 // QUESTIONS
 
-let accordionTitle = document.querySelectorAll(".accordion-item-title");
+let accordionTitle = document.querySelectorAll(".accordion__item-title");
+let accordionItem = document.querySelectorAll(".accordion__item");
 
 accordionTitle.forEach((el, index) => {
   el.addEventListener("click", () => {
     let accordionContent = el.nextElementSibling;
-    let faqClose = document.querySelectorAll(".faq-close")[index];
+    let faqClose = document.querySelectorAll(".accordion__item-close")[index];
     let windowWidth = window.innerWidth;
 
     if (accordionContent.style.maxHeight) {
-      document.querySelectorAll(".accordion-item-content").forEach((el) => {
+      document.querySelectorAll(".accordion__item-content").forEach((el) => {
         el.style.maxHeight = null;
         el.style.marginTop = "0px";
-      });
-      document.querySelectorAll(".faq-close").forEach((el) => {
-        el.style.transform = `scale(${getScaleValueFaqClose(
-          windowWidth
-        )}) rotate(0deg)`;
-        el.style.fill = "#007AFF";
-      });
-    } else {
-      document.querySelectorAll(".accordion-item-content").forEach((el) => {
-        el.style.maxHeight = null;
-        el.style.marginTop = "0px";
-      });
-      document.querySelectorAll(".faq-close").forEach((el) => {
-        el.style.transform = `scale(${getScaleValueFaqClose(
-          windowWidth
-        )}) rotate(0deg)`;
-        el.style.fill = "#007AFF";
+        el.classList.remove("open");
       });
 
-      accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+      document.querySelectorAll(".accordion__item-title").forEach((el) => {
+        el.style.color = "#fff";
+      });
+
+      document.querySelectorAll(".accordion__item-close").forEach((el) => {
+        el.style.transform = `scale(${getScaleValueFaqClose(
+          windowWidth
+        )}) rotate(0deg)`;
+        el.style.stroke = "#fff";
+      });
+    } else {
+      document.querySelectorAll(".accordion__item-content").forEach((el) => {
+        el.style.maxHeight = null;
+        el.style.marginTop = "0px";
+        el.classList.remove("open");
+      });
+
+      document.querySelectorAll(".accordion__item-title").forEach((el) => {
+        el.style.color = "#fff";
+      });
+
+      document.querySelectorAll(".accordion__item-close").forEach((el) => {
+        el.style.transform = `scale(${getScaleValueFaqClose(
+          windowWidth
+        )}) rotate(0deg)`;
+        el.style.stroke = "#fff";
+      });
+
+      accordionContent.style.maxHeight =
+        accordionContent.scrollHeight + 20 + "px";
       accordionContent.style.marginTop = `${getMarginTopValue(windowWidth)}px`;
       faqClose.style.transform = `scale(${getScaleValueFaqClose(
         windowWidth
       )}) rotate(45deg)`;
-      faqClose.style.fill = "#F0BB75";
+      faqClose.style.stroke = "#212019";
+      accordionContent.classList.add("open");
+      el.style.color = "#212019";
     }
   });
 });
@@ -224,13 +238,13 @@ function getMarginTopValue(width) {
   } else if (width > 575.98 && width <= 767.98) {
     return 10;
   } else if (width > 767.98 && width <= 991.98) {
-    return 15;
-  } else {
     return 20;
+  } else {
+    return 30;
   }
 }
 
-//  TEACHERS SWIPER
+//  REVIEWS SWIPER
 
 document.addEventListener("DOMContentLoaded", function () {
   const reviewsSwiperTop = new Swiper("#reviewsSwiperTop", {

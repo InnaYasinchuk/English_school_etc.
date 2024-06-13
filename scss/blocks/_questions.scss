@@ -1,10 +1,34 @@
 .questions {
   margin-top: 130px;
+
+  @include laptop {
+    margin-top: 100px;
+  }
+
+  @include tablet {
+    margin-top: 70px;
+  }
+
+  @include lg-mobile {
+    margin-top: 50px;
+  }
 }
 
 .questions__container {
   padding-left: 30px;
   padding-right: 30px;
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @include lg-mobile {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .questions__title-wrapper {
@@ -12,6 +36,11 @@
   justify-content: center;
   align-items: flex-end;
   gap: 11px;
+
+  @include lg-mobile {
+    gap: 5px;
+    align-self: flex-end;
+  }
 }
 
 .questions__title {
@@ -20,119 +49,258 @@
 
 .questions__title-img {
   max-width: 99px;
+
+  @include laptop {
+    max-width: 90px;
+  }
+
+  @include tablet {
+    max-width: 70px;
+  }
+
+  @include lg-mobile {
+    max-width: 55px;
+  }
+
+  @include mobile {
+    max-width: 40px;
+  }
 }
 
 .accordion {
- margin-top: 70px;
+  margin-top: 70px;
   list-style: none;
 
-  // @include tablet {
-  //   padding: 20px 25px;
-  // }
+  @include laptop {
+    margin-top: 55px;
+  }
 
-  // @include lg-mobile {
-  //   padding: 6px 0px;
-  // }
+  @include tablet {
+    margin-top: 40px;
+  }
+
+  @include lg-mobile {
+    margin-top: 20px;
+  }
 }
 
-.accordion-item {
-  padding: 31px 30px;
+.accordion__item {
+  margin-bottom: 30px;
+  padding: 31px 100px 31px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: relative;
   background: $gradientColor;
   border-radius: $borderRadiusExtra;
-  margin-bottom: 30px;
 
-  // @include lg-tablet {
-  //   padding: 20px 30px;
-  // }
+  @include laptop {
+    margin-bottom: 25px;
+    padding: 25px 70px 25px 0;
+  }
 
-  // @include tablet {
-  //   padding: 15px 20px;
-  // }
+  @media (max-width: 894.98px) {
+    min-height: 102px;
+    padding: 20px 70px 20px 0;
+  }
 
-  // @include lg-mobile {
-  //   padding: 10px 20px;
-  // }
+  @include tablet {
+    min-height: 85px;
+    padding: 15px 50px 15px 0;
+  }
+
+  @include lg-mobile {
+    margin-bottom: 15px;
+    padding: 9px 30px 9px 0;
+    min-height: 65px;
+    border-radius: $borderRadiusMobile;
+  }
+
+  @include mobile {
+    min-height: 60px;
+  }
 }
 
-.faq-close {
-  fill: $whiteColor;
-  position: absolute;
-  top: 37px;
-  right: 85px;
-  transform: scale(1) rotate(0deg);
-  transition: $transition;
-
-  // @include lg-tablet {
-  //   transform: scale(0.8) rotate(0deg);
-  //   right: 30px;
-  // }
-
-  // @include tablet {
-  //   transform: scale(0.6) rotate(0deg);
-  //   right: 10px;
-  //   top: 11px;
-  // }
-  // @include lg-mobile {
-  //   transform: scale(0.5) rotate(0deg);
-  //   right: 10px;
-  //   top: 1px;
-  // }
-  // @include mobile {
-  //   transform: scale(0.45) rotate(0deg);
-  //   top: 0;
-  // }
-}
-
-.accordion-item-title {
+.accordion__item-title {
+  width: 95%;
+  padding-left: 30px;
   font-size: 30px;
   font-weight: 600;
   color: $whiteColor;
   cursor: pointer;
   transition: $transition;
-  width: 87%;
 
-  // @include lg-tablet {
-  //   font-size: 28px;
-  // }
+  @include laptop {
+    font-size: 26px;
+  }
 
-  // @include tablet {
-  //   font-size: 22px;
-  // }
+  @include tablet {
+    font-size: 22px;
+  }
 
-  // @include lg-mobile {
-  //   font-size: 16px;
-  // }
+  @include lg-mobile {
+    padding-left: 15px;
+    font-size: 17px;
 
-  // @include mobile {
-  //   font-size: 14px;
-  // }
+    font-weight: 500;
+  }
+
+  @include mobile {
+    padding-left: 10px;
+  }
 
   &:hover,
   &:active {
     color: $textColor;
   }
+}
 
-  & span .faq-close:hover {
-    fill: $textColor !important;
+.accordion__item-close {
+  stroke: $whiteColor;
+  stroke-width: 2;
+
+  position: absolute;
+  top: 36px;
+  right: 5%;
+  transform: scale(1) rotate(0deg);
+  transition: $transition;
+
+  &:hover {
+    stroke: $textColor;
+  }
+
+  @include laptop {
+    top: 27px;
+  }
+
+  @include lg-tablet {
+    transform: scale(0.8) rotate(0deg);
+  }
+
+  @media (max-width: 894.98px) {
+    top: 38px;
+  }
+
+  @include tablet {
+    transform: scale(0.6) rotate(0deg);
+    top: 29px;
+  }
+  @include lg-mobile {
+    transform: scale(0.5) rotate(0deg);
+    top: 19px;
+  }
+  @include mobile {
+    transform: scale(0.45) rotate(0deg);
+    top: 16px;
   }
 }
-.accordion-item-content {
+
+.accordion__item-content {
   max-width: 1195px;
-  margin-top: 0px;
   max-height: 0px;
+  margin-top: 0px;
+  padding-top: 0px;
+  padding-left: 30px;
   overflow: hidden;
   transition: 0.5s ease-in-out;
+  position: relative;
 
-  // @include tablet {
-  //   font-size: 16px;
-  // }
+  &.open {
+    padding-top: 20px;
 
-  // @include lg-mobile {
-  //   font-size: 14px;
-  // }
+    @include lg-mobile {
+      padding-top: 10px;
+    }
+  }
 
-  // @include lg-mobile {
-  //   font-size: 13px;
-  // }
+  @include lg-mobile {
+    padding-left: 15px;
+  }
+
+  @include mobile {
+    padding-left: 10px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 2px;
+    top: 2px;
+    left: -30px;
+    background-color: $textColor;
+
+    @include lg-mobile {
+      height: 1px;
+    }
+  }
+
+  &.open::before {
+    width: 780px;
+    transition: 0.4s ease-in 0.3s;
+    transform-origin: left;
+
+    @include laptop {
+      width: 690px;
+    }
+
+    @media (max-width: 894.98px) {
+      width: 580px;
+    }
+
+    @include tablet {
+      width: 400px;
+    }
+
+    @include lg-mobile {
+      width: 270px;
+    }
+
+    @include mobile {
+      width: 250px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    top: 0px;
+    left: 750px;
+    border-radius: 50%;
+    background-color: $textColor;
+
+    @include laptop {
+      left: 660px;
+    }
+
+    @media (max-width: 894.98px) {
+      left: 550px;
+    }
+
+    @include tablet {
+      left: 370px;
+    }
+
+    @include lg-mobile {
+      top: 1px;
+      left: 240px;
+    }
+
+    @include mobile {
+      left: 220px;
+    }
+  }
+
+  &.open::after {
+    width: 6px;
+    height: 6px;
+    transition: 0.5s ease-in 0.3s;
+
+    @include lg-mobile {
+      width: 3px;
+      height: 3px;
+    }
+  }
 }

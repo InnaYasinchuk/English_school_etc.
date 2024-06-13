@@ -36,14 +36,27 @@
 
 <!-- TARIFFS -->
 
-<symbol  width="16" height="15" fill="none">
+<symbol  width="16" height="15">
   <g id='arrow' clip-path="url(#a)"><rect width="15" height="16" x="16" fill="#DFFEE0" rx="2" transform="rotate(90 16 0)"/><path fill="#212019" d="M12.938 6.75 8.08 2.197l1.131-1.06L16 7.5l-.566.53-6.222 5.834-1.131-1.06 4.857-4.554H0v-1.5h12.938Z"/></g><defs><clipPath id="a"><rect width="15" height="16" x="16" fill="#fff" rx="2" transform="rotate(90 16 0)"/></clipPath></defs>
+</symbol>
+
+
+
+<!-- QUESTIONS -->
+
+<symbol viewBox="0 0 25 24">
+  <path id='faqClose' d="M14.0849 11.3301H23.3725V12.6634H14.0849H13.0849V13.6634V22.6634H11.6557V13.6634V12.6634H10.6557H1.3681V11.3301H10.6557H11.6557V10.3301V1.33008H13.0849V10.3301V11.3301H14.0849Z"/>
 </symbol>
 
 
 
 
 
+<!-- FORM -->
+
+<symbol>
+<path id='result-check' fill="#42816C" d="m.714 27.676 6.743-6.705 16.857 16.762L61.4.857l6.743 6.705-43.829 43.58-23.6-23.466Z"/>
+</symbol>
 
 
 
@@ -64,24 +77,6 @@
   <linearGradient id="b" x1="2500" x2="2500" y1="0" y2="5000" gradientUnits="userSpaceOnUse"><stop stop-color="#2AABEE"/><stop offset="1" stop-color="#229ED9"/></linearGradient>
   <path fill="#fff" d="M0 0h50v50H0z"/>
 </symbol>
-
-
-
-
-<!-- QUESTIONS -->
-
-<symbol  viewBox="0 0 25 25" >
-<path id='faqClose' d="M14.0724 11.7168H23.36V13.0501H14.0724H13.0724V14.0501V23.0501H11.6432V14.0501V13.0501H10.6432H1.35559V11.7168H10.6432H11.6432V10.7168V1.7168H13.0724V10.7168V11.7168H14.0724Z"  stroke="white" stroke-width="2"/>
-</symbol>
-
-
-<!-- FORM -->
-
-<symbol>
-<path id='result-check' fill="#42816C" d="m.714 27.676 6.743-6.705 16.857 16.762L61.4.857l6.743 6.705-43.829 43.58-23.6-23.466Z"/>
-</symbol>
-
-
 
 
 
