@@ -1,15 +1,22 @@
 .reviews {
-  margin-top: 130px;
-}
+  margin-top: 90px;
 
-.reviews__container {
-  padding-left: 0px;
-  padding-right: 0px;
+  @include tablet {
+    margin-top: 70px;
+  }
+
+  @include lg-mobile {
+    margin-top: 30px;
+  }
 }
 
 .reviews__title-wrapper {
   @include flex(20px);
   justify-content: center;
+
+  @include lg-mobile {
+    gap: 10px;
+  }
 }
 
 .reviews__title {
@@ -18,59 +25,171 @@
 
 .reviews__title-img {
   max-width: 80px;
+
+  @include tablet {
+    max-width: 70px;
+  }
+
+  @include lg-mobile {
+    max-width: 55px;
+  }
+
+  @include mobile {
+    max-width: 40px;
+  }
 }
 
 .reviews__slider {
+  width: 100%;
   margin-top: 69px;
-  padding: 56px 0 105px 10px;
+  padding: 56px 0 56px 10px;
   background-image: url(./../../img/reviews/reviews-bgr.webp);
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
-  // height: 600px;
+
+  @include laptop {
+    margin-top: 60px;
+    padding: 50px 0 50px 10px;
+  }
+
+  @include tablet {
+    margin-top: 50px;
+    padding: 40px 0 25px 10px;
+  }
+
+  @include lg-mobile {
+    margin-top: 30px;
+    padding: 20px 15px 10px 15px;
+  }
 }
 
-// .swiper.teachers__swiper {
-//   margin: 0;
-//   margin-top: 50px;
-//   width: 100%;
-//   height: 680px;
-//   display: flex;
-//   justify-content: space-between;
-// }
-
 .reviews__swiper .swiper-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
   margin-bottom: 64px;
+  @include flex;
+  align-items: stretch;
+
+  @include laptop {
+    margin-bottom: 50px;
+  }
+
+  @include tablet {
+    margin-bottom: 40px;
+  }
+
+  @include lg-mobile {
+    margin-bottom: 20px;
+  }
+}
+
+.reviews__swiper-bottom .swiper-wrapper {
+  @include laptop {
+    margin-bottom: 60px;
+  }
+
+  @include tablet {
+    margin-bottom: 50px;
+  }
+
+  @include lg-mobile {
+    margin-bottom: 40px;
+  }
+
+  @include mobile {
+    margin-bottom: 30px;
+  }
 }
 
 .reviews__swiper .swiper-slide {
   height: auto;
-  background-color: $mainBgrColor;
   padding: 18px 18px 25px 27px;
+  background-color: $mainBgrColor;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   border-radius: 15px 0 15px 0;
+  position: relative;
   cursor: grab;
   &:active {
     cursor: grabbing;
   }
+
+  @include laptop {
+    padding: 20px 18px;
+  }
+
+  @include tablet {
+    padding: 18px 15px;
+  }
+
+  @include lg-mobile {
+    padding: 15px 11px 7px 11px;
+  }
+}
+
+.reviews__swiper-top .swiper-slide {
+  width: 587px;
+
+  @include laptop {
+    width: 450px;
+  }
+
+  @include tablet {
+    width: 380px;
+  }
+
+  @include lg-mobile {
+    width: 330px;
+  }
+
+  @include mobile {
+    width: 290px;
+  }
+}
+
+.reviews__swiper-bottom .swiper-slide {
+  width: 920px;
+
+  @include laptop {
+    width: 640px;
+  }
+
+  @include tablet {
+    width: 520px;
+  }
+
+  @include lg-mobile {
+    width: 330px;
+  }
+
+  @include mobile {
+    width: 290px;
+  }
 }
 
 .reviews__slide-title-wrapper {
- @include flex(20px);
- justify-content: flex-start;
+  @include flex(20px);
+  justify-content: flex-start;
+
+  @include lg-mobile {
+    gap: 8px;
+  }
 }
 
-.reviews__slide-avatar{
+.reviews__slide-avatar {
   max-width: 71px;
+
+  @include laptop {
+    width: 60px;
+  }
+  @include tablet {
+    width: 50px;
   }
 
-.reviews__slide-img {
-  
-  // max-height: 356px;
-  // border-radius: $borderRadius;
+  @include lg-mobile {
+    width: 35px;
+  }
+
+  @include mobile {
+    width: 30px;
+  }
 }
 
 .reviews__slide-title {
@@ -78,17 +197,41 @@
   font-weight: 600;
   color: $secondTextColor;
   text-transform: uppercase;
+
+  @include laptop {
+    font-size: 26px;
+  }
+
+  @include tablet {
+    font-size: 22px;
+  }
+  @include lg-mobile {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  @include mobile {
+    font-size: 12px;
+  }
 }
 
-.reviews__slide-descr{
+.reviews__slide-descr {
   margin-top: 17px;
-}
 
+  @include tablet {
+    margin-top: 14px;
+  }
+  @include lg-mobile {
+    margin-top: 10px;
+  }
+  @include mobile {
+    margin-top: 5px;
+  }
+}
 
 .reviews__swiper .swiper-pagination-bullet {
   width: 15px;
   height: 15px;
-  background-color: $mainColor;
+  background-color: $textColor;
 
   @include tablet {
     width: 10px;
@@ -103,5 +246,130 @@
   @include mobile {
     width: 7px;
     height: 7px;
+  }
+}
+
+// DECOR
+
+.reviews__swiper .swiper-slide.slide1::after,
+.reviews__swiper .swiper-slide.slide3::after,
+.reviews__swiper .swiper-slide.slide4::after,
+.reviews__swiper .swiper-slide.slide7::after {
+  position: absolute;
+
+  @include laptop {
+    transform: scale(0.7);
+  }
+
+  @include lg-mobile {
+    transform: scale(0.5);
+  }
+
+  @include mobile {
+    transform: scale(0.4);
+  }
+}
+
+.reviews__swiper .swiper-slide.slide1::after {
+  content: url(./../../img/reviews/reviews-slide1.webp);
+  right: 1%;
+  bottom: -6px;
+
+  @include laptop {
+    right: -2%;
+    bottom: -31px;
+  }
+
+  @include tablet {
+    right: -1%;
+    bottom: -29px;
+  }
+
+  @include lg-mobile {
+    right: -4%;
+    bottom: -45px;
+  }
+
+  @include mobile {
+    right: -5%;
+    bottom: -54px;
+  }
+}
+
+.reviews__swiper .swiper-slide.slide3::after {
+  content: url(./../../img/reviews/reviews-slide3.webp);
+  right: 3%;
+  bottom: -6px;
+
+  @include laptop {
+    right: 1%;
+    bottom: -21px;
+  }
+
+  @include tablet {
+    right: 0%;
+  }
+
+  @include lg-mobile {
+    right: -2%;
+    bottom: -30px;
+  }
+
+  @include mobile {
+    right: -3%;
+    bottom: -35px;
+  }
+}
+
+.reviews__swiper .swiper-slide.slide4::after {
+  content: url(./../../img/reviews/reviews-slide4.webp);
+  right: 1%;
+  bottom: -16px;
+
+  @include laptop {
+    right: -4%;
+    bottom: -24px;
+  }
+
+  @include tablet {
+    right: -5%;
+  }
+
+  @include lg-mobile {
+    right: -9%;
+    bottom: -34px;
+  }
+
+  @include mobile {
+    right: -14%;
+    bottom: -40px;
+  }
+}
+
+.reviews__swiper .swiper-slide.slide7::after {
+  content: url(./../../img/reviews/reviews-title-flower.webp);
+  right: 2%;
+  bottom: 17px;
+  transform: rotate(-20deg) scale(1.3);
+
+  @include laptop {
+    transform: rotate(-20deg) scale(1);
+    right: 0%;
+    bottom: 3px;
+  }
+
+  @include tablet {
+    transform: rotate(-20deg) scale(0.8);
+  }
+
+  @include lg-mobile {
+    transform: rotate(-20deg) scale(0.6);
+    right: -2%;
+    bottom: -6px;
+  }
+
+  @include mobile {
+    transform: rotate(-20deg) scale(0.5);
+    right: -4%;
   }
 }

@@ -148,10 +148,10 @@ const tariffsSwiper = new Swiper("#tariffsSwiper", {
     1050: {
       spaceBetween: 25,
     },
-    1200: {
-      spaceBetween: 45,
-    },
     1400: {
+      spaceBetween: 30,
+    },
+    1550: {
       spaceBetween: 55,
     },
   },
@@ -246,91 +246,69 @@ function getMarginTopValue(width) {
 
 //  REVIEWS SWIPER
 
-document.addEventListener("DOMContentLoaded", function () {
-  const reviewsSwiperTop = new Swiper("#reviewsSwiperTop", {
-    slidesPerView: 2.3,
-    spaceBetween: 40,
-    loop: true,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
-    speed: 5000,
-    slideToClickedSlide: true,
-    // centeredSlides: true,
-    // centeredSlidesBounds: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-      dynamicBullets: true,
-      // dynamicMainBullets: 2,
-    },
-    freeMode: {
-      enabled: true,
-      momentum: true,
-      momentumRatio: 0.5, // Керування інерцією для плавності
-    },
-    // breakpoints: {
-    //   360: {
-    //     slidesPerView: 1.4,
-    //     spaceBetween: 10,
-    //   },
-    //   410: {
-    //     slidesPerView: 1.5,
-    //     spaceBetween: 15,
-    //   },
+const reviewsSwiperTop = new Swiper("#reviewsSwiperTop", {
+  slidesPerView: "auto",
+  spaceBetween: 10,
+  loop: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  speed: 5000,
+  slideToClickedSlide: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
+  },
 
-    //   470: {
-    //     slidesPerView: 1.6,
-    //     spaceBetween: 15,
-    //   },
-
-    //   510: {
-    //     slidesPerView: 1.9,
-    //     spaceBetween: 15,
-    //   },
-
-    //   655: {
-    //     slidesPerView: 2,
-    //     spaceBetween: 15,
-    //   },
-
-    //   860: {
-    //     slidesPerView: 2.5,
-    //     spaceBetween: 18,
-    //   },
-    //   992: {
-    //     slidesPerView: 3,
-    //     spaceBetween: 22,
-    //   },
-    // },
-  });
-
-  const reviewsSwiperBottom = new Swiper("#reviewsSwiperBottom", {
-    loop: true,
-    slidesPerView: 1.8,
-    spaceBetween: 20,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
+  breakpoints: {
+    360: {
+      spaceBetween: 15,
     },
-    speed: 5000,
-    slideToClickedSlide: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-      dynamicBullets: true,
-      // dynamicMainBullets: 2,
+    655: {
+      spaceBetween: 20,
     },
-    freeMode: {
-      enabled: true,
-      momentum: true,
-      momentumRatio: 0.5, // Керування інерцією для плавності
-    },
-  });
 
-  // reviewsSwiperTop.controller.control = reviewsSwiperBottom;
-  // reviewsSwiperBottom.controller.control = reviewsSwiperTop;
+    768: {
+      spaceBetween: 25,
+    },
+    1200: {
+      spaceBetween: 40,
+    },
+  },
+});
+
+const reviewsSwiperBottom = new Swiper("#reviewsSwiperBottom", {
+  loop: true,
+  slidesPerView: "auto",
+  spaceBetween: 20,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  speed: 5000,
+  slideToClickedSlide: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
+  },
+  breakpoints: {
+    360: {
+      spaceBetween: 15,
+    },
+    655: {
+      spaceBetween: 20,
+    },
+
+    768: {
+      spaceBetween: 25,
+    },
+    1200: {
+      spaceBetween: 40,
+    },
+  },
 });
 
 // CONTACT FORM
