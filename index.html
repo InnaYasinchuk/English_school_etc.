@@ -752,12 +752,27 @@
   </div>
 
   <footer class="footer">
-    <section class="footer-content">
+    <div class="footer-content">
       <div class="footer-content__wrapper">
-        <div class="footer__logo">
+
+        <div class="footer__contact">
           <a href="#">
-            <img src="./img/logo.svg" alt="logo" width="120" height="120" />
+            <img class="footer__logo" src="./img/logo.svg" alt="logo" width="120" height="120" />
           </a>
+
+          <div class="footer__socials-mobile">
+          <a class="footer__socials-link" href="https://t.me/+380987282779" target="_blank" rel="noopener noreferrer">
+            <svg class="footer__socials-svg" width="50" height="50">
+              <use xlink:href="sprite.svg#telegram"></use>
+            </svg></a>
+          <a class="footer__socials-link" href="viber://chat?number=+380987282779" target="_blank"
+            rel="noopener noreferrer">
+            <svg class="footer__socials-svg" width="50" height="50">
+              <use xlink:href="sprite.svg#viber"></use>
+            </svg>
+          </a>
+        </div>
+
         </div>
 
         <nav class="footer-menu">
@@ -775,10 +790,11 @@
               <a class="footer__link" href="#tariffs">Тарифи</a>
             </li>
           </ul>
+          <a class="btn footer__button" href="#contact">Записатися</a>
         </nav>
-        <a class="btn footer__button" href="#contact">Записатися</a>
+        
 
-        <div class="footer__socials">
+        <div class="footer__socials-desktop">
           <a class="footer__socials-link" href="https://t.me/+380987282779" target="_blank" rel="noopener noreferrer">
             <svg class="footer__socials-svg" width="50" height="50">
               <use xlink:href="sprite.svg#telegram"></use>
@@ -790,10 +806,13 @@
             </svg>
           </a>
         </div>
+
       </div>
-    </section>
+    </div>
     <div class="footer__bgr-decor"></div>
   </footer>
+
+
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="./main.js"></script>
 </body>

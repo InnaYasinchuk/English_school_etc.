@@ -1,72 +1,231 @@
-
 .footer {
- position: relative;
- margin: 0 auto;
- 
+  position: relative;
+  margin: 0 auto;
+
+  @include lg-tablet {
+    height: 525px;
+  }
+
+  @include tablet {
+    height: 485px;
+  }
+
+  @include lg-mobile {
+    height: 310px;
+  }
+
+  @include mobile {
+    height: 290px;
+  }
 }
 
 .footer-content {
   @include flex;
   justify-content: center;
   max-width: 1500px;
+  width: 100%;
   margin: -300px auto;
-  background: url("./../../img/footer/bgr_footer.png") no-repeat center bottom;
+  background: url("./../../img/footer/bgr_footer.webp") no-repeat center bottom;
   background-size: contain;
   height: 440px;
-   
+
+  @include tablet {
+    height: 385px;
   }
 
-  .footer-content__wrapper{
-    @include flex;
-    width: 1204px;
-    height: 120px;
-    margin-top: 110px;
-    position: relative;
-  z-index: 2;
-  }
-
-  .footer__logo{
-  width: 120px;
-  height: 120px;
-  
-   }
-
-  .footer__logo a{
-  @include flex;
-  
-
-  &:focus{
-     outline: 3px solid $mainColor;
-  outline-offset: 3px;
-  border-radius: 130px;
+  @include lg-mobile {
+    height: 340px;
   }
 }
 
-.footer__list{
+.footer-content__wrapper {
+  @include flex(85px);
+  max-width: 1204px;
+  height: 120px;
+  margin-top: 110px;
+  position: relative;
+  z-index: 2;
+
+  @include laptop {
+    margin-top: 170px;
+    height: 100px;
+    gap: 60px;
+  }
+
+  @include lg-tablet {
+    width: 80%;
+    height: auto;
+    margin-top: 290px;
+    align-items: flex-end;
+  }
+
+  @include tablet {
+    margin-top: 305px;
+  }
+
+  @include lg-mobile {
+    margin-top: 365px;
+    gap: 25px;
+  }
+
+  @include mobile {
+    margin-top: 335px;
+    gap: 5px;
+  }
+}
+
+.footer__contact {
+  @include lg-tablet {
+    @include flex(10px);
+    flex-direction: column;
+  }
+
+  @include lg-mobile {
+    // gap: 0;
+  }
+}
+
+.footer__logo {
+  width: 120px;
+  height: 120px;
+
+  @include laptop {
+    width: 100px;
+    height: 100px;
+  }
+
+  @include lg-tablet {
+    width: 80px;
+    height: 80px;
+  }
+
+  @include tablet {
+    width: 60px;
+    height: 60px;
+  }
+
+  @include lg-mobile {
+    width: 45px;
+    height: 45px;
+  }
+
+  @include mobile {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.footer__logo a {
+  @include flex;
+
+  &:focus {
+    outline: 3px solid $mainColor;
+    outline-offset: 3px;
+    border-radius: 130px;
+  }
+}
+
+.footer-menu {
+  @include flex(106px);
+
+  @media (max-width: 1314.98px) {
+    gap: 70px;
+  }
+
+  @include laptop {
+    gap: 45px;
+  }
+
+  @include lg-tablet {
+    flex-direction: column;
+  }
+
+  @include tablet {
+    gap: 25px;
+  }
+
+  @include lg-mobile {
+    gap: 25px;
+  }
+
+  @include mobile {
+    gap: 17px;
+  }
+}
+
+.footer__list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px 85px;
   color: $mainColor;
-    font-size: 25px;
-    font-weight: 500;
+  font-size: 25px;
+  font-weight: 500;
 
+  @media (max-width: 1314.98px) {
+    gap: 20px 50px;
+  }
 
+  @include laptop {
+    gap: 18px 25px;
+    font-size: 22px;
+  }
+
+  @include lg-tablet {
+    gap: 18px 55px;
+  }
+
+  @include tablet {
+    gap: 18px 45px;
+    font-size: 18px;
+  }
+
+  @include lg-mobile {
+    gap: 10px 45px;
+    font-size: 14px;
+  }
+
+  @include mobile {
+    gap: 10px 35px;
+    font-size: 12px;
+  }
 }
 
 .footer__button {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
   padding: 26px 60px;
   font-size: 25px;
   font-weight: 700;
- letter-spacing: 1px;
-  text-transform: uppercase;
+  letter-spacing: 1px;
   color: $whiteColor;
   border-radius: $borderRadiusExtra;
   background-color: $mainColor;
-  cursor: pointer;
-  transition: $transition;
+
+  @include laptop {
+    padding: 20px 40px;
+    font-size: 22px;
+  }
+
+  @include lg-tablet {
+    padding: 15px 45px;
+  }
+
+  @include tablet {
+    padding: 11px 45px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  @include lg-mobile {
+    padding: 7px 35px;
+    font-size: 18px;
+    text-transform: none;
+    font-weight: 500;
+    letter-spacing: 0px;
+  }
+
+  @include mobile {
+    padding: 5px 30px;
+    font-size: 16px;
+  }
 
   &:hover,
   &:focus {
@@ -79,32 +238,90 @@
   }
 }
 
-.footer__socials-svg {
- 
-   transition: $transition;
+.footer__socials-desktop {
+  @include lg-tablet {
+    display: none;
+  }
+}
 
-   &:hover,
+.footer__socials-mobile {
+  display: none;
+
+  @include lg-tablet {
+    display: block;
+  }
+}
+
+.footer__socials-svg {
+  transition: $transition;
+
+  @include laptop {
+    transform: scale(0.9);
+  }
+
+  @include lg-tablet {
+    transform: scale(0.7);
+  }
+
+  @include tablet {
+    transform: scale(0.6);
+  }
+
+  @include lg-mobile {
+    transform: scale(0.5);
+    margin-bottom: -15px;
+  }
+
+  @include mobile {
+    transform: scale(0.4);
+  }
+
+  &:hover,
   &:focus {
-   transform: scale(1.1);
+    transform: scale(1.1);
     outline: none;
   }
 }
 
-.footer__socials a:last-child{
- margin-left: 59px;
+.footer__socials-link:last-child {
+  margin-left: 59px;
+
+  @media (max-width: 1314.98px) {
+    margin-left: 30px;
+  }
+
+  @include laptop {
+    margin-left: 20px;
+  }
+
+  @include tablet {
+    margin-left: 0px;
+  }
+
+  @include lg-mobile {
+    margin-left: -10px;
+  }
+
+  @include mobile {
+    margin-left: -15px;
+  }
 }
-
-
-
 
 .footer__bgr-decor {
   margin: 0 auto;
   width: 100%;
   height: 300px;
 
-  background: url("./../../img/footer/bgr_footer_decor.png") no-repeat center bottom;
+  background: url("./../../img/footer/bgr_footer_decor-desktop.webp") no-repeat
+    center bottom;
   background-size: contain;
   position: absolute;
   left: 0px;
   bottom: 0px;
+
+  @include lg-mobile {
+    background: url("./../../img/footer/bgr_footer_decor-mobile.webp") no-repeat
+      center bottom;
+    bottom: -130px;
+  }
 }

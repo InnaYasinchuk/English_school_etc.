@@ -1,17 +1,25 @@
 .contact {
   margin-top: 130px;
   padding-bottom: 570px;
+  
 
   @include laptop {
     margin-top: 100px;
+    padding-bottom: 470px;
+  }
+
+  @include lg-tablet{
+     padding-bottom: 320px;
   }
 
   @include tablet {
     margin-top: 70px;
+    padding-bottom: 280px;
   }
 
   @include lg-mobile {
     margin-top: 50px;
+
   }
 }
 
@@ -333,12 +341,14 @@
    &:active {
     background-color: $accentBgrColor;
   }
-}
 
   & > * {
     position: relative;
     z-index: 2;
   }
+
+}
+
 
  .contact__socials {
   width: 43%;
@@ -357,7 +367,7 @@
     text-align: right;
   }
 
-  @media (max-width: 1299.98px) {
+  @media (max-width: 1329.98px) {
     margin-top: -85px;
   }
 
@@ -389,6 +399,14 @@
   margin-top: 14px;
   margin-right: 22px;
   transform: scale(0.9);
+  
+   transition: $transition;
+
+   &:hover,
+  &:focus {
+   transform: scale(1);
+    outline: none;
+  }
  
   @include tablet {
    
