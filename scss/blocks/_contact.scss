@@ -370,6 +370,8 @@
   padding-left: 20px;
   align-self: flex-end;
   color: $mainColor;
+  position: relative;
+  z-index: 10;
 
   @media (max-width: 1439.98px) {
     padding-left: 50px;
@@ -405,6 +407,11 @@
     width: 100%;
     margin-top: 10px;
   }
+}
+
+.contact__socials-link{
+ display: inline-flex;
+ padding: 0;
 }
 
 .contact__socials-svg {

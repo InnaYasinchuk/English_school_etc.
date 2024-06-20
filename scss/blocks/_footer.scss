@@ -249,6 +249,11 @@
   }
 }
 
+.footer__socials-link{
+ display: inline-flex;
+ padding: 0;
+}
+
 .footer__socials-svg {
   @include laptop {
     transform: scale(0.9);
