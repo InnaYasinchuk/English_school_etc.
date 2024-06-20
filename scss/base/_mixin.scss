@@ -5,33 +5,11 @@
   gap: $gap;
 }
 
-// @mixin section-title($color: $main-blue-color, $fsize: 96px) {
-//   font-family: "Amatic SC", sans-serif;
-//   font-size: $fsize;
-//   font-weight: 700;
-//   color: $color;
-
-//   @include laptop {
-//     font-size: 76px;
-//   }
-
-//   @include tablet() {
-//     font-size: 56px;
-//   }
-
-//   @include lg-mobile {
-//     font-size: 30px;
-//   }
-// }
-
-
-
-
 @mixin decor($top, $left) {
   position: absolute;
-    top: $top;
-   left: $left;
-    transition: transform 1s ease-in-out;
+  top: $top;
+  left: $left;
+  transition: transform 1s ease-in-out;
 }
 
 @mixin decorAnimation($time: 6s) {
@@ -94,10 +72,72 @@
   }
 }
 
+@mixin decorAnimationCircle($time: 6s) {
+  transform-origin: center;
+  animation-name: scaleAndChangeColor;
+  animation-duration: $time;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+
+  @keyframes scaleAndChangeColor {
+    0% {
+      transform: scale(0.1);
+      fill: $decorFooter1;
+    }
+    50% {
+      transform: scale(1.2);
+      fill: $decorFooter1;
+    }
+
+    75% {
+      transform: scale(1.2);
+      fill: $decorFooter2;
+    }
+
+    90% {
+      transform: scale(1);
+      fill: $decorFooter3;
+    }
+    100% {
+      transform: scale(0.5);
+      fill: $decorFooter3;
+    }
+  }
+}
 
 
+@mixin decorAnimationCircleMobile($time: 6s) {
+  transform-origin: center;
+  animation-name: scaleAndChangeColorMobile;
+  animation-duration: $time;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 
+  @keyframes scaleAndChangeColorMobile {
+    0% {
+      transform: scale(0.1);
+      fill: $decorFooter1;
+    }
+    50% {
+      transform: scale(0.6);
+      fill: $decorFooter1;
+    }
 
+    75% {
+      transform: scale(0.6);
+      fill: $decorFooter2;
+    }
+
+    90% {
+      transform: scale(0.5);
+      fill: $decorFooter3;
+    }
+    100% {
+      transform: scale(0.3);
+      fill: $decorFooter3;
+    }
+  }
+}
 
 
 

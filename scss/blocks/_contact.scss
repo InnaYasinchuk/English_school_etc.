@@ -1,15 +1,26 @@
 .contact {
   margin-top: 130px;
   padding-bottom: 570px;
-  
 
-  @include laptop {
-    margin-top: 100px;
+  @media (max-width: 1349.98px) {
+    padding-bottom: 500px;
+  }
+
+  @media (max-width: 1249.98px) {
     padding-bottom: 470px;
   }
 
-  @include lg-tablet{
-     padding-bottom: 320px;
+  @include laptop {
+    margin-top: 100px;
+    padding-bottom: 450px;
+  }
+
+  @media (max-width: 1189.98px) {
+    padding-bottom: 400px;
+  }
+
+  @include lg-tablet {
+    padding-bottom: 320px;
   }
 
   @include tablet {
@@ -19,7 +30,11 @@
 
   @include lg-mobile {
     margin-top: 50px;
+    padding-bottom: 240px;
+  }
 
+  @include mobile {
+    padding-bottom: 200px;
   }
 }
 
@@ -66,7 +81,7 @@
   width: 43%;
   padding-left: 20px;
   align-self: flex-end;
-  
+
   @media (max-width: 1439.98px) {
     padding-left: 50px;
   }
@@ -99,7 +114,7 @@
 .contact__img {
   width: 706px;
   border-radius: 0 50px 50px 0;
- 
+
   @media (max-width: 1404.98px) {
     width: 50%;
   }
@@ -130,8 +145,7 @@
   @include lg-tablet {
     margin-top: 20px;
     flex-direction: column;
-   }
-
+  }
 }
 
 .contact__title {
@@ -217,12 +231,12 @@
 }
 
 .contact__form-label {
-   margin-top: 20px;
+  margin-top: 20px;
   margin-bottom: 5px;
   font-size: 12px;
   font-weight: 500;
   color: $lableColor;
-   cursor: pointer;
+  cursor: pointer;
 
   @include lg-tablet {
     font-size: 10px;
@@ -287,35 +301,37 @@
   font-size: 25px;
   font-weight: 500;
   letter-spacing: 1px;
-   font-family: $mainFamily;
+  font-family: $mainFamily;
   color: $textColor;
   background: $gradientColorBtn;
   border-radius: $borderRadius;
   position: relative;
   overflow: hidden;
- 
+
   @include laptop {
     margin-top: 22px;
     padding-top: 16px;
     padding-bottom: 15px;
     font-size: 22px;
-     }
+  }
 
   @include lg-mobile {
     margin-top: 15px;
-     padding-top: 11px;
+    padding-top: 11px;
     padding-bottom: 10px;
     font-size: 18px;
-   letter-spacing: 0px;
+    letter-spacing: 0px;
     border-radius: $borderRadiusMobile;
-    
   }
 
   @include mobile {
-     padding-top: 9px;
+    padding-top: 9px;
     padding-bottom: 8px;
     font-size: 16px;
-   
+  }
+
+  @media (max-width: 339.98px) {
+    font-size: 14px;
   }
 
   &::after {
@@ -338,7 +354,7 @@
     transform: scaleX(1);
   }
 
-   &:active {
+  &:active {
     background-color: $accentBgrColor;
   }
 
@@ -346,18 +362,16 @@
     position: relative;
     z-index: 2;
   }
-
 }
 
-
- .contact__socials {
+.contact__socials {
   width: 43%;
   margin-top: -100px;
-   padding-left: 20px;
-   align-self: flex-end;
+  padding-left: 20px;
+  align-self: flex-end;
   color: $mainColor;
-  
-   @media (max-width: 1439.98px) {
+
+  @media (max-width: 1439.98px) {
     padding-left: 50px;
   }
 
@@ -381,7 +395,6 @@
     padding-left: 0;
     align-self: center;
     text-align: left;
-       
   }
 
   @include tablet {
@@ -392,24 +405,14 @@
     width: 100%;
     margin-top: 10px;
   }
-
 }
 
 .contact__socials-svg {
   margin-top: 14px;
   margin-right: 22px;
   transform: scale(0.9);
-  
-   transition: $transition;
 
-   &:hover,
-  &:focus {
-   transform: scale(1);
-    outline: none;
-  }
- 
   @include tablet {
-   
     margin-right: 0px;
     margin-top: 10px;
     transform: scale(0.7);

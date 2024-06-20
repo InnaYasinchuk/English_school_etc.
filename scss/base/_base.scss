@@ -97,7 +97,7 @@ img {
   border-radius: 18px;
 
   @include tablet {
-    border-radius: 12px;
+    border-radius: $borderRadiusMobile;
   }
 }
 

@@ -28,6 +28,7 @@
   background: url("./../../img/footer/bgr_footer.webp") no-repeat center bottom;
   background-size: contain;
   height: 440px;
+  position: relative;
 
   @include tablet {
     height: 385px;
@@ -78,10 +79,6 @@
   @include lg-tablet {
     @include flex(10px);
     flex-direction: column;
-  }
-
-  @include lg-mobile {
-    // gap: 0;
   }
 }
 
@@ -253,8 +250,6 @@
 }
 
 .footer__socials-svg {
-  transition: $transition;
-
   @include laptop {
     transform: scale(0.9);
   }
@@ -274,12 +269,6 @@
 
   @include mobile {
     transform: scale(0.4);
-  }
-
-  &:hover,
-  &:focus {
-    transform: scale(1.1);
-    outline: none;
   }
 }
 
@@ -323,5 +312,317 @@
     background: url("./../../img/footer/bgr_footer_decor-mobile.webp") no-repeat
       center bottom;
     bottom: -130px;
+  }
+}
+
+// DECOR
+
+.footer__decor-circle1 {
+  @include decor(-35%, 14%);
+  @include decorAnimationCircle(11s);
+
+  @include laptop {
+    top: -5%;
+  }
+
+  @include lg-tablet {
+    display: none;
+  }
+}
+
+.footer__decor-circle2 {
+  @include decor(9%, 31%);
+  @include decorAnimationCircle(6s);
+
+  @include laptop {
+    top: 23%;
+  }
+
+  @include lg-tablet {
+    top: 39%;
+  }
+
+  @include lg-mobile {
+    @include decorAnimationCircleMobile(6s);
+  }
+
+  @include mobile {
+    top: 67%;
+    left: 28%;
+  }
+}
+
+.footer__decor-circle3 {
+  @include decor(-4%, 54%);
+  @include decorAnimationCircle(15s);
+
+  @include laptop {
+    top: 14%;
+  }
+
+  @include lg-tablet {
+    top: 30%;
+  }
+
+  @include lg-mobile {
+    @include decorAnimationCircleMobile(15s);
+  }
+
+  @include mobile {
+    top: 53%;
+    left: 49%;
+  }
+}
+
+.footer__decor-circle4 {
+  @include decor(-25%, 76%);
+  @include decorAnimationCircle(8s);
+
+  @include laptop {
+    top: -5%;
+  }
+
+  @include lg-tablet {
+    top: 11%;
+  }
+
+  @include lg-mobile {
+    @include decorAnimationCircleMobile(8s);
+  }
+
+  @include mobile {
+    top: 36%;
+    left: 63%;
+  }
+}
+
+.footer__decor-plus1 {
+  @include decor(-17%, 75px);
+  @include decorAnimation(4s);
+  fill: $decorFooter2;
+
+  @include lg-tablet {
+    top: 17%;
+  }
+
+  @include lg-mobile {
+    @include decorAnimationMobile(4s);
+    top: 30%;
+    left: 30px;
+  }
+
+  @include mobile {
+    top: 35%;
+    left: 18px;
+  }
+}
+
+.footer__decor-plus2 {
+  @include decor(23%, 69%);
+  @include decorAnimation(8s);
+  fill: $decorFooter1;
+
+  @media (max-width: 1285.98px) {
+    top: 34%;
+    left: 78%;
+  }
+
+  @include lg-tablet {
+    top: 67%;
+    left: 40%;
+  }
+
+  @include lg-mobile {
+    @include decorAnimationMobile(8s);
+    top: 40%;
+    left: 69%;
+  }
+
+  @include mobile {
+    top: 63%;
+    left: 62%;
+  }
+}
+
+.footer__decor-plus3 {
+  position: absolute;
+  top: -45%;
+  right: 70px;
+  @include decorAnimation;
+  fill: $decorFooter3;
+
+  @media (max-width: 1285.98px) {
+    top: -32%;
+  }
+
+  @include laptop {
+    display: none;
+  }
+}
+
+.footer-content::before {
+  position: absolute;
+  content: url(./../../img/footer/footer_man.webp);
+  top: -4%;
+  left: 15%;
+  z-index: 5;
+
+  @media (max-width: 1479.98px) {
+    top: -2%;
+  }
+
+  @media (max-width: 1389.98px) {
+    top: 2%;
+  }
+
+  @media (max-width: 1344.98px) {
+    top: 5%;
+  }
+
+  @media (max-width: 1279.98px) {
+    top: 8%;
+  }
+
+  @include laptop {
+    top: 11%;
+  }
+
+  @media (max-width: 1139.98px) {
+    top: 14%;
+  }
+
+  @media (max-width: 1089.98px) {
+    top: 16%;
+  }
+
+  @include lg-tablet {
+    top: 21%;
+  }
+
+  @media (max-width: 929.98px) {
+    top: 24%;
+  }
+
+  @media (max-width: 829.98px) {
+    top: 28%;
+  }
+
+  @include tablet {
+    transform: scale(0.8);
+    top: 25%;
+  }
+
+  @media (max-width: 714.98px) {
+    top: 28%;
+  }
+
+  @media (max-width: 649.98px) {
+    top: 31%;
+  }
+
+  @include lg-mobile {
+    transform: scale(0.6);
+  }
+
+  @media (max-width: 499.98px) {
+    top: 35%;
+    left: 10%;
+  }
+
+  @media (max-width: 429.98px) {
+    top: 38%;
+    left: 7%;
+  }
+
+  @include mobile {
+    transform: scale(0.6);
+    top: 42%;
+  }
+
+  @media (max-width: 339.98px) {
+    top: 44%;
+  }
+}
+
+.footer-content::after {
+  position: absolute;
+  content: url(./../../img/footer/footer_woman.webp);
+  top: -34%;
+  right: 8%;
+  z-index: 5;
+
+  @media (max-width: 1479.98px) {
+    top: -30%;
+  }
+
+  @media (max-width: 1389.98px) {
+    top: -25%;
+  }
+
+  @media (max-width: 1344.98px) {
+    top: -22%;
+  }
+
+  @media (max-width: 1279.98px) {
+    top: -17%;
+  }
+
+  @include laptop {
+    top: -12%;
+  }
+
+  @media (max-width: 1139.98px) {
+    top: -10%;
+  }
+
+  @media (max-width: 1089.98px) {
+    top: -4%;
+  }
+
+  @include lg-tablet {
+    top: 1%;
+  }
+
+  @media (max-width: 929.98px) {
+    top: 6%;
+  }
+
+  @media (max-width: 829.98px) {
+    top: 12%;
+  }
+
+  @include tablet {
+    transform: scale(0.8);
+    top: 7%;
+  }
+
+  @media (max-width: 714.98px) {
+    top: 12%;
+  }
+
+  @media (max-width: 649.98px) {
+    top: 16%;
+  }
+
+  @include lg-mobile {
+    transform: scale(0.6);
+  }
+
+  @media (max-width: 499.98px) {
+    top: 23%;
+    right: 7%;
+  }
+
+  @media (max-width: 429.98px) {
+    top: 29%;
+  }
+
+  @include mobile {
+    transform: scale(0.6);
+    top: 33%;
+  }
+
+  @media (max-width: 339.98px) {
+    top: 36%;
   }
 }
