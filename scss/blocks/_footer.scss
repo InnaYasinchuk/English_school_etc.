@@ -187,6 +187,28 @@
   }
 }
 
+.footer__link {
+  position: relative;
+}
+
+.footer__link::after {
+  content: "";
+  position: absolute;
+  width: 105%;
+  height: 2px;
+  left: 0%;
+  bottom: -5px;
+  background-color: $mainColor;
+
+  transition: $transition;
+  transform: scaleX(0);
+}
+
+.footer__link:hover::after,
+.footer__link:focus::after {
+  transform: scaleX(1);
+}
+
 .footer__button {
   padding: 26px 60px;
   font-size: 25px;
@@ -249,9 +271,9 @@
   }
 }
 
-.footer__socials-link{
- display: inline-flex;
- padding: 0;
+.footer__socials-link {
+  display: inline-flex;
+  padding: 0;
 }
 
 .footer__socials-svg {

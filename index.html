@@ -13,8 +13,10 @@
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png" />
   <link rel="manifest" href="img/favicon/site.webmanifest" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/main.css" />
+
   <title>etc</title>
 </head>
 
@@ -77,14 +79,16 @@
             <div class="header__content-wrapper">
               <div class="header__content-inner">
                 <ul class="advantages">
-                  <li class="advantages__item">Віковий бар’єр : відсутний</li>
-                  <li class="advantages__item">
+                  <li class="advantages__item" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="0">Віковий
+                    бар’єр : відсутний</li>
+                  <li class="advantages__item" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="200">
                     Бажання вчитися та прокачувати себе : обов’язкове
                   </li>
-                  <li class="advantages__item">
+                  <li class="advantages__item" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="400">
                     Індивідуальний підхід до кожного
                   </li>
-                  <li class="advantages__item">Онлайн</li>
+                  <li class="advantages__item" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="600">
+                    Онлайн</li>
                 </ul>
                 <a class="btn header__content-button" href="#contact">Cпробувати безкоштовно</a>
               </div>
@@ -106,7 +110,7 @@
       <main>
         <section class="about" id="about">
           <div class="about__container">
-            <div class="about__title-wrapper">
+            <div class="about__title-wrapper" data-aos="fade-left" data-aos-duration="1500">
               <h2 class="title about__title">Про нас</h2>
               <img class="about__title-img" src="./img/about/about-decor.webp" alt="Квіти" width="161" height="211" />
             </div>
@@ -162,30 +166,30 @@
 
         <section class="help">
           <div class="help__wrapper">
-            <h2 class="help__title">
+            <h2 class="help__title" data-aos="zoom-out" data-aos-duration="1500">
               Як школа етс. допоможе вам вивчати англійську
             </h2>
 
             <div class="help__text">
-              <p>
+              <p data-aos="fade-right" data-aos-duration="1200" data-aos-delay="0">
                 Якщо для вас важливий персоналізований підхід — кожен викладач
                 добирає програму навчання відповідно до потреб. Ви отримуєте
                 індивідуальні заняття, відповідні вашому рівню та спрямовані
                 на досягнення саме ваших мовних цілей.
               </p>
-              <p>
+              <p data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
                 Якщо для вас зручно оплачувати в певний спосіб — маємо різні
                 способи та графіки оплати. Обирайте оплату за кожне заняття,
                 за місяць або використовуйте пакетні пропозиції з урахуванням
                 кількості занять.
               </p>
-              <p>
+              <p data-aos="fade-right" data-aos-duration="1200" data-aos-delay="400">
                 Якщо вам потрібний гнучкий графік занять — ви самостійно
                 формуєте свій графік занять. Він цілком відповідатиме вашому
                 життєвому розпорядку, а це робить навчання більш ефективним і
                 зручним.
               </p>
-              <p>
+              <p data-aos="fade-left" data-aos-duration="1200" data-aos-delay="600">
                 Якщо ви втомилася від нудної домашки — спілкуйтеся на теми
                 цікаві вам, робіть креативні проєкти або виконуйте
                 інтерактивну домашку.
@@ -211,7 +215,7 @@
         <section class="teachers" id="teachers">
           <div class="teachers__container">
             <div class="teachers__content">
-              <div class="teachers__title-wrapper">
+              <div class="teachers__title-wrapper" data-aos="fade-left" data-aos-duration="1500">
                 <h2 class="title teachers__title">Вчителі</h2>
                 <img class="teachers__title-img" src="./img/teachers/teachers-title-flower.webp" alt="Квіти" width="135"
                   height="190" loading="lazy" />
@@ -378,7 +382,7 @@
           <div class="tariffs__container">
             <div class="tariffs__wrapper">
               <div class="tariffs__content">
-                <div class="tariffs__title-wrapper">
+                <div class="tariffs__title-wrapper" data-aos="fade-left" data-aos-duration="1500">
                   <img class="tariffs__title-img" src="./img/tariffs/tariffs-title-flower.webp" alt="Квіти" width="129"
                     height="111" loading="lazy" />
                   <h2 class="title tariffs__title">Тарифи</h2>
@@ -407,7 +411,8 @@
 
                   <div class="swiper-wrapper">
 
-                    <div class="swiper-slide accent-card">
+                    <div class="swiper-slide accent-card" data-aos="flip-left" data-aos-duration="1200"
+                      data-aos-delay="0">
                       <img class="accent-card__flower" src="./img/tariffs/tariffs-accent-card-flower.webp" alt="Квіти"
                         width="236" height="76" loading="lazy" />
                       <div class="card-inner">
@@ -425,7 +430,8 @@
                       <a class="btn card-btn accent-card__btn" href="#contact">Записатися</a>
                     </div>
 
-                    <div class="swiper-slide simple-card">
+                    <div class="swiper-slide simple-card" data-aos="flip-left" data-aos-duration="1200"
+                      data-aos-delay="200">
                       <div class="card-inner">
                         <p class="card-price">320 гривень</p>
                         <p>1 заняття</p>
@@ -438,7 +444,8 @@
                       <a class="btn card-btn simple-card__btn" href="#contact">Записатися</a>
                     </div>
 
-                    <div class="swiper-slide simple-card">
+                    <div class="swiper-slide simple-card" data-aos="flip-left" data-aos-duration="1200"
+                      data-aos-delay="400">
                       <div class="card-inner">
                         <p class="card-price">340 гривень</p>
                         <p>1 заняття</p>
@@ -451,7 +458,8 @@
                       <a class="btn card-btn simple-card__btn" href="#contact">Записатися</a>
                     </div>
 
-                    <div class="swiper-slide simple-card">
+                    <div class="swiper-slide simple-card" data-aos="flip-left" data-aos-duration="1200"
+                      data-aos-delay="600">
                       <div class="card-inner last-card">
                         <p class="card-price">370 гривень</p>
                         <p>1 заняття</p>
@@ -470,14 +478,14 @@
 
         <section class="questions" id="questions">
           <div class="questions__container">
-            <div class="questions__title-wrapper">
+            <div class="questions__title-wrapper" data-aos="zoom-out" data-aos-duration="1500">
               <h2 class="title questions__title">Питання</h2>
               <img class="questions__title-img" src="./img/questions/questions-title-img.webp" alt="Квіти" width="99"
                 height="109" loading="lazy" />
             </div>
 
             <ul class="accordion">
-              <li class="accordion__item">
+              <li class="accordion__item" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="0">
                 <h3 class="accordion__item-title">
                   Як проходять заняття?
                   <span>
@@ -491,7 +499,7 @@
                 </p>
               </li>
 
-              <li class="accordion__item">
+              <li class="accordion__item" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
                 <h3 class="accordion__item-title">
                   Який графік проведення занять?
                   <span>
@@ -506,7 +514,7 @@
                 </p>
               </li>
 
-              <li class="accordion__item">
+              <li class="accordion__item" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
                 <h3 class="accordion__item-title">
                   Що робити, якщо я не можу прийти на урок?
                   <span>
@@ -521,7 +529,7 @@
                 </p>
               </li>
 
-              <li class="accordion__item">
+              <li class="accordion__item" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="600">
                 <h3 class="accordion__item-title">
                   Як відбувається оплата?
                   <span>
@@ -541,7 +549,7 @@
 
         <section class="reviews" id="reviews">
 
-          <div class="reviews__title-wrapper">
+          <div class="reviews__title-wrapper" data-aos="zoom-out" data-aos-duration="1500">
             <img class="reviews__title-img" src="./img/reviews/reviews-title-flower.webp" alt="Квіти" width="80"
               height="60" loading="lazy" />
             <h2 class="title reviews__title">відгуки</h2>
@@ -684,8 +692,9 @@
             <div class="contact__wrapper">
 
               <div class="contact__text">
-                <h2 class="contact__title">І що далі?</h2>
-                <p class="contact__descr">
+                <h2 class="contact__title" data-aos="zoom-out" data-aos-duration="1200" data-aos-delay="0">І що далі?
+                </h2>
+                <p class="contact__descr" data-aos="zoom-out" data-aos-duration="1200" data-aos-delay="250">
                   Заповнюйте форму - залишайте заявку на перший урок
                 </p>
               </div>
@@ -762,7 +771,8 @@
           </a>
 
           <div class="footer__socials-mobile">
-            <a class="footer__socials-link" href="https://t.me/%2B380634521254" target="_blank" rel="noopener noreferrer">
+            <a class="footer__socials-link" href="https://t.me/%2B380634521254" target="_blank"
+              rel="noopener noreferrer">
               <svg class="footer__socials-svg" width="50" height="50">
                 <use xlink:href="sprite.svg#telegram"></use>
               </svg></a>
@@ -814,15 +824,15 @@
         <use xlink:href="sprite.svg#circle"></use>
       </svg>
 
-       <svg class="footer__decor-circle2" width="25" height="26">
+      <svg class="footer__decor-circle2" width="25" height="26">
         <use xlink:href="sprite.svg#circle"></use>
       </svg>
 
-       <svg class="footer__decor-circle3" width="25" height="26">
+      <svg class="footer__decor-circle3" width="25" height="26">
         <use xlink:href="sprite.svg#circle"></use>
       </svg>
 
-       <svg class="footer__decor-circle4" width="25" height="26">
+      <svg class="footer__decor-circle4" width="25" height="26">
         <use xlink:href="sprite.svg#circle"></use>
       </svg>
 
@@ -830,20 +840,19 @@
         <use xlink:href="sprite.svg#plus"></use>
       </svg>
 
-       <svg class="footer__decor-plus2" width="28" height="29">
+      <svg class="footer__decor-plus2" width="28" height="29">
         <use xlink:href="sprite.svg#plus"></use>
       </svg>
 
-       <svg class="footer__decor-plus3" width="28" height="29">
+      <svg class="footer__decor-plus3" width="28" height="29">
         <use xlink:href="sprite.svg#plus"></use>
       </svg>
-
 
     </div>
     <div class="footer__bgr-decor"></div>
   </footer>
 
-
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="./main.js"></script>
 </body>

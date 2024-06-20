@@ -409,9 +409,9 @@
   }
 }
 
-.contact__socials-link{
- display: inline-flex;
- padding: 0;
+.contact__socials-link {
+  display: inline-flex;
+  padding: 0;
 }
 
 .contact__socials-svg {
@@ -468,6 +468,21 @@
   color: $whiteColor;
   overflow: hidden;
 
+  @include tablet {
+    padding: 100px 120px;
+    font-size: 34px;
+  }
+
+  @include lg-mobile {
+    padding: 70px 90px;
+    font-size: 20px;
+  }
+
+  @include mobile {
+    padding: 50px 70px;
+    font-size: 16px;
+  }
+
   &::before,
   &::after {
     position: absolute;
@@ -477,12 +492,36 @@
     content: url(./../../img/contact/result-decor-top.webp);
     top: 0;
     left: 0;
+
+    @include lg-mobile {
+      transform: scale(0.7);
+      top: -33px;
+      left: -30px;
+    }
+
+    @include mobile {
+      transform: scale(0.4);
+      top: -63px;
+      left: -60px;
+    }
   }
 
   &::after {
     content: url(./../../img/contact/result-decor-bottom.webp);
     bottom: -10px;
     right: -5px;
+
+    @include lg-mobile {
+      transform: scale(0.7);
+      bottom: -64px;
+      right: -25px;
+    }
+
+    @include mobile {
+      transform: scale(0.4);
+      bottom: -116px;
+      right: -51px;
+    }
   }
 }
 
@@ -494,10 +533,30 @@
   border-radius: 12px;
   position: relative;
 
+  @include lg-mobile {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 30px;
+  }
+
+  @include mobile {
+    width: 35px;
+    height: 35px;
+    margin: 0 auto 20px;
+  }
+
   & svg {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    @include lg-mobile {
+      transform: translate(-50%, -50%) scale(0.7);
+    }
+
+    @include mobile {
+      transform: translate(-50%, -50%) scale(0.4);
+    }
   }
 }

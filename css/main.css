@@ -4732,6 +4732,24 @@ img {
   color: #fff;
   overflow: hidden;
 }
+@media (max-width: 767.98px) {
+  .contact__form-result-wrapper {
+    padding: 100px 120px;
+    font-size: 34px;
+  }
+}
+@media (max-width: 575.98px) {
+  .contact__form-result-wrapper {
+    padding: 70px 90px;
+    font-size: 20px;
+  }
+}
+@media (max-width: 389.98px) {
+  .contact__form-result-wrapper {
+    padding: 50px 70px;
+    font-size: 16px;
+  }
+}
 .contact__form-result-wrapper::before, .contact__form-result-wrapper::after {
   position: absolute;
 }
@@ -4740,10 +4758,38 @@ img {
   top: 0;
   left: 0;
 }
+@media (max-width: 575.98px) {
+  .contact__form-result-wrapper::before {
+    transform: scale(0.7);
+    top: -33px;
+    left: -30px;
+  }
+}
+@media (max-width: 389.98px) {
+  .contact__form-result-wrapper::before {
+    transform: scale(0.4);
+    top: -63px;
+    left: -60px;
+  }
+}
 .contact__form-result-wrapper::after {
   content: url(./../../img/contact/result-decor-bottom.webp);
   bottom: -10px;
   right: -5px;
+}
+@media (max-width: 575.98px) {
+  .contact__form-result-wrapper::after {
+    transform: scale(0.7);
+    bottom: -64px;
+    right: -25px;
+  }
+}
+@media (max-width: 389.98px) {
+  .contact__form-result-wrapper::after {
+    transform: scale(0.4);
+    bottom: -116px;
+    right: -51px;
+  }
 }
 
 .contact__form-result-check {
@@ -4754,11 +4800,35 @@ img {
   border-radius: 12px;
   position: relative;
 }
+@media (max-width: 575.98px) {
+  .contact__form-result-check {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 30px;
+  }
+}
+@media (max-width: 389.98px) {
+  .contact__form-result-check {
+    width: 35px;
+    height: 35px;
+    margin: 0 auto 20px;
+  }
+}
 .contact__form-result-check svg {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+@media (max-width: 575.98px) {
+  .contact__form-result-check svg {
+    transform: translate(-50%, -50%) scale(0.7);
+  }
+}
+@media (max-width: 389.98px) {
+  .contact__form-result-check svg {
+    transform: translate(-50%, -50%) scale(0.4);
+  }
 }
 
 .footer {
@@ -4990,6 +5060,27 @@ img {
     gap: 10px 35px;
     font-size: 12px;
   }
+}
+
+.footer__link {
+  position: relative;
+}
+
+.footer__link::after {
+  content: "";
+  position: absolute;
+  width: 105%;
+  height: 2px;
+  left: 0%;
+  bottom: -5px;
+  background-color: #42816C;
+  transition: 0.3s ease-in;
+  transform: scaleX(0);
+}
+
+.footer__link:hover::after,
+.footer__link:focus::after {
+  transform: scaleX(1);
 }
 
 .footer__button {

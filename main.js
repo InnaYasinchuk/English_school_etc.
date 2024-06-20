@@ -1,3 +1,12 @@
+
+// ANIMATION
+
+AOS.init({
+  mirror: false,
+  once: true,
+});
+
+
 const body = document.body;
 
 // BURGER MENU
