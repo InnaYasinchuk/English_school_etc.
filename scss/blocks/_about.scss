@@ -341,12 +341,12 @@
   }
 
   @include tablet {
-    @include decor(-8%, -1%);
+    @include decor(-10%, -1%);
     @include decorAnimationMobile(8s);
   }
 
   @include mobile {
-    @include decor(-10%, -4%);
+    @include decor(-12%, -4%);
   }
 }
 

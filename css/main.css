@@ -987,8 +987,8 @@ img {
 }
 @media (max-width: 389.98px) {
   .header__bubble-lg-decor {
-    top: 30%;
-    left: 85%;
+    top: 23%;
+    left: 93%;
   }
 }
 
@@ -1511,7 +1511,7 @@ img {
 @media (max-width: 767.98px) {
   .star1 {
     position: absolute;
-    top: -8%;
+    top: -10%;
     left: -1%;
     transition: transform 1s ease-in-out;
     transform-origin: center;
@@ -1535,7 +1535,7 @@ img {
 @media (max-width: 389.98px) {
   .star1 {
     position: absolute;
-    top: -10%;
+    top: -12%;
     left: -4%;
     transition: transform 1s ease-in-out;
   }
