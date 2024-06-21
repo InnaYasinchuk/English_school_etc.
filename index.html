@@ -16,7 +16,7 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/main.css">
-  <link rel="preload" as="image" href="./img/header/header-img.webp">
+  <link rel="preload" as="image" href="./img/header/header-img.webp" fetchpriority="high">
 
   <title>etc</title>
 </head>
@@ -96,7 +96,7 @@
 
               <div class="header__img-wrapper">
                 <img class="header__img" src="./img/header/header-img.webp" alt="Вчитель та учень" width="723"
-                  height="447" fetchpriority="high">
+                  height="447" loading="eager">
               </div>
 
               <div class="header__bubble-sm-decor"></div>
@@ -246,7 +246,7 @@
                     <div class="teachers__slide-img-wrapper">
                       <img class="teachers__slide-img" src="./img/teachers/Anastasiya.webp" alt="Анастасія" width="310"
                         height="356" loading="lazy">
-                      <button class="teachers__slide-btn" data-modal-btn="modal1">
+                      <button class="teachers__slide-btn" data-modal-btn="modal1" aria-label="play video">
                         <svg class="teachers__slide-btn-svg">
                           <use xlink:href="sprite.svg#play-video" width="65" height="65"></use>
                         </svg>
@@ -267,7 +267,7 @@
                     <div class="teachers__slide-img-wrapper">
                       <img class="teachers__slide-img" src="./img/teachers/Anna.webp" alt="Анна" width="310"
                         height="356" loading="lazy">
-                      <button class="teachers__slide-btn" data-modal-btn="modal2">
+                      <button class="teachers__slide-btn" data-modal-btn="modal2" aria-label="play video">
                         <svg class="teachers__slide-btn-svg">
                           <use xlink:href="sprite.svg#play-video" width="65" height="65"></use>
                         </svg>
@@ -289,7 +289,7 @@
                     <div class="teachers__slide-img-wrapper">
                       <img class="teachers__slide-img" src="./img/teachers/Mariya.webp" alt="Марія" width="310"
                         height="356" loading="lazy">
-                      <button class="teachers__slide-btn" data-modal-btn="modal3">
+                      <button class="teachers__slide-btn" data-modal-btn="modal3" aria-label="play video">
                         <svg class="teachers__slide-btn-svg">
                           <use xlink:href="sprite.svg#play-video" width="65" height="65"></use>
                         </svg>
@@ -307,7 +307,7 @@
                     <div class="teachers__slide-img-wrapper">
                       <img class="teachers__slide-img" src="./img/teachers/Victoriya.webp" alt="Вікторія" width="310"
                         height="356" loading="lazy">
-                      <button class="teachers__slide-btn" data-modal-btn="modal4">
+                      <button class="teachers__slide-btn" data-modal-btn="modal4" aria-label="play video">
                         <svg class="teachers__slide-btn-svg">
                           <use xlink:href="sprite.svg#play-video" width="65" height="65"></use>
                         </svg>
@@ -332,7 +332,7 @@
                 <div class="teachers-modal-box__wrapper">
                   <video class="teachers-modal-box__video" src="./video/Anastasiya.webm" width="822" height="433"
                     controls preload="auto"></video>
-                  <button class="teachers-modal-box__close-btn" aria-label="play video">
+                  <button class="teachers-modal-box__close-btn" aria-label="close video">
                     <svg class="teachers-modal-box__close-btn-svg" width="35" height="35">
                       <use xlink:href="sprite.svg#close"></use>
                     </svg>
@@ -344,7 +344,7 @@
                 <div class="teachers-modal-box__wrapper">
                   <video class="teachers-modal-box__video" src="./video/Anna.webm" width="822" height="433" controls
                     preload="auto"></video>
-                  <button class="teachers-modal-box__close-btn" aria-label="play video">
+                  <button class="teachers-modal-box__close-btn" aria-label="close video">
                     <svg class="teachers-modal-box__close-btn-svg" width="35" height="35">
                       <use xlink:href="sprite.svg#close"></use>
                     </svg>
@@ -356,7 +356,7 @@
                 <div class="teachers-modal-box__wrapper">
                   <video class="teachers-modal-box__video" src="./video/Mariya.webm" width="822" height="433"
                     controls preload="auto"></video>
-                  <button class="teachers-modal-box__close-btn" aria-label="play video">
+                  <button class="teachers-modal-box__close-btn" aria-label="close video">
                     <svg class="teachers-modal-box__close-btn-svg" width="35" height="35">
                       <use xlink:href="sprite.svg#close"></use>
                     </svg>
@@ -368,7 +368,7 @@
                 <div class="teachers-modal-box__wrapper">
                   <video class="teachers-modal-box__video" src="./video/Victoriya.webm" width="822" height="433"
                     controls preload="auto"></video>
-                  <button class="teachers-modal-box__close-btn" aria-label="play video">
+                  <button class="teachers-modal-box__close-btn" aria-label="close video">
                     <svg class="teachers-modal-box__close-btn-svg" width="35" height="35">
                       <use xlink:href="sprite.svg#close"></use>
                     </svg>
