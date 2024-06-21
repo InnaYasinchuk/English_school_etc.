@@ -2,13 +2,13 @@
 <html lang="uk">
 
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
   <meta name="color-scheme" content="only light">
   <meta name="description"
     content="Прокачай свою англійську зі школою etc. Для нас важливо, щоб вивчати англійську було цікаво, весело, а головне — ефективно">
-  <link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
@@ -16,6 +16,7 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="preload" as="image" href="./img/header/header-img.webp">
 
   <title>etc</title>
 </head>
@@ -95,7 +96,7 @@
 
               <div class="header__img-wrapper">
                 <img class="header__img" src="./img/header/header-img.webp" alt="Вчитель та учень" width="723"
-                  height="447" />
+                  height="447" fetchpriority="high">
               </div>
 
               <div class="header__bubble-sm-decor"></div>
@@ -331,7 +332,7 @@
                 <div class="teachers-modal-box__wrapper">
                   <video class="teachers-modal-box__video" src="./video/Anastasiya.webm" width="822" height="433"
                     controls preload="auto"></video>
-                  <button class="teachers-modal-box__close-btn">
+                  <button class="teachers-modal-box__close-btn" aria-label="play video">
                     <svg class="teachers-modal-box__close-btn-svg" width="35" height="35">
                       <use xlink:href="sprite.svg#close"></use>
                     </svg>
@@ -343,7 +344,7 @@
                 <div class="teachers-modal-box__wrapper">
                   <video class="teachers-modal-box__video" src="./video/Anna.webm" width="822" height="433" controls
                     preload="auto"></video>
-                  <button class="teachers-modal-box__close-btn">
+                  <button class="teachers-modal-box__close-btn" aria-label="play video">
                     <svg class="teachers-modal-box__close-btn-svg" width="35" height="35">
                       <use xlink:href="sprite.svg#close"></use>
                     </svg>
@@ -355,7 +356,7 @@
                 <div class="teachers-modal-box__wrapper">
                   <video class="teachers-modal-box__video" src="./video/Mariya.webm" width="822" height="433"
                     controls preload="auto"></video>
-                  <button class="teachers-modal-box__close-btn">
+                  <button class="teachers-modal-box__close-btn" aria-label="play video">
                     <svg class="teachers-modal-box__close-btn-svg" width="35" height="35">
                       <use xlink:href="sprite.svg#close"></use>
                     </svg>
@@ -367,7 +368,7 @@
                 <div class="teachers-modal-box__wrapper">
                   <video class="teachers-modal-box__video" src="./video/Victoriya.webm" width="822" height="433"
                     controls preload="auto"></video>
-                  <button class="teachers-modal-box__close-btn">
+                  <button class="teachers-modal-box__close-btn" aria-label="play video">
                     <svg class="teachers-modal-box__close-btn-svg" width="35" height="35">
                       <use xlink:href="sprite.svg#close"></use>
                     </svg>
@@ -706,7 +707,7 @@
                 <form class="contact__form" action="https://api.web3forms.com/submit" method="POST" id="form">
                   <input type="hidden" name="access_key" value="0e5ba20c-75a1-46a9-8132-008a8b84b71c">
                   <input type="hidden" name="subject" value="I want to learn English. Contact me">
-                  <input type="hidden" name="from_name" value="etc site" />
+                  <input type="hidden" name="from_name" value="etc site">
 
                   <label class="contact__form-label" for="name">*Ім'я</label>
                   <input class="contact__form-input" id="name" type="text" name="name" required placeholder="Вікторія"
@@ -741,12 +742,12 @@
               <div class="contact__socials">
                 <p>Пишіть нам у месенджери :</p>
                 <a class="contact__socials-link" href="https://t.me/ @etc_sch" target="_blank"
-                  rel="noopener noreferrer">
+                  rel="noopener noreferrer" aria-label="telegram">
                   <svg class="contact__socials-svg" width="50" height="50">
                     <use xlink:href="sprite.svg#telegram"></use>
                   </svg></a>
                 <a class="contact__socials-link" href="viber://chat?number=%2B380634521254" target="_blank"
-                  rel="noopener noreferrer">
+                  rel="noopener noreferrer" aria-label="viber">
                   <svg class="contact__socials-svg" width="50" height="50">
                     <use xlink:href="sprite.svg#viber"></use>
                   </svg>
@@ -771,13 +772,11 @@
           </a>
 
           <div class="footer__socials-mobile">
-            <a class="footer__socials-link" href="https://t.me/ @etc_sch" target="_blank"
-              rel="noopener noreferrer">
+            <a class="footer__socials-link" href="https://t.me/ @etc_sch" target="_blank" rel="noopener noreferrer" aria-label="telegram">
               <svg class="footer__socials-svg" width="50" height="50">
                 <use xlink:href="sprite.svg#telegram"></use>
               </svg></a>
-            <a class="footer__socials-link" href="viber://chat?number=%2B380634521254" target="_blank"
-              rel="noopener noreferrer">
+            <a class="footer__socials-link" href="viber://chat?number=%2B380634521254" target="_blank" rel="noopener noreferrer" aria-label="viber">
               <svg class="footer__socials-svg" width="50" height="50">
                 <use xlink:href="sprite.svg#viber"></use>
               </svg>
@@ -806,12 +805,11 @@
 
 
         <div class="footer__socials-desktop">
-          <a class="footer__socials-link" href="https://t.me/ @etc_sch" target="_blank" rel="noopener noreferrer">
+          <a class="footer__socials-link" href="https://t.me/ @etc_sch" target="_blank" rel="noopener noreferrer" aria-label="telegram">
             <svg class="footer__socials-svg" width="50" height="50">
               <use xlink:href="sprite.svg#telegram"></use>
             </svg></a>
-          <a class="footer__socials-link" href="viber://chat?number=%2B380634521254" target="_blank"
-            rel="noopener noreferrer">
+          <a class="footer__socials-link" href="viber://chat?number=%2B380634521254" target="_blank" rel="noopener noreferrer" aria-label="viber">
             <svg class="footer__socials-svg" width="50" height="50">
               <use xlink:href="sprite.svg#viber"></use>
             </svg>
@@ -852,9 +850,9 @@
     <div class="footer__bgr-decor"></div>
   </footer>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="./main.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+  <script src="./main.js" defer></script>
 </body>
 
 </html>
